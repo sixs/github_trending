@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trending - 历史日报</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --background-color: #f6f8fa;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #e1e4e8;
+            --header-height: 60px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            height: 100%;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 80px;
+            }
+            
+            .header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .year-month-nav {
+                margin: 10px 0;
+            }
+        }
+        
+        /* 头部样式 */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            background: var(--card-background);
+            border-bottom: 1px solid var(--border-color);
+            height: var(--header-height);
+            min-height: var(--header-height);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: var(--text-color);
+        }
+        
+        /* 年月导航 */
+        .year-month-nav {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .year-month-item {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+        }
+        
+        .year-month-item:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        /* 内容区域 */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 按年份分组 */
+        .year-group {
+            margin-bottom: 40px;
+        }
+        
+        .year-header {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            color: #24292e;
+        }
+        
+        /* 按月份分组 */
+        .month-group {
+            margin-bottom: 30px;
+        }
+        
+        .month-header {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #24292e;
+        }
+        
+        /* 日期列表 */
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .date-list {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+        
+        .date-item {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .date-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border-color: var(--primary-color);
+        }
+        
+        .date-item .date {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .date-item .weekday {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>GitHub Trending 历史日报</h1>
+    </div>
+    
+    <div class="content">
+        <!-- 年月快速导航 -->
+        <div class="year-month-nav">
+            <a href="#2026-02" class="year-month-item">2026年02月</a>
+            <a href="#2026-01" class="year-month-item">2026年01月</a>
+            <a href="#2025-12" class="year-month-item">2025年12月</a>
+        </div>
+        
+        <!-- 按年份分组 -->
+        <div class="year-group">
+            <div class="year-header" id="2026">2026年</div>
+            
+            <!-- 按月份分组 -->
+            <div class="month-group">
+                <div class="month-header" id="2026-02">02月</div>
+                <div class="date-list">
+                    <a href="trending-2026-02-11.html" class="date-item">
+                        <div class="date">02月11日</div>
+                        <div class="weekday">星期三</div>
+                    </a>
+                    <a href="trending-2026-02-10.html" class="date-item">
+                        <div class="date">02月10日</div>
+                        <div class="weekday">星期二</div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 按月份分组 -->
+            <div class="month-group">
+                <div class="month-header" id="2026-01">01月</div>
+                <div class="date-list">
+                    <a href="trending-2026-01-15.html" class="date-item">
+                        <div class="date">01月15日</div>
+                        <div class="weekday">星期四</div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- 按年份分组 -->
+        <div class="year-group">
+            <div class="year-header" id="2025">2025年</div>
+            
+            <!-- 按月份分组 -->
+            <div class="month-group">
+                <div class="month-header" id="2025-12">12月</div>
+                <div class="date-list">
+                    <a href="trending-2025-12-20.html" class="date-item">
+                        <div class="date">12月20日</div>
+                        <div class="weekday">星期六</div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <div class="footer">
+        <p>© 2026 GitHub Trending 日报 | 数据来源于 GitHub Trending</p>
+    </div>
+</body>
+</html>

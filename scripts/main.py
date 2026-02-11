@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+"""
+GitHub Trending 日报生成器
+"""
+
+from scripts.github_trending import fetch_trending
+from scripts.page_generator import build_refined_html, save_html_file, generate_pages_index
+from scripts.wechat_publisher import publish_to_wechat
+from scripts.feishu_publisher import publish_to_feishu
+
+def main():
+    """主函数"""
+    # 收集数据
+    print("正在收集GitHub Trending数据...")
+    d, w, m = fetch_trending('daily'), fetch_trending('weekly'), fetch_trending('monthly')
+    
+    if d or w or m:
+        print("数据收集完成，正在生成日报...")
+        # 构建HTML内容
+        final_html = build_refined_html(d, w, m)
+        
+        # 保存HTML文件用于GitHub Pages
+        filepath = save_html_file(final_html)
+        print(f"日报已保存至: {filepath}")
+        
+        # 生成GitHub Pages索引页面
+        generate_pages_index()
+        print("GitHub Pages索引页面生成完成")
+        
+        # 发送到微信公众号（如果需要）
+        print("正在推送至微信公众号...")
+        publish_to_wechat(final_html)
+        
+        # 发送到飞书机器人（如果需要）
+        print("正在推送至飞书机器人...")
+        publish_to_feishu(final_html)
+        
+        print("所有任务完成！")
+    else:
+        print("未能获取到GitHub Trending数据")
+
+if __name__ == "__main__":
+    main()
