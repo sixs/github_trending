@@ -4,6 +4,15 @@ import json
 import time
 from datetime import datetime
 
+# 导入GitHub工具模块
+try:
+    import scripts.github_utils
+    get_github_pages_url = scripts.github_utils.get_github_pages_url
+except ImportError:
+    # 如果无法导入，定义一个默认函数
+    def get_github_pages_url():
+        return "https://sixs.github.io/github_trending/"
+
 # 缓存tenant_access_token及其过期时间
 _tenant_access_token = None
 _token_expires_at = 0
@@ -145,7 +154,7 @@ def create_interactive_message(html_content):
                             "tag": "plain_text"
                         },
                         "type": "primary",
-                        "url": "https://your-github-pages-url.com"
+                        "url": get_github_pages_url()
                     }
                 ]
             }
@@ -197,7 +206,7 @@ def publish_to_feishu_webhook(html_content):
                                     "tag": "plain_text"
                                 },
                                 "type": "primary",
-                                "url": "https://your-github-pages-url.com"
+                                "url": get_github_pages_url()
                             }
                         ]
                     }
