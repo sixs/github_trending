@@ -13,6 +13,21 @@ except ImportError:
     def get_github_pages_url():
         return "https://sixs.github.io/github_trending/"
 
+def get_trending_page_url():
+    """
+    获取当前日期的GitHub Trending日报页面URL
+    
+    Returns:
+        str: 当前日期的日报页面URL
+    """
+    from datetime import datetime
+    base_url = get_github_pages_url()
+    if base_url.endswith('/'):
+        base_url = base_url[:-1]
+    
+    date_str = datetime.now().strftime('%Y-%m-%d')
+    return f"{base_url}/trending-{date_str}.html"
+
 # 缓存tenant_access_token及其过期时间
 _tenant_access_token = None
 _token_expires_at = 0
@@ -66,7 +81,7 @@ def get_tenant_access_token():
         print(f"获取tenant_access_token异常: {e}")
         return None
 
-def send_message_to_receivers(receive_ids, message_content, receive_id_type="chat_id"):
+def send_message_to_receivers(receive_ids, message_content, receive_id_type="open_id"):
     """
     向指定的receive_id列表发送消息
     
@@ -107,6 +122,7 @@ def send_message_to_receivers(receive_ids, message_content, receive_id_type="cha
                     failed_count += 1
             else:
                 print(f"向 {receive_id} 发送消息失败: HTTP {response.status_code}")
+                print(f"Response content: {response.text}")
                 failed_count += 1
         except Exception as e:
             print(f"向 {receive_id} 发送消息异常: {e}")
@@ -154,7 +170,7 @@ def create_interactive_message(html_content):
                             "tag": "plain_text"
                         },
                         "type": "primary",
-                        "url": get_github_pages_url()
+                        "url": get_trending_page_url()
                     }
                 ]
             }
@@ -206,7 +222,7 @@ def publish_to_feishu_webhook(html_content):
                                     "tag": "plain_text"
                                 },
                                 "type": "primary",
-                                "url": get_github_pages_url()
+                                "url": get_trending_page_url()
                             }
                         ]
                     }
