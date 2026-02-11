@@ -3,10 +3,14 @@
 GitHub Trending 日报生成器
 """
 
-from scripts.github_trending import fetch_trending
-from scripts.page_generator import build_refined_html, save_html_file, generate_pages_index
-from scripts.wechat_publisher import publish_to_wechat
-from scripts.feishu_publisher import publish_to_feishu
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__)))
+
+from github_trending import fetch_trending
+from page_generator import build_refined_html, save_html_file, generate_pages_index
+from wechat_publisher import publish_to_wechat
+from feishu_publisher import publish_to_feishu
 
 def main():
     """主函数"""
