@@ -2,7 +2,7 @@ import os
 import re
 from datetime import datetime
 
-def build_refined_html(daily, weekly, monthly):
+def build_refined_html(daily, weekly, monthly, current_date=None):
     """
     构建精美的GitHub Trending日报HTML页面（用于iframe内嵌显示，无顶部栏和侧边栏）
     
@@ -10,13 +10,16 @@ def build_refined_html(daily, weekly, monthly):
         daily (list): 每日热门项目列表
         weekly (list): 每周热门项目列表
         monthly (list): 每月热门项目列表
+        current_date (datetime): 当前日期，默认为None时使用当前时间
     
     Returns:
         str: 完整的HTML页面内容
     """
     from ai_processor import get_rich_summary, clean_md_to_html
     
-    date_str = datetime.now().strftime('%Y / %m / %d')
+    if current_date is None:
+        current_date = datetime.now()
+    date_str = current_date.strftime('%Y / %m / %d')
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -177,12 +180,13 @@ def build_refined_html(daily, weekly, monthly):
 </html>'''
     return html
 
-def save_html_file(html_content):
+def save_html_file(html_content, current_date=None):
     """
     保存HTML文件到public目录
     
     Args:
         html_content (str): HTML内容
+        current_date (datetime): 当前日期，默认为None时使用当前时间
     
     Returns:
         str: 文件路径
@@ -191,7 +195,9 @@ def save_html_file(html_content):
     os.makedirs('public', exist_ok=True)
     
     # 生成文件名
-    filename = f"trending-{datetime.now().strftime('%Y-%m-%d')}.html"
+    if current_date is None:
+        current_date = datetime.now()
+    filename = f"trending-{current_date.strftime('%Y-%m-%d')}.html"
     filepath = os.path.join('public', filename)
     
     # 保存HTML文件

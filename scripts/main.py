@@ -5,6 +5,11 @@ GitHub Trending 日报生成器
 
 import sys
 import os
+from datetime import datetime
+
+# 在程序开始时获取统一的日期，避免跨日期问题
+CURRENT_DATE = datetime.now()
+
 sys.path.append(os.path.join(os.path.dirname(__file__)))
 
 from github_trending import fetch_trending
@@ -21,10 +26,10 @@ def main():
     if d or w or m:
         print("数据收集完成，正在生成日报...")
         # 构建HTML内容
-        final_html = build_refined_html(d, w, m)
+        final_html = build_refined_html(d, w, m, CURRENT_DATE)
         
         # 保存HTML文件用于GitHub Pages
-        filepath = save_html_file(final_html)
+        filepath = save_html_file(final_html, CURRENT_DATE)
         print(f"日报已保存至: {filepath}")
         
         # 生成GitHub Pages索引页面
