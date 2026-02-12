@@ -26,6 +26,7 @@ github_trending/
 │   ├── main.py            # 主程序入口
 │   ├── github_trending.py # GitHub 数据抓取
 │   ├── ai_processor.py    # AI 分析处理
+│   ├── cache_manager.py   # LLM摘要缓存管理
 │   ├── page_generator.py  # 页面生成
 │   ├── wechat_publisher.py# 微信推送
 │   └── feishu_publisher.py# 飞书推送
@@ -46,6 +47,14 @@ github_trending/
   - **核心介绍**：技术实现方案
   - **关键特性**：核心技术亮点
 
+### 智能缓存层
+- **缓存管理**：实现LLM摘要缓存，避免重复调用并定期刷新（7天有效期）
+  - 首次调用时通过LLM生成项目摘要并缓存
+  - 后续调用优先使用缓存内容
+  - 缓存超过7天自动刷新，确保信息新鲜度
+  - 缓存文件存储在 `data/project_summaries_cache.json`
+- **性能优化**：大幅减少LLM调用次数，降低成本并提升响应速度
+
 ### 内容展示层
 - 生成精美的 HTML 页面
 - 响应式设计，适配各种设备
@@ -61,6 +70,10 @@ github_trending/
 ### 环境要求
 - Python 3.7+
 - 依赖包：`requests`, `beautifulsoup4`, `dashscope`
+
+### 目录结构说明
+- `data/`：缓存数据目录（自动生成）
+  - `project_summaries_cache.json`：LLM摘要缓存文件
 
 ### GitHub Actions 配置
 

@@ -2,6 +2,7 @@ import os
 import re
 import dashscope
 from dashscope import Generation
+from cache_manager import get_cached_summary, cache_summary
 
 def clean_md_to_html(text):
     """
@@ -23,7 +24,7 @@ def clean_md_to_html(text):
 
 def get_rich_summary(p):
     """
-    使用DashScope模型为GitHub项目生成详细摘要
+    使用DashScope模型为GitHub项目生成详细摘要（带缓存机制）
     
     Args:
         p (dict): 包含项目信息的字典
@@ -31,6 +32,14 @@ def get_rich_summary(p):
     Returns:
         str: 项目摘要
     """
+    # 首先检查缓存
+    cached_summary = get_cached_summary(p['name'])
+    if cached_summary:
+        print(f"使用缓存的摘要: {p['name']}")
+        return cached_summary
+    
+    # 缓存未命中，调用LLM生成摘要
+    print(f"调用LLM生成摘要: {p['name']}")
     dashscope.api_key = os.environ.get("DASHSCOPE_API_KEY")
     prompt = (
         f"你是一个资深架构师。请深入分析GitHub项目 '{p['name']}'。描述：{p['desc']}。\n"
@@ -42,7 +51,15 @@ def get_rich_summary(p):
     try:
         resp = Generation.call(model="qwen-max", prompt=prompt, result_format='message')
         if resp.status_code == 200:
-            return resp.output.choices[0].message.content
-        return f"【项目背景】{p['desc']}"
-    except:
-        return f"【项目背景】{p['desc']}"
+            summary = resp.output.choices[0].message.content
+            # 缓存生成的摘要
+            cache_summary(p['name'], summary)
+            return summary
+        fallback_summary = f"【项目背景】{p['desc']}"
+        cache_summary(p['name'], fallback_summary)
+        return fallback_summary
+    except Exception as e:
+        print(f"LLM调用失败: {e}")
+        fallback_summary = f"【项目背景】{p['desc']}"
+        cache_summary(p['name'], fallback_summary)
+        return fallback_summary
