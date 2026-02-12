@@ -74,9 +74,39 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
                 font-size: 20px;
             }}
             
-            /* 在移动端隐藏导航按钮 */
+            /* 在移动端隐藏圆形导航按钮 */
             .nav-button {{
                 display: none;
+            }}
+        }}
+        
+        /* 移动端底部导航栏 */
+        @media screen and (max-width: 768px) {{
+            .mobile-nav {{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-background);
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }}
+            
+            .mobile-nav-btn {{
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+                color: var(--primary-color);
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+            }}
+            
+            .mobile-nav-btn:hover {{
+                background-color: #f0f0f0;
             }}
         }}
         
@@ -234,7 +264,13 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
             <div class="nav-button top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
             <div class="nav-button bottom-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">↓</div>
             
-            <div class="footer">
+            <!-- 移动端底部导航栏 -->
+            <div class="mobile-nav">
+                <a href="#" class="mobile-nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">回到顶部</a>
+                <a href="#footer" class="mobile-nav-btn">跳到底部</a>
+            </div>
+            
+            <div class="footer" id="footer">
                 <p>© 2026 GitHub Trending 日报 | 数据来源于 GitHub Trending</p>
             </div>
         </div>
