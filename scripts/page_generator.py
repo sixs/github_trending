@@ -41,6 +41,10 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
             padding: 0;
         }}
         
+        html, body {{
+            overflow-x: hidden; /* 防止横向滚动 */
+        }}
+        
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -53,6 +57,27 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }}
+        
+        /* 移动端优化 */
+        @media screen and (max-width: 768px) {{
+            .content {{
+                padding: 10px;
+                width: 100%;
+            }}
+            
+            .project {{
+                padding: 15px;
+            }}
+            
+            .project-title {{
+                font-size: 20px;
+            }}
+            
+            /* 在移动端隐藏导航按钮 */
+            .nav-button {{
+                display: none;
+            }}
         }}
         
         .project {{
@@ -107,6 +132,39 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
             margin-right: 10px;
         }}
         
+        /* 回到顶部和底部按钮 */
+        .nav-button {{
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            right: 20px;
+            /* 确保按钮不会超出视口导致滚动 */
+            max-width: calc(100vw - 20px);
+        }}
+        
+        .top-button {{
+            top: 50%;
+            transform: translateY(-100%);
+        }}
+        
+        .bottom-button {{
+            top: 58%;
+            transform: translateY(-100%);
+        }}
+        
+        .nav-button:hover {{
+            background-color: #0251a0;
+        }}
+        
         /* 页脚 */
         .footer {{
             text-align: center;
@@ -152,6 +210,7 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
                 <div class="project-stats">
                     <span>总星标: {p['total_stars']}</span> | 
                     <span>新增星标: {p['added_stars']}</span>
+                    {f' | <span>语言: {p["language"]}</span>' if p.get('language') else ''}
                 </div>
                 
                 <div>
@@ -170,6 +229,10 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
             <div style="text-align: center; margin: 30px 0;">
                 <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 4px; font-size: 16px;">← 返回历史日报首页</a>
             </div>
+            
+            <!-- 回到顶部和底部按钮 -->
+            <div class="nav-button top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
+            <div class="nav-button bottom-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">↓</div>
             
             <div class="footer">
                 <p>© 2026 GitHub Trending 日报 | 数据来源于 GitHub Trending</p>

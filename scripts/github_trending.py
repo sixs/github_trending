@@ -35,6 +35,10 @@ def fetch_trending(since):
                 # 获取用户名（从链接中提取）
                 user_name = name.split('/')[0] if '/' in name else ""
                 
+                # 获取编程语言
+                language_elem = art.select_one('span[itemprop="programmingLanguage"]')
+                language = language_elem.get_text(strip=True) if language_elem else ""
+                
                 stats = art.select('a.Link--muted')
                 total_stars = stats[0].get_text(strip=True) if len(stats) > 0 else "0"
                 added_stars = art.select_one('span.d-inline-block.float-sm-right')
@@ -45,6 +49,7 @@ def fetch_trending(since):
                     "link": link, 
                     "desc": desc, 
                     "user_name": user_name,
+                    "language": language,
                     "total_stars": total_stars,
                     "added_stars": added_stars
                 })
