@@ -6,9 +6,10 @@ GitHub Trending 日报生成器
 import sys
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
-# 在程序开始时获取统一的日期，避免跨日期问题
-CURRENT_DATE = datetime.now()
+# 在程序开始时获取统一的北京时间，避免跨日期和时区不一致问题
+CURRENT_DATE = datetime.now(ZoneInfo("Asia/Shanghai"))
 
 sys.path.append(os.path.join(os.path.dirname(__file__)))
 
@@ -38,11 +39,11 @@ def main():
         
         # 发送到微信公众号（如果需要）
         print("正在推送至微信公众号...")
-        publish_to_wechat(final_html)
+        publish_to_wechat(final_html, CURRENT_DATE)
         
         # 发送到飞书机器人（如果需要）
         print("正在推送至飞书机器人...")
-        publish_to_feishu(final_html)
+        publish_to_feishu(final_html, CURRENT_DATE)
         
         print("所有任务完成！")
     else:

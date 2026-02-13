@@ -13,19 +13,21 @@ except ImportError:
     def get_github_pages_url():
         return "https://sixs.github.io/github_trending/"
 
-def get_trending_page_url():
+def get_trending_page_url(current_date=None):
     """
     获取当前日期的GitHub Trending日报页面URL
     
     Returns:
         str: 当前日期的日报页面URL
     """
-    from datetime import datetime
+    if current_date is None:
+        current_date = datetime.now()
+
     base_url = get_github_pages_url()
     if base_url.endswith('/'):
         base_url = base_url[:-1]
     
-    date_str = datetime.now().strftime('%Y-%m-%d')
+    date_str = current_date.strftime('%Y-%m-%d')
     return f"{base_url}/trending-{date_str}.html"
 
 # 缓存tenant_access_token及其过期时间
@@ -131,16 +133,20 @@ def send_message_to_receivers(receive_ids, message_content, receive_id_type="ope
     print(f"飞书消息推送完成: 成功 {success_count} 个, 失败 {failed_count} 个")
     return success_count > 0
 
-def create_interactive_message(html_content):
+def create_interactive_message(html_content, current_date=None):
     """
     创建交互式消息卡片
     
     Args:
         html_content (str): HTML内容
+        current_date (datetime, optional): 统一日期，默认为当前时间
         
     Returns:
         dict: 消息卡片内容
     """
+    if current_date is None:
+        current_date = datetime.now()
+
     return {
         "config": {
             "wide_screen_mode": True
@@ -148,7 +154,7 @@ def create_interactive_message(html_content):
         "header": {
             "template": "blue",
             "title": {
-                "content": f"【{datetime.now().strftime('%m%d')}】GitHub 热门项目日报",
+                "content": f"【{current_date.strftime('%m%d')}】GitHub 热门项目日报",
                 "tag": "plain_text"
             }
         },
@@ -170,20 +176,24 @@ def create_interactive_message(html_content):
                             "tag": "plain_text"
                         },
                         "type": "primary",
-                        "url": get_trending_page_url()
+                        "url": get_trending_page_url(current_date)
                     }
                 ]
             }
         ]
     }
 
-def publish_to_feishu_webhook(html_content):
+def publish_to_feishu_webhook(html_content, current_date=None):
     """
     通过Webhook将GitHub Trending日报推送到飞书机器人
     
     Args:
         html_content (str): HTML内容
+        current_date (datetime, optional): 统一日期，默认为当前时间
     """
+    if current_date is None:
+        current_date = datetime.now()
+
     try:
         webhook_url = os.environ.get("FEISHU_WEBHOOK_URL")
         if not webhook_url:
@@ -200,7 +210,7 @@ def publish_to_feishu_webhook(html_content):
                 "header": {
                     "template": "blue",
                     "title": {
-                        "content": f"【{datetime.now().strftime('%m%d')}】GitHub 热门项目日报",
+                        "content": f"【{current_date.strftime('%m%d')}】GitHub 热门项目日报",
                         "tag": "plain_text"
                     }
                 },
@@ -222,7 +232,7 @@ def publish_to_feishu_webhook(html_content):
                                     "tag": "plain_text"
                                 },
                                 "type": "primary",
-                                "url": get_trending_page_url()
+                                "url": get_trending_page_url(current_date)
                             }
                         ]
                     }
@@ -250,13 +260,17 @@ def publish_to_feishu_webhook(html_content):
     except Exception as e:
         print(f"飞书Webhook推送异常: {e}")
 
-def publish_to_feishu_app(html_content):
+def publish_to_feishu_app(html_content, current_date=None):
     """
     通过App ID和App Secret将GitHub Trending日报推送到指定的receive_id列表
     
     Args:
         html_content (str): HTML内容
+        current_date (datetime, optional): 统一日期，默认为当前时间
     """
+    if current_date is None:
+        current_date = datetime.now()
+
     try:
         # 检查是否配置了App ID和App Secret
         app_id = os.environ.get("FEISHU_APP_ID")
@@ -287,7 +301,7 @@ def publish_to_feishu_app(html_content):
             return
             
         # 创建消息内容
-        message_content = create_interactive_message(html_content)
+        message_content = create_interactive_message(html_content, current_date)
         
         # 发送消息
         send_message_to_receivers(receive_ids, message_content)
@@ -295,20 +309,24 @@ def publish_to_feishu_app(html_content):
     except Exception as e:
         print(f"飞书App推送异常: {e}")
 
-def publish_to_feishu(html_content):
+def publish_to_feishu(html_content, current_date=None):
     """
     将GitHub Trending日报推送到飞书
     
     Args:
         html_content (str): HTML内容
+        current_date (datetime, optional): 统一日期，默认为当前时间
     """
+    if current_date is None:
+        current_date = datetime.now()
+
     # 优先使用Webhook推送
     webhook_url = os.environ.get("FEISHU_WEBHOOK_URL")
     if webhook_url:
-        publish_to_feishu_webhook(html_content)
+        publish_to_feishu_webhook(html_content, current_date)
     
     # 如果配置了App ID和App Secret，则也使用App推送
     app_id = os.environ.get("FEISHU_APP_ID")
     app_secret = os.environ.get("FEISHU_APP_SECRET")
     if app_id and app_secret:
-        publish_to_feishu_app(html_content)
+        publish_to_feishu_app(html_content, current_date)

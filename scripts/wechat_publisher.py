@@ -2,19 +2,23 @@ import os
 import requests
 from datetime import datetime
 
-def publish_to_wechat(html_content):
+def publish_to_wechat(html_content, current_date=None):
     """
     将GitHub Trending日报推送到微信公众号
     
     Args:
         html_content (str): HTML内容
+        current_date (datetime, optional): 统一日期，默认为当前时间
     """
+    if current_date is None:
+        current_date = datetime.now()
+
     try:
         response = requests.post(
             os.environ.get("SERVER_URL"),
             headers={"X-Api-Key": os.environ.get("SERVER_API_KEY")},
             json={
-                "title": f"【{datetime.now().strftime('%m%d')}】GitHub 热门项目日报",
+                "title": f"【{current_date.strftime('%m%d')}】GitHub 热门项目日报",
                 "content": html_content,
                 "thumb_id": os.environ.get("THUMB_ID"),
                 "digest": "全方位解析今日热门 GitHub 项目：背景、架构与核心特性。"

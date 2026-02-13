@@ -68,7 +68,7 @@ github_trending/
 ## ⚙️ 部署配置
 
 ### 环境要求
-- Python 3.7+
+- Python 3.9+（推荐 3.10，与 GitHub Actions 保持一致）
 - 依赖包：`requests`, `beautifulsoup4`, `dashscope`
 
 ### 目录结构说明
@@ -134,7 +134,7 @@ python scripts/main.py
 ```
 
 ### 自动运行
-项目配置了每日自动运行的 GitHub Actions 工作流，默认在北京时间 8:00 执行。
+项目配置了每日自动运行的 GitHub Actions 工作流，默认在北京时间 07:30 执行（对应 UTC 23:30）。
 
 ## 🛡️ 安全性
 

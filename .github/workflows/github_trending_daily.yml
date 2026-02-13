@@ -13,6 +13,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
     # 关键优化 1: 显式声明权限，确保能自动生成 gh-pages 分支
     permissions:
       contents: write
@@ -33,6 +35,14 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f scripts/requirements.txt ]; then pip install -r scripts/requirements.txt; fi
 
+    - name: Restore LLM summary cache
+      uses: actions/cache@v4
+      with:
+        path: data/project_summaries_cache.json
+        key: project-summary-cache-${{ runner.os }}-${{ github.repository }}-${{ github.ref_name }}-${{ github.run_id }}
+        restore-keys: |
+          project-summary-cache-${{ runner.os }}-${{ github.repository }}-${{ github.ref_name }}-
+
     - name: Run GitHub Trending Collector
       run: python scripts/main.py
       env:
@@ -45,6 +55,21 @@ jobs:
         FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
         FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
         FEISHU_RECEIVE_IDS: ${{ secrets.FEISHU_RECEIVE_IDS }}
+
+    - name: Show cache file status
+      run: |
+        if [ -f "data/project_summaries_cache.json" ]; then
+          echo "Cache file exists."
+          ls -lh data/project_summaries_cache.json
+          python - <<'PY'
+        import json
+        with open('data/project_summaries_cache.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        print(f"Cached project summaries: {len(data)}")
+        PY
+        else
+          echo "Cache file does not exist after run."
+        fi
 
     # 关键优化 2: 部署前的检查步骤，如果 public 没生成，Action 会在这里报错报错而不是静默结束
     - name: Check for build artifacts
