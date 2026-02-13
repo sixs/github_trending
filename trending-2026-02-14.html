@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trending - 2026 / 02 / 14</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --background-color: #f6f8fa;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            overflow-x: hidden; /* 防止横向滚动 */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        /* 内容区域 */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 移动端优化 */
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .project {
+                padding: 15px;
+            }
+            
+            .project-title {
+                font-size: 20px;
+            }
+            
+            /* 在移动端隐藏圆形导航按钮 */
+            .nav-button {
+                display: none;
+            }
+        }
+        
+        /* 移动端底部导航栏 */
+        @media screen and (max-width: 768px) {
+            .mobile-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-background);
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            .mobile-nav-btn {
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+                color: var(--primary-color);
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+            
+            .mobile-nav-btn:hover {
+                background-color: #f0f0f0;
+            }
+        }
+        
+        .project {
+            background: var(--card-background);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #24292e;
+        }
+        
+        .project-stats {
+            font-size: 14px;
+            color: #586069;
+            margin-bottom: 15px;
+        }
+        
+        .project-content {
+            margin-bottom: 15px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            color: #24292e;
+        }
+        
+        .rank-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #666;
+            margin-right: 10px;
+        }
+        
+        /* 回到顶部和底部按钮 */
+        .nav-button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            right: 20px;
+            /* 确保按钮不会超出视口导致滚动 */
+            max-width: calc(100vw - 20px);
+        }
+        
+        .top-button {
+            top: 50%;
+            transform: translateY(-100%);
+        }
+        
+        .bottom-button {
+            top: 58%;
+            transform: translateY(-100%);
+        }
+        
+        .nav-button:hover {
+            background-color: #0251a0;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div style="text-align: center; margin-bottom: 20px; color: #666;">
+            <p>2026 / 02 / 14</p>
+        </div><div class="section-title">今日趋势</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">SynkraAI/aios-core</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 409</span> | 
+                    <span>新增星标: 105 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Synkra AIOS 项目旨在解决全栈开发过程中，因技术栈复杂、工具链繁多导致的开发效率低下和系统集成困难的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过提供一个<strong style="color:#000;">AI驱动</strong>的编排系统来简化从需求分析到部署上线的全流程；它定位为一个能够智能识别项目需求，并自动配置最佳实践和技术选型的核心框架。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">智能代码生成与优化</strong>：基于深度学习模型，能够根据用户提供的描述自动生成高质量代码片段或整个模块，同时对现有代码进行性能优化。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自动化测试与部署流水线</strong>：构建了从单元测试、集成测试到持续集成/持续部署(CI/CD)的一站式解决方案，极大地提高了软件交付的速度和质量。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/SynkraAI/aios-core" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/SynkraAI" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">ChromeDevTools/chrome-devtools-mcp</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 24,707</span> | 
+                    <span>新增星标: 357 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了开发者在调试和测试多端应用时，因环境差异导致的效率低下问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;ChromeDevTools/chrome-devtools-mcp 旨在通过提供一个统一的<strong style="color:#000;">跨平台通信协议</strong>来简化开发者工具与目标环境之间的交互过程。它允许开发者利用熟悉的Chrome DevTools界面去调试那些运行于非浏览器环境中的代码。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">跨平台支持</strong>：该方案能够无缝地连接到多种不同的执行环境中，包括但不限于Node.js后端服务、移动应用程序等，极大地扩展了Chrome DevTools的应用范围。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">标准化协议</strong>：通过定义一套标准的消息传递接口，使得任何遵循此规范的客户端都可以轻松集成进现有工作流中，促进了工具链之间更好的互操作性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ChromeDevTools" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">danielmiessler/Personal_AI_Infrastructure</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,019</span> | 
+                    <span>新增星标: 588 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了个人或小型团队在构建和利用<strong style="color:#000;">人工智能基础设施</strong>时面临的资源和技术壁垒问题，使得更多人能够便捷地利用AI技术放大自身的能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;通过提供一套可定制的、模块化的<strong style="color:#000;">个人AI基础设施</strong>方案，'danielmiessler/Personal_AI_Infrastructure'旨在让非专业人员也能轻松搭建起自己的AI服务；它侧重于简化部署流程与管理操作，同时保持高度灵活性以适应不同场景下的需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">模块化设计</strong>：整个系统采用微服务架构思想进行开发，每个组件都可以独立运行或与其他部分集成工作，极大地增强了系统的可扩展性和维护性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">用户友好界面</strong>：除了强大的后端支持外，该项目还特别注重前端体验的设计，提供了直观易用的操作界面，即使是缺乏深厚技术背景的用户也能够快速上手并有效利用该平台提供的各项功能。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/danielmiessler/Personal_AI_Infrastructure" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/danielmiessler" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">patchy631/ai-engineering-hub</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 29,283</span> | 
+                    <span>新增星标: 386 stars today</span>
+                     | <span>语言: Jupyter Notebook</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过提供深入的教程和技术资源，解决了人工智能领域中开发者对于<strong style="color:#000;">大语言模型（LLM）</strong>、<strong style="color:#000;">检索增强生成（RAG）</strong>以及实际AI代理应用知识获取困难的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'patchy631/ai-engineering-hub' 定位为一个全面的学习平台，旨在帮助AI工程师和研究人员掌握当前最前沿的技术与实践案例。它不仅涵盖了理论基础，还提供了丰富的动手实操机会，使得学习者能够更加直观地理解并应用这些复杂概念。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高质量教育资源</strong>：项目内含详尽且易于理解的教学文档，覆盖了从基础到高级的各种主题，特别强调了<strong style="color:#000;">大语言模型</strong>与<strong style="color:#000;">检索增强生成技术</strong>的应用。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">实战导向的设计</strong>：除了理论讲解外，还提供了多个基于真实世界场景的示例工程，让参与者能够在实践中加深对所学知识的理解，并激发创新思维解决实际问题。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/patchy631/ai-engineering-hub" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/patchy631" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">TelegramMessenger/MTProxy</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 5,875</span> | 
+                    <span>新增星标: 72 stars today</span>
+                     | <span>语言: C</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>MTProxy项目解决了在某些网络环境下访问Telegram被限制的问题，通过提供一种特殊的代理方式来确保用户能够稳定地使用Telegram服务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>MTProxy是基于Telegram自定义协议设计的一种轻量级代理解决方案，旨在为用户提供一个更安全、更稳定的通信环境。它通过<strong style="color:#000;">自定义传输协议</strong>和加密技术，在不牺牲性能的前提下增强了数据传输的安全性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自定义传输协议</strong>：不同于传统的HTTP或HTTPS协议，MTProxy采用了专门为Telegram优化过的协议，这使得即使在网络审查严格的情况下也能保持良好的连通性和较低的延迟。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">强加密支持</strong>：为了保护用户的隐私与信息安全，MTProxy引入了强大的端到端加密机制，确保只有消息的发送者和接收者才能解密信息内容，从而有效抵御中间人攻击等安全威胁。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/TelegramMessenger/MTProxy" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/TelegramMessenger" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">google-deepmind/superhuman</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 366</span> | 
+                    <span>新增星标: 108 stars today</span>
+                     | <span>语言: TeX</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'google-deepmind/superhuman' 项目通过开发能够超越人类水平的游戏AI，解决了在复杂决策环境中实现高效学习与适应性这一人工智能领域的关键挑战。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目基于强化学习算法，特别是利用了<strong style="color:#000;">自对弈</strong>（Self-Play）技术来训练AI模型；它旨在证明机器可以在特定任务上达到甚至超过顶尖人类玩家的表现。此外，项目还强调了如何通过大规模并行计算资源优化训练过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">AlphaZero框架</strong>的应用：通过结合蒙特卡洛树搜索与深度神经网络，使得AI能够在没有人类知识输入的情况下自主学习游戏策略。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">大规模分布式训练系统</strong>的设计：支持数千个CPU/GPU同时参与训练，极大地加速了模型收敛速度，并提高了最终解决方案的质量。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/google-deepmind/superhuman" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/google-deepmind" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">cheahjs/free-llm-api-resources</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 10,615</span> | 
+                    <span>新增星标: 442 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了开发人员和研究人员在使用大型语言模型（LLM）时面临的高昂成本问题，通过提供一系列免费的LLM推理资源API接口，降低了进入门槛。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>'cheahjs/free-llm-api-resources' 定位为一个聚合了多种可免费访问的<strong style="color:#000;">大型语言模型</strong>API服务的清单，旨在帮助用户轻松找到适合自己需求的服务；它不直接提供API服务，而是作为一个信息平台，汇总了来自不同提供商的免费资源链接与使用指南。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多样性</strong>：收集并整理了来自全球多个供应商提供的各种类型的<strong style="color:#000;">免费大型语言模型</strong>API资源，涵盖了文本生成、问答系统等多个应用场景。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">易用性</strong>：不仅列出了可用的服务列表，还为每个条目提供了详细的接入指南及示例代码，极大地简化了开发者集成这些API的过程。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/cheahjs/free-llm-api-resources" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/cheahjs" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">HandsOnLLM/Hands-On-Large-Language-Models</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 21,147</span> | 
+                    <span>新增星标: 318 stars today</span>
+                     | <span>语言: Jupyter Notebook</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目通过提供一系列实用的代码示例和教程，解决了在大型语言模型领域内，开发者和研究人员面临的学习曲线陡峭及实践资料匮乏的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>"Hands-On Large Language Models" 项目旨在为O'Reilly出版的同名书籍提供官方代码支持，它不仅涵盖了从基础理论到高级应用的广泛内容，还特别强调了<strong style="color:#000;">实战性</strong>与<strong style="color:#000;">可操作性</strong>，帮助读者通过实际编程练习来加深对大型语言模型的理解。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">端到端案例</strong>：提供了多个完整的、覆盖不同应用场景（如文本生成、对话系统等）的<strong style="color:#000;">端到端实现</strong>，让学习者能够直接运行并修改这些例子以适应自己的需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多模型兼容</strong>：支持多种流行的大型语言模型框架（包括但不限于Hugging Face Transformers），并通过统一接口简化了跨平台/框架间切换的成本，增强了项目的<strong style="color:#000;">灵活性</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/HandsOnLLM/Hands-On-Large-Language-Models" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/HandsOnLLM" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">THUDM/slime</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,073</span> | 
+                    <span>新增星标: 85 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在大规模语言模型（LLM）训练后，如何通过强化学习方法进一步优化模型性能以适应特定任务需求的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#000;">Slime</strong> 是一个专为大规模语言模型设计的后训练框架，旨在利用<strong style="color:#000;">强化学习</strong>技术来微调已有的预训练模型，使其更加高效地解决下游任务。该框架提供了一系列工具和算法支持，使得用户能够轻松实现从环境设置到策略优化的全过程自动化。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">强化学习微调</strong>：通过引入先进的强化学习算法，Slime允许开发者针对具体应用场景对已有大规模语言模型进行定制化调整，从而显著提升模型在特定任务上的表现。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">易用性与灵活性</strong>：Slime框架不仅提供了丰富的API接口方便集成进现有工作流中，还支持多种不同类型的强化学习方法及自定义奖励函数的设计，极大地增强了其在处理复杂问题时的适应性和可扩展性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/THUDM/slime" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/THUDM" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">DebugSwift/DebugSwift</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 1,419</span> | 
+                    <span>新增星标: 50 stars today</span>
+                     | <span>语言: Swift</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了iOS开发者在调试应用程序过程中遇到的效率低下和复杂性问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;DebugSwift是一个专为iOS应用设计的调试工具包，旨在通过提供一系列实用的调试功能来简化开发者的调试过程。它利用了<strong style="color:#000;">Swift</strong>语言的强大特性和iOS平台的API，使得追踪问题、分析性能变得更为直观与高效。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">日志记录增强</strong>：提供了比标准`print()`函数更加强大的日志记录机制，支持自定义格式化输出以及按条件过滤信息级别等功能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">内存泄漏检测</strong>：集成了先进的内存管理工具，能够帮助开发者快速定位并修复应用程序中的<strong style="color:#000;">内存泄漏</strong>问题，从而提高程序稳定性和性能。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/DebugSwift/DebugSwift" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/DebugSwift" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">本周热门</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">KeygraphHQ/shannon</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 21,617</span> | 
+                    <span>新增星标: 16,805 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了网络安全领域中，自动化发现并利用Web应用程序漏洞的难题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Shannon是一个完全自主的人工智能黑客工具，旨在通过分析源代码和运行时行为来自动识别Web应用中的真实可利用漏洞。它采用了先进的机器学习模型以达到在无提示条件下对复杂安全问题的高度准确识别。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自适应学习算法</strong>：通过不断学习新的攻击模式与防御机制，Shannon能够自我进化，提高其发现未知漏洞的能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高度精准定位</strong>：基于强大的<strong style="color:#000;">语义理解能力</strong>，Shannon能够在大量代码中精确地定位到可能存在风险的部分，从而极大减少了误报率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/KeygraphHQ/shannon" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/KeygraphHQ" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">google/langextract</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 31,990</span> | 
+                    <span>新增星标: 6,996 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了从非结构化文本中高效、准确地提取结构化信息的难题，特别是在需要保持信息来源精确追踪和可视化交互的应用场景中。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*google/langextract* 通过利用<strong style="color:#000;">大型语言模型（LLMs）</strong>来理解和解析文本内容，并结合先进的自然语言处理技术，实现了对复杂文本信息的深层次理解和提取。此外，它还提供了<strong style="color:#000;">源代码级别的精确定位功能</strong>与直观的可视化工具，使得用户能够轻松追踪到所提取信息在原始文档中的具体位置，从而增强了信息提取过程的透明度和可信度。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">精准源定位</strong>：不仅能够从大量文本中准确抽取所需信息，而且能够精确定位这些信息在原文档中的出处，这对于需要验证信息真实性和来源的研究或应用来说至关重要。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">交互式可视化</strong>：提供了一个强大的<strong style="color:#000;">可视化界面</strong>，允许用户以图形化的方式探索和理解数据提取的结果，包括但不限于信息之间的关系、重要性评分等，极大地提高了用户体验及工作效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/google/langextract" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/google" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">github/gh-aw</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 2,178</span> | 
+                    <span>新增星标: 1,594 stars this week</span>
+                     | <span>语言: Go</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>GitHub Agentic Workflows（gh-aw）旨在解决开发人员在自动化工作流程中遇到的复杂性和效率问题，通过提供一个更加灵活和强大的自动化工具来提升开发和运维效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一种基于<strong style="color:#000;">GitHub Actions</strong>的工作流扩展，允许用户定义更复杂的逻辑和交互；它通过引入智能代理的概念，使得自动化任务不仅限于简单的脚本执行，而是能够根据环境动态调整其行为，从而实现更高级别的自动化。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">智能代理</strong>：通过集成先进的机器学习模型，gh-aw 能够理解上下文信息，并据此做出决策或推荐行动方案，极大提高了自动化流程的灵活性与适应性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">多语言支持</strong>：除了支持常见的编程语言外，gh-aw 还特别强调了对多种编程范式及领域特定语言的支持，使得不同背景的开发者都能轻松上手并利用这一工具优化自己的开发流程。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/github/gh-aw" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/github" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">openai/skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,354</span> | 
+                    <span>新增星标: 4,141 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'openai/skills' 项目旨在解决编程教育与软件开发领域中，开发者难以快速找到适合自身技术水平或项目需求的学习资源和代码示例这一痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过构建一个结构化的<strong style="color:#000;">技能目录</strong>，为不同层次的程序员提供从基础到高级的编程知识、最佳实践以及实用技巧；它基于Codex的能力，能够生成高质量的代码样例，并支持多种编程语言，帮助用户更高效地学习与解决问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多语言支持</strong>：不仅限于单一编程语言，而是覆盖了广泛的技术栈，使得无论使用哪种编程语言的开发者都能从中受益。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">智能推荐系统</strong>：利用<strong style="color:#000;">机器学习算法</strong>分析用户的浏览历史和偏好，从而向用户推荐最相关的学习资料或代码片段，提高学习效率和个人化体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openai/skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">Jeffallan/claude-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 2,155</span> | 
+                    <span>新增星标: 1,124 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了全栈开发者在面对复杂项目时，缺乏系统化、专业化的技能指导和代码优化支持的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*Claude-Skills* 通过提供一系列精心设计的<strong style="color:#000;">66项专业化技能</strong>，帮助全栈开发人员提升个人能力，并将Claude代码转换为能够辅助编程工作的专家级伙伴。它不仅是一份技能清单，更是一个促进持续学习和个人成长的平台。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">定制化学习路径</strong>：根据每个开发者的现有技术水平及兴趣方向量身打造学习计划，确保每个人都能以最有效的方式进步。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">交互式代码实践</strong>：利用先进的<strong style="color:#000;">AI技术</strong>，允许用户与虚拟助手进行互动式的编码练习，即时获得反馈和改进建议，极大地提高了学习效率和实践能力。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Jeffallan/claude-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Jeffallan" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">virattt/dexter</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,018</span> | 
+                    <span>新增星标: 4,197 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'virattt/dexter' 项目旨在解决金融研究领域中数据处理与分析效率低下、信息挖掘不足的问题，通过自动化手段提升深度金融研究的质量和速度。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一个自主代理，利用<strong style="color:#000;">自然语言处理</strong>技术和机器学习算法自动搜集、整理并分析大量金融相关文档及新闻，从而辅助研究人员快速获取有价值的洞察。它能够从非结构化文本中提取关键信息，并基于这些信息生成易于理解的报告或摘要。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多源异构数据整合</strong>：Dexter支持从多种不同来源（如新闻网站、社交媒体等）抓取数据，并能够有效处理包括文本、图像在内的多种类型的数据。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">智能语义理解和知识图谱构建</strong>：通过先进的<strong style="color:#000;">自然语言理解</strong>技术，Dexter不仅能准确解析文本内容，还能建立实体间的关系网络，形成丰富的知识图谱，帮助用户更直观地理解复杂的信息关系。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/virattt/dexter" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/virattt" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">badlogic/pi-mono</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 11,622</span> | 
+                    <span>新增星标: 4,215 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'badlogic/pi-mono' 项目旨在解决开发人员在构建和集成<strong style="color:#000;">人工智能代理</strong>时遇到的复杂性和不一致性问题，通过提供一套统一且易于使用的工具集来简化这一过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目定位于成为一站式的AI代理开发平台，它不仅提供了从命令行接口到图形用户界面的一系列库支持，还能够与流行的即时通讯软件如Slack无缝集成。技术上，pi-mono利用了最新的语言模型技术，并通过实现一个统一的<strong style="color:#000;">大型语言模型API</strong>来促进不同AI组件之间的高效协作。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">统一LLM API</strong>：通过定义一套标准接口，使得开发者可以轻松地接入不同的大型语言模型服务，极大地提高了灵活性和可扩展性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多模态交互支持</strong>：除了传统的文本交互外，pi-mono还支持通过<strong style="color:#000;">TUI（文本用户界面）</strong>和Web UI进行更直观的操作，满足了不同场景下的需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/badlogic/pi-mono" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/badlogic" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">hsliuping/TradingAgents-CN</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 17,200</span> | 
+                    <span>新增星标: 1,488 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了金融交易领域中，中文信息处理与理解不足的问题，提供了一个能够理解和执行中文指令的智能交易框架。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>TradingAgents-CN基于<strong style="color:#000;">多智能体系统</strong>和<strong style="color:#000;">大语言模型（LLM）</strong>构建，旨在通过自然语言处理技术为用户提供一个更加智能化、本地化的金融交易平台。它不仅支持中文输入，还能够根据用户的指令进行市场分析、策略制定及自动交易等操作。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多智能体协作</strong>：通过设计多个具有不同功能的智能体，如市场分析智能体、策略生成智能体等，实现复杂任务的分解与协同工作，提高了系统的灵活性与效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">强大的自然语言处理能力</strong>：利用先进的<strong style="color:#000;">大语言模型</strong>技术，使得系统能够准确理解并响应复杂的中文指令，包括但不限于获取特定股票的历史数据、分析新闻对股价的影响等，极大地提升了用户体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/hsliuping/TradingAgents-CN" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/hsliuping" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">thedotmack/claude-mem</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 27,895</span> | 
+                    <span>新增星标: 4,200 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了开发者在编码过程中难以持续追踪和利用先前代码会话中产生的知识和上下文信息这一行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;通过集成<strong style="color:#000;">Claude AI</strong>的代理SDK，'thedotmack/claude-mem'能够自动捕获、压缩并通过智能方式重新注入用户与Claude交互时产生的所有相关信息到未来的开发会话中，从而增强工作效率和代码质量。它不仅记录了具体的代码更改，还包括了决策背后的思考过程，使得开发者可以更轻松地回顾历史工作并从中学习。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自动上下文管理</strong>：系统能够自动识别哪些信息对于当前任务是相关的，并将其无缝地整合进新的对话或编辑环境中，无需手动搜索历史记录。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">基于AI的内容压缩与提取</strong>：利用先进的<strong style="color:#000;">自然语言处理技术</strong>对大量的会话数据进行高效压缩及关键点提取，确保即使是长时间跨度下的大量数据也能被快速访问和理解。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/thedotmack/claude-mem" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/thedotmack" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">EveryInc/compound-engineering-plugin</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,790</span> | 
+                    <span>新增星标: 1,448 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在复杂工程项目中，代码管理和自动化构建过程中的效率与一致性问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该插件旨在通过提供一系列针对<strong style="color:#000;">Claude Code</strong>环境优化的工具和功能，简化开发流程并提高团队协作效率。它基于现有成熟的CI/CD实践之上，特别为需要高度定制化配置的大型软件项目设计。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">智能依赖管理</strong>：自动检测项目所需的库文件版本，并根据预设规则进行更新或锁定，确保整个开发周期内所有开发者使用的都是兼容且最新的依赖项。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自定义构建流程</strong>：支持用户根据具体需求定义个性化的构建步骤，包括但不限于编译、测试、打包等，极大提升了项目的灵活性与可维护性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/EveryInc/compound-engineering-plugin" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/EveryInc" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">chenyme/grok2api</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 1,402</span> | 
+                    <span>新增星标: 342 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在快速发展的AI应用领域中，传统API接口难以高效支持多样化、高并发的智能服务请求的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Grok2API基于<strong style="color:#000;">FastAPI</strong>框架重构，旨在为开发者提供一个更加灵活、高效的API平台，该平台不仅能够处理文本对话任务，还扩展到了图像生成与编辑等领域。通过引入先进的<strong style="color:#000;">流式处理</strong>和非流式处理机制，以及深度思考功能的支持，使得其应用场景更加广泛且响应速度更快。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">号池并发与自动负载均衡一体化</strong>：通过智能调度算法实现资源的最优分配，确保即使在高并发请求下也能保持稳定的服务性能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">全面适配最新Web调用格式</strong>：支持多种现代化的数据交换格式及协议（如JSON, GraphQL等），便于集成到现有系统或开发新应用时使用最新的Web技术栈。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/chenyme/grok2api" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/chenyme" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">linshenkx/prompt-optimizer</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 20,913</span> | 
+                    <span>新增星标: 1,536 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'linshenkx/prompt-optimizer' 项目针对自然语言处理领域中，特别是在使用大模型进行文本生成时，因提示词设计不当导致的生成质量低下问题提供了有效的解决方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过提供一系列工具和方法来帮助用户优化其输入给AI模型的<strong style="color:#000;">提示词</strong>，从而提高输出文本的相关性、准确性和创造性；它不仅限于简单的语法或风格调整，而是深入到如何更有效地利用上下文信息以及如何根据特定任务定制最佳提示策略。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">智能推荐系统</strong>：基于大量的训练数据和先进的机器学习算法，能够自动分析现有提示词，并给出改进建议，以增强最终生成内容的质量。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">多场景适用性</strong>：支持多种应用场景下的提示词优化需求，包括但不限于创意写作、代码生成、对话系统等，使得该工具具有广泛的实用性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/linshenkx/prompt-optimizer" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/linshenkx" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">tobi/qmd</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,306</span> | 
+                    <span>新增星标: 1,632 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了个人和团队在海量文档、知识库、会议记录等信息中快速查找所需内容的难题，提升了工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;tobi/qmd 定位为一个轻量级命令行界面搜索引擎，专为本地文件系统设计；它跟踪并应用了当前最先进的搜索技术，同时保证所有数据处理都在用户本地进行，不依赖于云端服务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">本地化处理</strong>：所有的索引建立与搜索操作完全在用户的设备上执行，无需上传任何数据到互联网，确保了极高的隐私性和安全性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高效搜索算法</strong>：采用了<strong style="color:#000;">先进的文本分析与检索技术</strong>，能够快速准确地从大量非结构化文本中提取相关信息，满足即时查询需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/tobi/qmd" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/tobi" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">Shubhamsaboo/awesome-llm-apps</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 94,774</span> | 
+                    <span>新增星标: 2,074 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过整合大型语言模型（LLM）与人工智能代理及检索增强生成（RAG）技术，解决了开发高效、智能应用时面临的技术选型难、集成复杂等痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'awesome-llm-apps' 是一个精选的开源项目集合，旨在为开发者提供基于<strong style="color:#000;">OpenAI</strong>、<strong style="color:#000;">Anthropic</strong>、Gemini以及其他开源模型构建的应用程序示例。它不仅促进了不同领域内AI解决方案的发展，还加速了从理论到实践的转化过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多模型支持</strong>：项目展示了如何跨多个先进的LLM平台进行开发，包括但不限于OpenAI和Anthropic的产品，这使得用户能够根据自身需求灵活选择最适合自己的模型。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;"></strong>检索增强生成(RAG)技术集成**：通过将传统信息检索系统与强大的生成式AI相结合，增强了应用程序在处理特定任务时的信息准确性和上下文理解能力，从而提升了用户体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Shubhamsaboo/awesome-llm-apps" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Shubhamsaboo" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">likec4/likec4</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 2,616</span> | 
+                    <span>新增星标: 962 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'likec4/likec4' 项目解决了软件开发过程中架构图与实际代码经常不同步、难以维护的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过自动化地从源代码生成<strong style="color:#000;">实时更新</strong>的架构图，帮助团队更好地可视化和理解系统结构；同时支持协作编辑，确保所有成员对项目的架构有共同的理解和认知。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自动同步</strong>：能够根据最新的代码库状态自动生成或更新架构图，保证了文档与实现的一致性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">协作友好</strong>：提供了一个平台让开发者可以共同编辑和讨论架构设计，增强了团队之间的沟通效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/likec4/likec4" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/likec4" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#16</span>
+                    <span class="project-title">microsoft/RD-Agent</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 11,114</span> | 
+                    <span>新增星标: 294 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在AI时代，研发过程中数据处理和模型训练效率低下、自动化程度不足的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;R&D-Agent 旨在通过<strong style="color:#000;">人工智能驱动的数据处理</strong>与模型优化流程，实现研发过程的高度自动化；它专注于为工业生产提供一个能够自我学习并持续改进的研发辅助系统。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">自适应学习能力</strong>：能够根据历史数据及当前任务需求自动调整算法参数，提高模型训练的速度与准确性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">端到端的自动化流水线</strong>：从原始数据收集到最终模型部署整个流程实现了无缝衔接，极大简化了开发者的操作步骤。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/microsoft/RD-Agent" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/microsoft" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">月度榜单</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">openclaw/openclaw</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 191,840</span> | 
+                    <span>新增星标: 184,746 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了用户在不同操作系统和平台上难以获得统一且高效的个人AI助手体验的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*Openclaw* 定位为一个跨平台的个人AI助手解决方案，旨在通过提供一致性的用户体验来打破操作系统之间的壁垒。它利用了<strong style="color:#000;">人工智能</strong>技术来理解用户需求，并通过自然语言处理等技术实现与用户的智能交互。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">跨平台兼容性</strong>：支持多种操作系统（如Windows、macOS、Linux）及移动设备，确保用户可以在任何设备上享受无缝连接的服务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自定义能力</strong>：提供了丰富的API接口以及插件系统，允许开发者根据自己的需要定制<strong style="color:#000;">AI助手</strong>的功能，从而满足特定场景下的个性化需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openclaw/openclaw" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openclaw" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">vercel-labs/agent-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 20,214</span> | 
+                    <span>新增星标: 20,027 stars this month</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'<strong style="color:#000;">vercel-labs/agent-skills</strong>' 项目旨在解决在构建智能代理时，开发者面临的技术栈碎片化问题，提供了一站式的解决方案来简化开发流程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过集成多种预设技能，让开发者能够快速为他们的应用程序添加复杂的功能，如自然语言处理、内容生成等。它定位为一个开放平台，鼓励社区贡献新的技能模板，以促进技术创新和共享。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">模块化设计</strong>：采用高度模块化的架构，允许用户根据需求灵活选择和组合不同的技能组件，极大地提高了系统的可扩展性和维护性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">低代码/无代码友好</strong>：针对非专业编程人员优化了使用体验，通过直观的界面或简单的配置文件即可实现强大的功能定制，降低了技术门槛。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/vercel-labs/agent-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/vercel-labs" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">iOfficeAI/AionUi</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,689</span> | 
+                    <span>新增星标: 11,808 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了开发者在使用多种AI编码助手时，需要频繁切换工具和环境的不便，提供了一个统一的、本地化的开源平台来集成管理这些工具。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;AionUi定位为一个免费且开源的24/7协作开发环境，旨在通过集成如Gemini CLI, Claude Code等流行的AI辅助编程工具，简化开发者的工作流程。它允许用户在一个界面下轻松访问多个AI助手，从而提高开发效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多AI助手集成</strong>：支持包括但不限于Gemini CLI, Claude Code, Codex, Qwen Code等多种AI编码辅助工具的同时使用，极大地方便了开发者根据需求选择最适合的帮助。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">本地化运行</strong>：与许多在线服务不同，AionUi可以在用户的本地机器上运行，这不仅增强了数据安全性，还减少了对网络连接的依赖，使得即使在没有互联网的情况下也能高效工作。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/iOfficeAI/AionUi" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/iOfficeAI" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">badlogic/pi-mono</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 11,622</span> | 
+                    <span>新增星标: 9,580 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'badlogic/pi-mono' 项目旨在解决开发人员在构建和集成<strong style="color:#000;">人工智能代理</strong>时遇到的复杂性和不一致性问题，通过提供一套统一且易于使用的工具集来简化这一过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目定位于成为一站式的AI代理开发平台，它不仅提供了从命令行接口到图形用户界面的一系列库支持，还能够与流行的即时通讯软件如Slack无缝集成。技术上，pi-mono利用了最新的语言模型技术，并通过实现一个统一的<strong style="color:#000;">大型语言模型API</strong>来促进不同AI组件之间的高效协作。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">统一LLM API</strong>：通过定义一套标准接口，使得开发者可以轻松地接入不同的大型语言模型服务，极大地提高了灵活性和可扩展性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多模态交互支持</strong>：除了传统的文本交互外，pi-mono还支持通过<strong style="color:#000;">TUI（文本用户界面）</strong>和Web UI进行更直观的操作，满足了不同场景下的需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/badlogic/pi-mono" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/badlogic" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">obra/superpowers</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 51,059</span> | 
+                    <span>新增星标: 32,435 stars this month</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'obra/superpowers' 项目旨在解决软件开发过程中技能框架与实际工作流程脱轨的问题，提供了一种能够有效结合开发者技能与团队协作的解决方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过构建一个基于<strong style="color:#000;">角色和能力</strong>的系统来定义和管理软件开发过程中的各项任务，从而实现更高效、灵活的团队合作模式；它不仅仅是一个工具集合，更是一种新的软件开发方法论，强调个人成长与团队效能并重。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自定义角色与权限分配</strong>：允许根据项目需求和个人专长定制不同的角色，并赋予相应的操作权限，增强了团队成员间的协作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">集成式学习与发展路径</strong>：内置了针对不同技术栈的学习资源推荐机制，帮助开发者持续提升自身技能，同时促进整个团队技术水平的进步。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/obra/superpowers" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/obra" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">KeygraphHQ/shannon</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 21,617</span> | 
+                    <span>新增星标: 17,455 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了网络安全领域中，自动化发现并利用Web应用程序漏洞的难题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Shannon是一个完全自主的人工智能黑客工具，旨在通过分析源代码和运行时行为来自动识别Web应用中的真实可利用漏洞。它采用了先进的机器学习模型以达到在无提示条件下对复杂安全问题的高度准确识别。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自适应学习算法</strong>：通过不断学习新的攻击模式与防御机制，Shannon能够自我进化，提高其发现未知漏洞的能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高度精准定位</strong>：基于强大的<strong style="color:#000;">语义理解能力</strong>，Shannon能够在大量代码中精确地定位到可能存在风险的部分，从而极大减少了误报率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/KeygraphHQ/shannon" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/KeygraphHQ" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">VectifyAI/PageIndex</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,030</span> | 
+                    <span>新增星标: 9,721 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong><strong style="color:#000;">PageIndex</strong> 项目旨在解决在无向量（vectorless）环境下，基于推理的检索增强生成（RAG, Retrieval-Augmented Generation）技术中高效文档索引与检索的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过构建一个专注于文本内容理解和逻辑推理能力的文档索引系统，实现了无需依赖传统向量化方法即可完成高质量信息检索的目标。它利用先进的自然语言处理技术和深度学习模型来增强对复杂文档结构的理解和处理效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">双星__基于推理的信息检索__双星</strong>：PageIndex 引入了一种创新的信息检索机制，该机制能够根据上下文语义及逻辑关系进行精准匹配，而非单纯依靠关键词或向量相似度。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">双星__自适应文档理解__双星</strong>：系统具备强大的自适应能力，可以自动识别并解析不同类型、格式的文档，提高了对于非结构化数据处理的灵活性与准确性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/VectifyAI/PageIndex" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/VectifyAI" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">remotion-dev/remotion</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 36,463</span> | 
+                    <span>新增星标: 11,178 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#000;">Remotion</strong> 解决了视频制作过程中高度依赖手动操作和专业软件的问题，使得开发者能够通过编程方式创建视频内容。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目利用<strong style="color:#000;">React</strong>框架的强大功能，允许用户以编写网页的方式创建视频，将复杂的视频编辑任务转化为简单的组件化开发。它提供了一套完整的API，支持从动画到音频处理等各种视频制作需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">基于React的开发模式</strong>：采用广泛使用的前端技术栈之一<strong style="color:#000;">React</strong>作为基础，极大地降低了学习成本，并且可以让熟悉Web开发的人员快速上手视频创作。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">强大的合成能力</strong>：内置了对多种媒体格式的支持以及灵活的时间轴控制等功能，使得<strong style="color:#000;">Remotion</strong>不仅限于简单的图像序列拼接，而是能够处理更加复杂多变的视频合成任务。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/remotion-dev/remotion" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/remotion-dev" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">anthropics/skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 69,364</span> | 
+                    <span>新增星标: 30,672 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Anthropic的'skills'项目旨在解决构建高效、可复用且易于管理的AI代理技能时所面临的挑战，为开发者提供了一个开放平台来创建和分享这些技能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过定义一套标准化的接口和协议，使得不同功能的AI技能可以被轻松地集成到各种应用中；它不仅支持多种编程语言，还鼓励社区贡献，以促进<strong style="color:#000;">技能生态</strong>的发展。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">模块化设计</strong>：每个技能都被设计成独立的模块，这不仅简化了开发过程，也使得技能可以在不同的应用场景之间灵活迁移。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多语言兼容性</strong>：支持包括Python、JavaScript在内的多种编程语言编写技能，极大降低了开发者的学习成本和技术门槛。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">asgeirtj/system_prompts_leaks</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 31,391</span> | 
+                    <span>新增星标: 6,318 stars this month</span>
+                     | <span>语言: HTML</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目通过收集并公开来自ChatGPT、Claude & Gemini等流行聊天机器人的系统提示，解决了AI模型透明度不足的问题，使得研究者和开发者能够更深入地理解这些模型的行为基础。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>'asgeirtj/system_prompts_leaks' 定位为一个开源库，旨在提供一个平台让公众可以访问到各大知名聊天机器人内部使用的<strong style="color:#000;">系统提示</strong>；它不仅促进了人工智能领域的开放性与协作精神，还为想要改进或定制自己聊天机器人系统的开发者提供了宝贵的参考资料。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">逆向工程</strong>：通过对现有聊天服务输出的分析，采用复杂的算法和技术手段成功提取出隐藏于黑盒中的<strong style="color:#000;">系统级指导信息</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">跨平台兼容</strong>：所收集的数据被整理成易于理解和使用的格式，并且支持多种编程语言接口调用，极大地方便了不同背景的研究人员和开发团队快速上手利用。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/asgeirtj/system_prompts_leaks" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/asgeirtj" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">openai/skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,354</span> | 
+                    <span>新增星标: 6,707 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'openai/skills' 项目旨在解决编程教育与软件开发领域中，开发者难以快速找到适合自身技术水平或项目需求的学习资源和代码示例这一痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过构建一个结构化的<strong style="color:#000;">技能目录</strong>，为不同层次的程序员提供从基础到高级的编程知识、最佳实践以及实用技巧；它基于Codex的能力，能够生成高质量的代码样例，并支持多种编程语言，帮助用户更高效地学习与解决问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多语言支持</strong>：不仅限于单一编程语言，而是覆盖了广泛的技术栈，使得无论使用哪种编程语言的开发者都能从中受益。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">智能推荐系统</strong>：利用<strong style="color:#000;">机器学习算法</strong>分析用户的浏览历史和偏好，从而向用户推荐最相关的学习资料或代码片段，提高学习效率和个人化体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openai/skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">tobi/qmd</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,306</span> | 
+                    <span>新增星标: 6,653 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了个人和团队在海量文档、知识库、会议记录等信息中快速查找所需内容的难题，提升了工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;tobi/qmd 定位为一个轻量级命令行界面搜索引擎，专为本地文件系统设计；它跟踪并应用了当前最先进的搜索技术，同时保证所有数据处理都在用户本地进行，不依赖于云端服务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">本地化处理</strong>：所有的索引建立与搜索操作完全在用户的设备上执行，无需上传任何数据到互联网，确保了极高的隐私性和安全性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高效搜索算法</strong>：采用了<strong style="color:#000;">先进的文本分析与检索技术</strong>，能够快速准确地从大量非结构化文本中提取相关信息，满足即时查询需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/tobi/qmd" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/tobi" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">anomalyco/opencode</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 104,039</span> | 
+                    <span>新增星标: 39,755 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'anomalyco/opencode' 项目旨在解决开发者在代码审查、自动化测试以及持续集成过程中面临的效率低下和一致性差的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过提供一个开源的编码代理，实现了对开发流程中多个环节的支持，包括但不限于代码质量检查与改进建议自动生成；它定位于成为开发者日常工作中不可或缺的辅助工具，以提升软件开发的整体质量和速度。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">智能代码分析</strong>：利用先进的机器学习算法来识别代码中的潜在问题，并给出具体的修复建议。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">无缝集成能力</strong>：支持与主流的开发环境（如VS Code, IntelliJ IDEA等）及CI/CD平台（如Jenkins, GitLab CI等）进行<strong style="color:#000;">无缝对接</strong>，使得开发者可以轻松地将其纳入现有的工作流之中。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anomalyco/opencode" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anomalyco" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">thedotmack/claude-mem</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 27,895</span> | 
+                    <span>新增星标: 14,358 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了开发者在编码过程中难以持续追踪和利用先前代码会话中产生的知识和上下文信息这一行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;通过集成<strong style="color:#000;">Claude AI</strong>的代理SDK，'thedotmack/claude-mem'能够自动捕获、压缩并通过智能方式重新注入用户与Claude交互时产生的所有相关信息到未来的开发会话中，从而增强工作效率和代码质量。它不仅记录了具体的代码更改，还包括了决策背后的思考过程，使得开发者可以更轻松地回顾历史工作并从中学习。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自动上下文管理</strong>：系统能够自动识别哪些信息对于当前任务是相关的，并将其无缝地整合进新的对话或编辑环境中，无需手动搜索历史记录。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">基于AI的内容压缩与提取</strong>：利用先进的<strong style="color:#000;">自然语言处理技术</strong>对大量的会话数据进行高效压缩及关键点提取，确保即使是长时间跨度下的大量数据也能被快速访问和理解。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/thedotmack/claude-mem" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/thedotmack" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">eigent-ai/eigent</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 12,408</span> | 
+                    <span>新增星标: 9,641 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Eigent解决了远程协作和分布式团队在沟通、协作效率上的行业痛点，提供了一个高效的协同工作桌面环境。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>Eigent定位为一个开源的协作桌面平台，旨在通过集成多种工具和服务来提高团队成员之间的生产力与协作效率；它采用现代化的Web技术栈构建，支持跨平台使用，让不同操作系统下的用户能够无缝地共享同一个工作空间。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多用户实时协作</strong>：支持多人同时在线编辑同一文件或项目，极大提高了远程团队的工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高度可定制化</strong>：用户可以根据自己的需求自定义界面布局以及集成第三方应用，打造最适合个人或团队使用的个性化工作环境。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/eigent-ai/eigent" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/eigent-ai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#16</span>
+                    <span class="project-title">ThePrimeagen/99</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 3,767</span> | 
+                    <span>新增星标: 2,730 stars this month</span>
+                     | <span>语言: Lua</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在代码编辑器中高效集成AI助手以提升开发效率的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'ThePrimeagen/99' 是一个专注于为Neovim用户提供无缝AI辅助体验的插件，通过与多种AI服务接口对接，实现了代码补全、错误检测等智能支持功能。它定位于成为开发者日常工作中不可或缺的一部分，极大提高编码速度和质量。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多AI后端支持</strong>：允许用户根据需求选择不同的AI服务提供商，如OpenAI的GPT模型或其他开源替代方案，增强了灵活性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">深度集成Neovim</strong>：该插件利用了<strong style="color:#000;">Neovim API</strong>的强大能力，确保了与编辑器的高度兼容性和流畅的操作体验，使得AI辅助功能如同原生般自然融入到用户的日常工作流程中。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ThePrimeagen/99" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ThePrimeagen" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 4px; font-size: 16px;">← 返回历史日报首页</a>
+            </div>
+            
+            <!-- 回到顶部和底部按钮 -->
+            <div class="nav-button top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
+            <div class="nav-button bottom-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">↓</div>
+            
+            <!-- 移动端底部导航栏 -->
+            <div class="mobile-nav">
+                <a href="#" class="mobile-nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">回到顶部</a>
+                <a href="#footer" class="mobile-nav-btn">跳到底部</a>
+            </div>
+            
+            <div class="footer" id="footer">
+                <p>© 2026 GitHub Trending 日报 | 数据来源于 GitHub Trending</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
