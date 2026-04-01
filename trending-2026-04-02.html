@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trending - 2026 / 04 / 02</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --background-color: #f6f8fa;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            overflow-x: hidden; /* 防止横向滚动 */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        /* 内容区域 */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 移动端优化 */
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .project {
+                padding: 15px;
+            }
+            
+            .project-title {
+                font-size: 20px;
+            }
+            
+            /* 在移动端隐藏圆形导航按钮 */
+            .nav-button {
+                display: none;
+            }
+        }
+        
+        /* 移动端底部导航栏 */
+        @media screen and (max-width: 768px) {
+            .mobile-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-background);
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            .mobile-nav-btn {
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+                color: var(--primary-color);
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+            
+            .mobile-nav-btn:hover {
+                background-color: #f0f0f0;
+            }
+        }
+        
+        .project {
+            background: var(--card-background);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #24292e;
+        }
+        
+        .project-stats {
+            font-size: 14px;
+            color: #586069;
+            margin-bottom: 15px;
+        }
+        
+        .project-content {
+            margin-bottom: 15px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            color: #24292e;
+        }
+        
+        .rank-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #666;
+            margin-right: 10px;
+        }
+        
+        /* 回到顶部和底部按钮 */
+        .nav-button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            right: 20px;
+            /* 确保按钮不会超出视口导致滚动 */
+            max-width: calc(100vw - 20px);
+        }
+        
+        .top-button {
+            top: 50%;
+            transform: translateY(-100%);
+        }
+        
+        .bottom-button {
+            top: 58%;
+            transform: translateY(-100%);
+        }
+        
+        .nav-button:hover {
+            background-color: #0251a0;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div style="text-align: center; margin-bottom: 20px; color: #666;">
+            <p>2026 / 04 / 02</p>
+        </div><div class="section-title">今日趋势</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">anthropics/claude-code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 100,487</span> | 
+                    <span>新增星标: 10,087 stars today</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Claude Code 项目解决了开发者在编写代码过程中遇到的效率低下、代码理解困难以及繁琐的版本控制操作等痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过将自然语言处理技术与终端环境相结合，使得开发者能够使用自然语言指令来执行常见的开发任务；它旨在成为开发者的智能助手，帮助理解和管理代码库，从而提高编码速度和质量。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自然语言交互</strong>：用户可以通过简单的自然语言命令来请求Claude Code完成诸如代码搜索、重构或提交变更等任务，极大地简化了人机交互的过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">代码库理解能力</strong>：Claude Code具备对整个<strong style="color:#000;">代码库结构</strong>及其内部逻辑的理解能力，能够基于此提供更准确的帮助信息，如解释特定部分代码的功能或是建议可能的改进措施。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/claude-code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">microsoft/VibeVoice</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 34,382</span> | 
+                    <span>新增星标: 1,704 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Open-Source Frontier Voice AI</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/microsoft/VibeVoice" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/microsoft" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">google-research/timesfm</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 12,047</span> | 
+                    <span>新增星标: 358 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>TimesFM 解决了时间序列预测中数据量不足和模型泛化能力差的行业痛点，通过预训练模型提高了在不同场景下的预测准确性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>TimesFM 由 Google Research 开发，旨在利用大规模时间序列数据进行预训练，以创建一个能够适应多种下游任务的时间序列基础模型。该模型不仅提升了时间序列分析与预测的质量，还降低了对特定领域数据依赖性的要求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">跨域迁移学习</strong>：TimesFM 支持从一个领域学到的知识迁移到另一个相关但不同的领域，从而有效减少新应用场景下所需的数据量。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高效可扩展性</strong>：通过采用<strong style="color:#000;">Transformer架构</strong>，TimesFM 能够处理长序列数据，并且支持并行计算，极大地提高了模型训练效率及推理速度。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/google-research/timesfm" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/google-research" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">luongnv89/claude-howto</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,509</span> | 
+                    <span>新增星标: 3,336 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/luongnv89/claude-howto" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/luongnv89" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">axios/axios</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 108,856</span> | 
+                    <span>新增星标: 148 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;axios/axios 项目解决了在浏览器和Node.js环境中进行HTTP请求时，由于原生XMLHttpRequest接口的复杂性和局限性带来的开发效率低下及跨平台兼容性差的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;axios是一个基于<strong style="color:#000;">Promise</strong>设计的、用于浏览器和Node.js环境下的HTTP客户端库，它简化了发起网络请求的过程，并提供了统一的API来处理不同环境下的HTTP通信需求。通过支持拦截器、转换请求和响应数据等功能，axios使得开发者能够更高效地构建可维护的网络应用。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">基于Promise的设计</strong>：axios采用JavaScript中的<strong style="color:#000;">Promise</strong>对象来处理异步操作，这不仅提高了代码的可读性和可维护性，还允许用户利用.then()和.catch()等方法链式调用，从而更加灵活地控制请求流程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">广泛的浏览器与Node.js支持</strong>：axios能够在多种现代浏览器（包括IE）以及Node.js环境下运行，无需额外配置即可实现跨平台的数据交互能力，极大地提升了Web应用或后端服务在网络请求方面的通用性和便捷性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/axios/axios" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/axios" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">openai/codex</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 71,658</span> | 
+                    <span>新增星标: 2,345 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong><strong style="color:#000;">Codex</strong> 项目解决了开发者在编程过程中需要频繁切换工具和环境，以及代码补全、生成效率低下的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过将 <strong style="color:#000;">OpenAI Codex</strong> 模型集成到终端中，为用户提供了一个轻量级的编码助手，能够直接在用户的开发环境中提供智能代码建议与自动生成服务。它旨在提高开发者的编码速度与准确性，同时减少对于复杂IDE（集成开发环境）的依赖。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自然语言处理能力</strong>：利用先进的<strong style="color:#000;">自然语言处理技术</strong>，使得用户可以通过简单的自然语言指令来生成复杂的代码片段。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">无缝集成体验</strong>：支持多种编程语言，并且能够<strong style="color:#000;">无缝地集成到现有的开发工作流</strong>之中，无需改变开发者习惯的工作方式或学习新的工具使用方法。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openai/codex" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">f/prompts.chat</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 155,978</span> | 
+                    <span>新增星标: 442 stars today</span>
+                     | <span>语言: HTML</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了用户在使用大型语言模型时难以找到高质量、适用性强的<strong style="color:#000;">提示词</strong>的问题，提高了生成内容的质量和多样性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'f/prompts.chat' 作为一个开源社区平台，旨在让用户能够分享、发现并收集有用的<strong style="color:#000;">提示词</strong>；同时支持组织自建部署，确保数据隐私安全。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;它不仅提供了一个便捷的交流与学习环境，还通过灵活的架构设计满足了不同场景下的需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">开源性</strong>：允许任何人自由访问代码库，并根据自身需要进行修改或扩展，促进了技术共享与创新。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自托管能力</strong>：提供了详细的文档指导如何在本地服务器上安装运行该应用，使得企业或个人可以在完全控制数据的情况下享受其带来的便利。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/f/prompts.chat" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/f" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">本周热门</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">luongnv89/claude-howto</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,509</span> | 
+                    <span>新增星标: 13,440 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/luongnv89/claude-howto" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/luongnv89" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">microsoft/VibeVoice</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 34,382</span> | 
+                    <span>新增星标: 8,327 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Open-Source Frontier Voice AI</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/microsoft/VibeVoice" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/microsoft" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">mvanhorn/last30days-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 17,292</span> | 
+                    <span>新增星标: 11,933 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过整合多平台信息资源，解决了用户在短时间内难以全面了解某一话题最新动态的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该<strong style="color:#000;">AI代理技能</strong>定位为一个跨平台的信息搜集与分析工具，能够从Reddit、X（原Twitter）、YouTube、Hn（Hacker News）、Polymarket以及整个互联网上收集关于特定主题的内容，并通过智能算法生成一份基于事实的综合摘要。其技术实现依赖于自然语言处理技术和大数据分析能力，确保了信息的准确性和时效性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">跨平台数据集成</strong>：支持从多个热门社交媒体及新闻网站自动抓取相关信息，覆盖范围广泛。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">智能内容合成</strong>：利用先进的<strong style="color:#000;">自然语言理解</strong>技术对收集到的数据进行深度解析和总结，提供给用户易于消化且高度相关的知识概览。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/mvanhorn/last30days-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/mvanhorn" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">hacksider/Deep-Live-Cam</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 87,310</span> | 
+                    <span>新增星标: 6,693 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>real time face swap and one-click video deepfake with only a single image</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/hacksider/Deep-Live-Cam" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/hacksider" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">Yeachan-Heo/oh-my-claudecode</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 20,823</span> | 
+                    <span>新增星标: 6,933 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Teams-first Multi-agent orchestration for Claude Code</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Yeachan-Heo/oh-my-claudecode" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Yeachan-Heo" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">SakanaAI/AI-Scientist-v2</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,362</span> | 
+                    <span>新增星标: 1,814 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/SakanaAI/AI-Scientist-v2" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/SakanaAI" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">bytedance/deer-flow</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 56,008</span> | 
+                    <span>新增星标: 13,560 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/bytedance/deer-flow" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/bytedance" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">NousResearch/hermes-agent</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 21,563</span> | 
+                    <span>新增星标: 7,539 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'NousResearch/hermes-agent' 项目旨在解决在复杂多变的软件开发环境中，如何高效、灵活地管理和监控分布式系统这一行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过构建一个可扩展且高度自定义的<strong style="color:#000;">代理框架</strong>，使得开发者能够轻松集成各种工具和服务来优化其应用程序性能和安全性；它定位于成为伴随开发者成长的技术伙伴，支持从简单的日志记录到复杂的微服务治理等多层次需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">动态配置管理</strong>：允许用户在运行时调整配置而无需重启服务，极大提高了系统的灵活性与可用性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">插件化架构</strong>：采用模块化设计思想，支持快速添加或移除功能插件，确保了<strong style="color:#000;">Hermes-Agent</strong>可以随技术栈的发展而不断进化。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/NousResearch/hermes-agent" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/NousResearch" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">affaan-m/everything-claude-code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 130,898</span> | 
+                    <span>新增星标: 19,869 stars this week</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/affaan-m/everything-claude-code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/affaan-m" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">obra/superpowers</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 130,189</span> | 
+                    <span>新增星标: 18,021 stars this week</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>An agentic skills framework & software development methodology that works.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/obra/superpowers" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/obra" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">pascalorg/editor</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 9,033</span> | 
+                    <span>新增星标: 4,584 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'pascalorg/editor' 项目旨在解决建筑行业中3D建筑设计与共享的复杂性问题，使得设计师能够更高效地创建、编辑并分享他们的作品。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过提供一个基于Web的<strong style="color:#000;">三维建模平台</strong>，让非专业用户也能轻松上手进行建筑设计；同时它还支持多人协作以及模型的在线展示和分享功能，极大地促进了团队合作与创意交流。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">实时协同编辑</strong>：允许多个用户在同一时间对同一个3D模型进行修改，提高了团队工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">跨平台兼容性</strong>：支持多种操作系统及设备访问，确保了<strong style="color:#000;">广泛的可用性</strong>，无论是在PC端还是移动端都能流畅使用。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/pascalorg/editor" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/pascalorg" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">月度榜单</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">msitarzewski/agency-agents</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 68,184</span> | 
+                    <span>新增星标: 66,293 stars this month</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在快速变化的数字营销环境中，企业难以高效管理和优化多渠道营销活动以及与客户互动的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*msitarzewski/agency-agents* 定位为一个全面的人工智能代理平台，旨在通过<strong style="color:#000;">AI驱动的角色</strong>提供从创意生成到社区管理等全方位的服务。它利用了先进的自然语言处理技术和机器学习算法来创建具有特定技能集和个性特征的虚拟助手。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">AI个性化角色构建</strong>：每个代理不仅具备专业知识，还拥有独特的性格特点，能够以更加人性化的方式与用户或潜在顾客交流，增强用户体验。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多场景应用支持</strong>：该系统设计支持多种应用场景，包括但不限于前端开发辅助、社交媒体运营、内容创作等，展现了其在<strong style="color:#000;">跨领域适应性</strong>方面的强大能力。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/msitarzewski/agency-agents" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/msitarzewski" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">666ghj/MiroFish</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 47,611</span> | 
+                    <span>新增星标: 42,611 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/666ghj/MiroFish" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/666ghj" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">NousResearch/hermes-agent</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 21,563</span> | 
+                    <span>新增星标: 18,592 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'NousResearch/hermes-agent' 项目旨在解决在复杂多变的软件开发环境中，如何高效、灵活地管理和监控分布式系统这一行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过构建一个可扩展且高度自定义的<strong style="color:#000;">代理框架</strong>，使得开发者能够轻松集成各种工具和服务来优化其应用程序性能和安全性；它定位于成为伴随开发者成长的技术伙伴，支持从简单的日志记录到复杂的微服务治理等多层次需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">动态配置管理</strong>：允许用户在运行时调整配置而无需重启服务，极大提高了系统的灵活性与可用性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">插件化架构</strong>：采用模块化设计思想，支持快速添加或移除功能插件，确保了<strong style="color:#000;">Hermes-Agent</strong>可以随技术栈的发展而不断进化。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/NousResearch/hermes-agent" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/NousResearch" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">bytedance/deer-flow</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 56,008</span> | 
+                    <span>新增星标: 32,826 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/bytedance/deer-flow" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/bytedance" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">shareAI-lab/learn-claude-code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 46,386</span> | 
+                    <span>新增星标: 25,450 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Bash is all you need - A nano claude code–like 「agent harness」, built from 0 to 1</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/shareAI-lab/learn-claude-code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/shareAI-lab" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">affaan-m/everything-claude-code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 130,898</span> | 
+                    <span>新增星标: 69,450 stars this month</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/affaan-m/everything-claude-code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/affaan-m" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">lightpanda-io/browser</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 26,528</span> | 
+                    <span>新增星标: 14,445 stars this month</span>
+                     | <span>语言: Zig</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Lightpanda: the headless browser designed for AI and automation</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/lightpanda-io/browser" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/lightpanda-io" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">mvanhorn/last30days-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 17,292</span> | 
+                    <span>新增星标: 13,598 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过整合多平台信息资源，解决了用户在短时间内难以全面了解某一话题最新动态的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该<strong style="color:#000;">AI代理技能</strong>定位为一个跨平台的信息搜集与分析工具，能够从Reddit、X（原Twitter）、YouTube、Hn（Hacker News）、Polymarket以及整个互联网上收集关于特定主题的内容，并通过智能算法生成一份基于事实的综合摘要。其技术实现依赖于自然语言处理技术和大数据分析能力，确保了信息的准确性和时效性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">跨平台数据集成</strong>：支持从多个热门社交媒体及新闻网站自动抓取相关信息，覆盖范围广泛。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">智能内容合成</strong>：利用先进的<strong style="color:#000;">自然语言理解</strong>技术对收集到的数据进行深度解析和总结，提供给用户易于消化且高度相关的知识概览。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/mvanhorn/last30days-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/mvanhorn" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">obra/superpowers</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 130,189</span> | 
+                    <span>新增星标: 62,512 stars this month</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>An agentic skills framework & software development methodology that works.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/obra/superpowers" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/obra" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">alirezarezvani/claude-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,643</span> | 
+                    <span>新增星标: 6,308 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>+192 Claude Code skills & agent plugins for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/alirezarezvani/claude-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/alirezarezvani" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">volcengine/OpenViking</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 20,416</span> | 
+                    <span>新增星标: 16,068 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/volcengine/OpenViking" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/volcengine" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">jarrodwatts/claude-hud</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 16,016</span> | 
+                    <span>新增星标: 11,834 stars this month</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在使用Claude AI助手时，用户难以直观了解当前会话状态、工具使用情况及任务进度的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该插件通过与<strong style="color:#000;">Claude Code</strong>集成，提供了一个可视化界面来展示包括上下文利用情况、激活的工具列表、正在运行的代理程序以及待办事项进展等信息。它旨在增强用户体验，使开发者能够更高效地监控和管理AI辅助开发过程中的各种活动。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">实时状态监控</strong>：能够即时反映Claude AI助手的工作状态变化，如当前使用的上下文数据量、哪些工具被激活或停用等，帮助用户更好地掌握系统运作细节。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">交互式</strong>待办事项追踪**：不仅显示了待完成任务的总体进度，还允许用户直接在界面上对特定任务进行操作（如标记为已完成），从而提高了任务管理和执行效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/jarrodwatts/claude-hud" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/jarrodwatts" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">langchain-ai/open-swe</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,973</span> | 
+                    <span>新增星标: 3,682 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>An Open-Source Asynchronous Coding Agent</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/langchain-ai/open-swe" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/langchain-ai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">moeru-ai/airi</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 36,829</span> | 
+                    <span>新增星标: 18,075 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/moeru-ai/airi" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/moeru-ai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">TauricResearch/TradingAgents</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 45,681</span> | 
+                    <span>新增星标: 14,198 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>TradingAgents: Multi-Agents LLM Financial Trading Framework</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/TauricResearch/TradingAgents" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/TauricResearch" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#16</span>
+                    <span class="project-title">promptfoo/promptfoo</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 19,041</span> | 
+                    <span>新增星标: 8,233 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在AI领域中，对于生成模型的<strong style="color:#000;">提示词（prompt）</strong>、代理（agents）以及检索增强生成（RAGs）缺乏系统化测试与评估工具的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Promptfoo定位为一个针对AI系统的红队测试/渗透测试/漏洞扫描平台，通过提供简单声明式的配置方式来帮助开发者比较不同大语言模型如GPT、Claude等之间的性能差异；它支持命令行操作及CI/CD集成，使得持续集成和交付过程中也能轻松地进行AI组件的质量控制。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多模型对比</strong>：用户可以轻松设置实验来同时测试多个不同的AI模型，并直接对比它们在特定任务上的表现。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">易于集成</strong>：采用<strong style="color:#000;">声明式配置</strong>风格设计，极大简化了配置过程，同时也提供了良好的命令行接口及CI/CD支持，便于将AI测试流程无缝融入现有的开发工作流之中。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/promptfoo/promptfoo" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/promptfoo" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#17</span>
+                    <span class="project-title">microsoft/BitNet</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 36,935</span> | 
+                    <span>新增星标: 8,421 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'microsoft/BitNet' 项目解决了在大规模语言模型（LLMs）部署中，由于模型参数量巨大导致的计算资源消耗高、推理速度慢的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过将模型权重压缩至1比特表示来大幅度减少模型大小和加速推理过程，同时提供了一个官方支持的高效推理框架以确保低精度模型仍能保持较高的性能表现。它定位为一种创新性的解决方案，旨在不牺牲太多准确率的前提下显著提升大模型的应用效率与可访问性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">1-bit量化</strong>：通过对模型进行极端的量化处理，将原本需要多比特存储的权重简化成单个比特，极大降低了内存占用和计算复杂度。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高性能优化技术</strong>：采用了包括但不限于稀疏矩阵运算、硬件加速指令集等手段，进一步提升了基于<strong style="color:#000;">1-bit LLMs</strong>的推理速度与能源效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/microsoft/BitNet" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/microsoft" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#18</span>
+                    <span class="project-title">langchain-ai/deepagents</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 18,583</span> | 
+                    <span>新增星标: 8,745 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在处理复杂任务时，需要高效、智能地协调多个子任务和资源的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'langchain-ai/deepagents' 是基于<strong style="color:#000;">LangChain</strong>与<strong style="color:#000;">LangGraph</strong>构建的一个智能代理框架，旨在通过提供一个计划工具、文件系统后端以及生成子代理的能力来解决复杂的多步骤问题。它定位于成为能够自主规划并执行一系列连贯操作以达成目标的高级AI助手。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">规划能力</strong>：内置了强大的任务分解与规划机制，允许代理根据设定的目标自动生成详细的行动计划。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">子代理支持</strong>：具备创建和管理<strong style="color:#000;">子代理</strong>的功能，使得主代理可以将大型或复杂的任务分割成更小的部分，并分配给不同的子代理去完成，从而提高整体效率和灵活性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/langchain-ai/deepagents" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/langchain-ai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 4px; font-size: 16px;">← 返回历史日报首页</a>
+            </div>
+            
+            <!-- 回到顶部和底部按钮 -->
+            <div class="nav-button top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
+            <div class="nav-button bottom-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">↓</div>
+            
+            <!-- 移动端底部导航栏 -->
+            <div class="mobile-nav">
+                <a href="#" class="mobile-nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">回到顶部</a>
+                <a href="#footer" class="mobile-nav-btn">跳到底部</a>
+            </div>
+            
+            <div class="footer" id="footer">
+                <p>© 2026 GitHub Trending 日报 | 数据来源于 GitHub Trending</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
