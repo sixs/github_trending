@@ -58,6 +58,10 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
             margin: 0 auto;
             padding: 20px;
         }}
+
+        .mobile-nav {{
+            display: none;
+        }}
         
         /* 移动端优化 */
         @media screen and (max-width: 768px) {{
@@ -82,6 +86,10 @@ def build_refined_html(daily, weekly, monthly, current_date=None):
         
         /* 移动端底部导航栏 */
         @media screen and (max-width: 768px) {{
+            body {{
+                padding-bottom: 70px;
+            }}
+
             .mobile-nav {{
                 position: fixed;
                 bottom: 0;

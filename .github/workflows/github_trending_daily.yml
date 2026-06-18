@@ -35,6 +35,19 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f scripts/requirements.txt ]; then pip install -r scripts/requirements.txt; fi
 
+    - name: Restore historical reports from GitHub Pages
+      run: |
+        mkdir -p public
+        if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
+          echo "Restoring existing trending reports from gh-pages..."
+          git fetch origin gh-pages:refs/remotes/origin/gh-pages
+          git checkout origin/gh-pages -- 'trending-*.html' 2>/dev/null || true
+          find . -maxdepth 1 -name 'trending-*.html' -exec mv {} public/ \;
+          ls -la public
+        else
+          echo "No gh-pages branch found yet. Starting with current report only."
+        fi
+
     - name: Restore LLM summary cache
       uses: actions/cache@v4
       with:
@@ -87,6 +100,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
         publish_branch: gh-pages  # 明确指定分支名
+        keep_files: true           # 保留已发布的历史日报文件
         enable_jekyll: false      # 禁用Jekyll处理
         commit_message: "Deploy GitHub Trending pages at $(date '+%Y-%m-%d %H:%M:%S')"
         user_name: "github-actions[bot]"
