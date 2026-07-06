@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trending - 2026 / 07 / 06</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --background-color: #f6f8fa;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            overflow-x: hidden; /* 防止横向滚动 */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        /* 内容区域 */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+        
+        /* 移动端优化 */
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .project {
+                padding: 15px;
+            }
+            
+            .project-title {
+                font-size: 20px;
+            }
+            
+            /* 在移动端隐藏圆形导航按钮 */
+            .nav-button {
+                display: none;
+            }
+        }
+        
+        /* 移动端底部导航栏 */
+        @media screen and (max-width: 768px) {
+            body {
+                padding-bottom: 70px;
+            }
+
+            .mobile-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-background);
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            .mobile-nav-btn {
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+                color: var(--primary-color);
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+            
+            .mobile-nav-btn:hover {
+                background-color: #f0f0f0;
+            }
+        }
+        
+        .project {
+            background: var(--card-background);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #24292e;
+        }
+        
+        .project-stats {
+            font-size: 14px;
+            color: #586069;
+            margin-bottom: 15px;
+        }
+        
+        .project-content {
+            margin-bottom: 15px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            color: #24292e;
+        }
+        
+        .rank-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #666;
+            margin-right: 10px;
+        }
+        
+        /* 回到顶部和底部按钮 */
+        .nav-button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            right: 20px;
+            /* 确保按钮不会超出视口导致滚动 */
+            max-width: calc(100vw - 20px);
+        }
+        
+        .top-button {
+            top: 50%;
+            transform: translateY(-100%);
+        }
+        
+        .bottom-button {
+            top: 58%;
+            transform: translateY(-100%);
+        }
+        
+        .nav-button:hover {
+            background-color: #0251a0;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div style="text-align: center; margin-bottom: 20px; color: #666;">
+            <p>2026 / 07 / 06</p>
+        </div><div class="section-title">今日趋势</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">Zackriya-Solutions/meetily</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 17,027</span> | 
+                    <span>新增星标: 1,409 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了会议记录过程中隐私保护与高效处理的行业痛点，通过本地化处理确保数据安全的同时提供高效的会议转录和总结功能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Meetily 是一个基于 <strong style="color:#000;">Rust</strong> 语言开发的AI会议助手，专注于在用户设备上进行所有处理工作，无需依赖云端服务。它利用了先进的语音识别（如 <strong style="color:#000;">Parakeet/Whisper</strong>）技术来实现快速准确的实时转写，并结合说话人分离及摘要生成技术，为用户提供完整的会议笔记解决方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">100%本地处理</strong>：整个应用程序运行于用户的个人计算机上，不上传任何信息到互联网，从而极大增强了用户的数据安全性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">4倍速转录能力</strong>：通过优化后的<strong style="color:#000;">Parakeet/Whisper</strong>模型，相比同类产品能够以更快的速度完成高质量的音频转文字转换任务。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Zackriya-Solutions/meetily" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Zackriya-Solutions" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">openai/codex-plugin-cc</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 25,476</span> | 
+                    <span>新增星标: 1,532 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了开发者在代码审查和任务分配过程中效率低下、质量不高的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过集成<strong style="color:#000;">Claude Code</strong>的Codex能力，为用户提供了一种智能化的方式来进行代码审查及任务委派。它旨在简化开发流程，提高团队协作效率的同时保证代码质量。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">智能代码审查</strong>：利用先进的自然语言处理技术自动识别代码中的潜在错误或不良实践，提供修改建议。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自动化任务管理</strong>：能够根据项目的当前状态智能地分解大任务为小任务，并合理地分配给团队成员，提升整体工作效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openai/codex-plugin-cc" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">asgeirtj/system_prompts_leaks</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 49,968</span> | 
+                    <span>新增星标: 981 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过收集和公开各大AI公司（如Anthropic, OpenAI, Google, xAI等）的系统提示词，解决了AI模型开发过程中由于缺乏高质量或特定场景下<strong style="color:#000;">系统提示词</strong>而导致的效率低下问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目定位为一个开放资源库，旨在提供来自不同先进AI平台及版本的系统级提示词样本；它不仅促进了AI社区对于如何更好地设计与使用<strong style="color:#000;">系统提示词</strong>的理解，还加速了相关研究和应用的发展。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;技术实现上，主要是通过对目标AI系统的逆向工程分析来提取这些宝贵的提示词信息，并以结构化的方式整理发布。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多源性</strong>：涵盖多个领先AI企业的多种类型模型，包括但不限于语言生成、代码辅助、设计支持等领域，极大地丰富了可用资源池。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">实时更新</strong>：承诺定期根据最新发布的AI产品进行内容补充和完善，确保用户能够获取到最前沿、最具代表性的<strong style="color:#000;">系统提示词</strong>资料。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/asgeirtj/system_prompts_leaks" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/asgeirtj" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">Leonxlnx/taste-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 57,502</span> | 
+                    <span>新增星标: 863 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Taste-Skill 项目旨在解决人工智能生成内容时缺乏创意和个性化，导致产出单调乏味的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>通过集成先进的<strong style="color:#000;">自然语言处理</strong>技术和特定领域的知识库，Taste-Skill 能够增强AI系统在生成文本时的创造力与相关性；它定位于成为任何需要高质量、富有创意输出场景下的插件或工具。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">领域适应性强</strong>：支持根据不同应用场景快速调整模型参数及训练数据集，以满足特定行业或主题下对内容创新性的需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">用户交互友好</strong>：提供直观易用的接口让非技术背景用户也能轻松配置和使用，同时支持高级开发者进行深度定制。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Leonxlnx/taste-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Leonxlnx" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">alirezarezvani/claude-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 20,574</span> | 
+                    <span>新增星标: 392 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在多领域应用中，如何高效地利用AI助手进行代码编写、项目管理及日常办公等任务的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*claude-skills* 是一个集成了超过330种技能、插件以及自定义命令的平台，旨在通过<strong style="color:#000;">Claude Code</strong>、Codex等多个编码代理提供跨领域的技术支持。它不仅支持工程开发，还涵盖了市场营销、产品设计、合规性审查等多个非技术领域的需求，为用户提供了一站式解决方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多领域覆盖</strong>：该项目能够同时满足从软件开发到商业运营等多个不同领域的具体需求，极大地提高了工作效率与灵活性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高度可定制化</strong>：用户可以根据自己的需要对参考文献、脚本等内容进行个性化设置，甚至创建新的命令或调整现有功能，体现了其强大的<strong style="color:#000;">扩展能力</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/alirezarezvani/claude-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/alirezarezvani" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">rommapp/romm</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 10,543</span> | 
+                    <span>新增星标: 410 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了用户在管理和播放ROM（游戏镜像文件）时缺乏美观、功能强大的自管理平台的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'rommapp/romm' 是一个设计精良的<strong style="color:#000;">自托管</strong>ROM管理器和播放器，它允许用户通过简洁直观的界面来组织自己的游戏库，并且支持多种平台的游戏模拟。该软件采用现代化的Web技术栈开发，确保了良好的用户体验与性能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自托管解决方案</strong>：用户可以在自己的服务器上部署romm，从而完全控制个人数据的安全性和隐私。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">跨平台兼容性</strong>：romm不仅支持主流的操作系统如Windows、macOS及Linux，还能够运行于树莓派等小型设备上，极大地扩展了使用场景。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/rommapp/romm" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/rommapp" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">ogulcancelik/herdr</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 12,076</span> | 
+                    <span>新增星标: 651 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在终端中同时管理和操作多个代理（agent）的复杂性和效率问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Herdr是一个<strong style="color:#000;">代理多路复用器</strong>，它允许用户通过单一界面管理多个后端服务或代理。其设计目的在于简化终端用户的操作流程，提高工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">统一控制台</strong>：提供一个集中的控制台来访问和管理所有连接的代理，极大地简化了多任务处理。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高度可扩展性</strong>：支持自定义插件开发，使得Herdr能够轻松适应不同的应用场景和技术栈需求，增加了系统的灵活性与实用性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ogulcancelik/herdr" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ogulcancelik" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">alibaba/page-agent</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 23,892</span> | 
+                    <span>新增星标: 805 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'alibaba/page-agent' 项目解决了用户与网页交互过程中需要手动操作复杂界面的问题，通过自然语言处理技术使得网页控制更加直观和高效。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一个基于JavaScript的<strong style="color:#000;">在页GUI代理</strong>工具，它能够理解并执行用户的自然语言指令来自动化地操控网页元素。通过集成先进的自然语言理解和页面分析技术，page-agent能够准确解析用户意图，并将其转换成具体的网页操作。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">自然语言处理</strong>：利用先进的NLP技术解析用户命令，即使是非专业用户也能轻松上手。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">跨平台兼容性</strong>：支持多种浏览器环境，确保了广泛的适用性和良好的用户体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/alibaba/page-agent" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/alibaba" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">harvard-edge/cs249r_book</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 26,848</span> | 
+                    <span>新增星标: 329 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过提供系统化的教程和资源，解决了机器学习领域中理论与实践脱节的问题，帮助读者更好地理解如何构建高效、可扩展的<strong style="color:#000;">机器学习系统</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;《Machine Learning Systems》是哈佛大学计算机科学课程CS249r的配套教材，旨在为学生及从业者提供从基础到高级的机器学习系统设计知识；它不仅涵盖了算法层面的内容，还特别强调了在实际应用中遇到的各种工程挑战及其解决方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">端到端案例研究</strong>：本书通过一系列精心挑选的真实世界案例，展示了如何将机器学习模型从开发阶段过渡到生产环境部署，包括但不限于数据预处理、特征选择、模型训练、性能优化等全流程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">跨学科融合</strong>：除了传统的机器学习技术外，《Machine Learning Systems》还深入探讨了<strong style="color:#000;">云计算</strong>、大数据处理框架（如Spark）、容器化技术（如Docker）等现代IT基础设施对于支持复杂ML工作流的重要性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/harvard-edge/cs249r_book" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/harvard-edge" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">usestrix/strix</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 37,133</span> | 
+                    <span>新增星标: 1,114 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong><strong style="color:#000;">usestrix/strix</strong> 解决了软件开发过程中难以高效发现和修复应用程序安全漏洞的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过集成先进的<strong style="color:#000;">人工智能</strong>技术，自动化地识别、分析并提出针对应用安全漏洞的解决方案；定位于成为开源社区中一款易于使用且功能强大的渗透测试工具。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">基于AI的漏洞检测</strong>：利用机器学习算法自动识别潜在的安全威胁，提高了检测效率与准确性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自动生成修复建议</strong>：不仅能发现漏洞，还能根据具体情况提供定制化的<strong style="color:#000;">修复指南</strong>，帮助开发者快速解决问题。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/usestrix/strix" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/usestrix" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">hesreallyhim/awesome-claude-code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 48,366</span> | 
+                    <span>新增星标: 148 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目旨在解决开发者在寻找高质量、高效能的开发工具和资源时面临的挑战，通过精选一系列顶级资源来辅助Claude Code这款强大的编码伴侣。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*awesome-claude-code* 定位为一个精心挑选的资源集合，专为使用<strong style="color:#000;">Claude Code</strong>的开发者提供支持；它不仅涵盖了从基础到高级的各种编程技巧，还包括了能够极大提升开发效率的工具插件。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;通过整合这些资源，无论是初学者还是经验丰富的程序员都能找到适合自己需求的内容，从而加快学习曲线或提高工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">双星号加粗</strong>：<strong style="color:#000;">顶级技能教程</strong> - 项目内含有一系列由行业专家编写的教程，覆盖了从算法设计到软件架构等多个领域，帮助用户快速掌握所需技能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">双星号加粗</strong>：<strong style="color:#000;">插件生态系统</strong> - 提供了一系列易于集成的插件，这些插件可以无缝地与Claude Code以及其他流行IDE（如VSCode）结合使用，增强功能性和用户体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/hesreallyhim/awesome-claude-code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/hesreallyhim" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">coreyhaines31/marketingskills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 36,435</span> | 
+                    <span>新增星标: 145 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目旨在解决AI助手和Claude Code在市场营销技能方面的不足，特别是针对<strong style="color:#000;">转化率优化(CRO)</strong>、文案撰写、搜索引擎优化(SEO)、数据分析以及增长工程等领域缺乏系统性指导和支持的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'coreyhaines31/marketingskills'项目通过提供一系列教程、案例研究与工具集，帮助开发者及企业提升其AI产品或服务的市场表现力；它不仅涵盖了基础理论知识，还包括了实践操作指南，特别强调了如何将这些技能应用于实际场景中以实现业务增长。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">双星号加粗</strong>的<strong style="color:#000;">CRO框架</strong>：项目内提供了详细的CRO最佳实践指南，包括用户行为分析、A/B测试设计等，助力提高网站或应用的转化效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">双星号加粗</strong>的<strong style="color:#000;">SEO优化策略</strong>：结合最新的搜索算法变化，分享有效的关键词研究方法、内容创作技巧以及技术SEO要点，帮助企业改善在线可见度并吸引潜在客户。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/coreyhaines31/marketingskills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/coreyhaines31" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">JuliusBrussee/caveman</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 84,874</span> | 
+                    <span>新增星标: 1,052 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目通过简化语言表达，解决了在自然语言处理任务中过度使用<strong style="color:#000;">token</strong>导致的资源浪费问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>'JuliusBrussee/caveman' 项目定位在于模仿原始人说话的方式，通过减少句子复杂度和长度来大幅度降低文本处理时所需的<strong style="color:#000;">token</strong>数量。它采用了一种创新的方法论，即用最简单的词汇和结构替代复杂的语句，以此达到高效沟通的目的。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">Token优化技术</strong>：通过将复杂的句子转换为简单直接的语言表达形式，显著减少了数据处理过程中所需消耗的<strong style="color:#000;">token</strong>数量。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自适应简化算法</strong>：能够根据输入内容自动调整简化程度，在保持信息完整性的前提下最大化地减少不必要的文字描述，从而进一步提高效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/JuliusBrussee/caveman" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/JuliusBrussee" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">CoplayDev/unity-mcp</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 11,927</span> | 
+                    <span>新增星标: 414 stars today</span>
+                     | <span>语言: C#</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Unity MCP 项目解决了游戏开发和虚拟现实内容创作中，利用AI助手进行高效自动化管理与编辑的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过构建一个<strong style="color:#000;">桥梁</strong>，使AI助手能够直接与Unity编辑器交互，从而实现对Unity项目中的资源、场景、脚本等元素的智能管理和自动化操作。它不仅支持基本的命令执行，还允许开发者自定义复杂的任务流程，极大提升了开发效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">AI集成</strong>: 通过将最新的语言模型技术与Unity环境相结合，使得用户可以通过自然语言指令来控制Unity编辑器内的各种功能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高度可定制化</strong>: 提供了丰富的API接口及插件系统，允许开发者根据自身需求扩展新的功能模块或调整现有逻辑，增强了系统的灵活性与适应性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/CoplayDev/unity-mcp" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/CoplayDev" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">facebook/astryx</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 5,889</span> | 
+                    <span>新增星标: 522 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Astryx 项目解决了在构建用户界面时，设计系统难以实现高度定制化与跨平台一致性的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>Astryx 定位为一个完全可定制的设计系统，它不仅支持广泛的自定义配置，还通过<strong style="color:#000;">代理机制</strong>确保了不同环境下的表现一致性。该设计系统基于现代Web技术栈开发，旨在提供一种更加灵活且易于维护的方式来创建和管理UI组件库。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">全自定义能力</strong>：用户可以根据自己的品牌需求调整几乎所有的视觉属性，从颜色、字体到间距等，使得每个使用Astryx的项目都能拥有独特的外观。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;"></strong>代理就绪性<strong style="color:#000;"></strong>：通过内置的支持代理功能，Astryx能够无缝地集成进各种前端框架或后端渲染流程中，保证了一致性和性能优化的同时，也极大地提高了系统的适应性和扩展性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/facebook/astryx" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/facebook" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#16</span>
+                    <span class="project-title">immich-app/immich</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 106,121</span> | 
+                    <span>新增星标: 470 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Immich项目解决了个人和小团队在高效管理和存储大量照片及视频时面临的成本高、隐私保护不足等行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Immich定位为一款高性能的自托管照片与视频管理解决方案，它通过利用现代Web技术栈结合分布式存储架构来实现数据的安全存储与快速访问。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该方案不仅提供了用户友好的界面体验，还支持多种部署方式以适应不同规模的需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">端到端加密</strong>：确保了用户上传的所有媒体文件从客户端到服务器再到最终存储位置全程受到保护，极大增强了数据安全性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">可扩展性设计</strong>：基于微服务架构开发，使得系统能够轻松地根据实际需要进行水平扩展，满足日益增长的数据处理需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/immich-app/immich" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/immich-app" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#17</span>
+                    <span class="project-title">ruvnet/RuView</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 76,724</span> | 
+                    <span>新增星标: 161 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了在保护隐私的前提下，如何利用现有Wi-Fi信号实现空间智能、生命体征监测及存在检测的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>RuView通过分析环境中现有的<strong style="color:#000;">Wi-Fi信号</strong>变化来推断人体活动和生理状态，无需安装额外传感器或摄像头即可提供非视觉化的监控解决方案。它定位于为家庭安全、健康护理等领域提供一种既高效又尊重用户隐私的新方法。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">无接触式监测</strong>：利用无线电信号波动而非直接视觉图像采集数据，实现了对人体动作乃至细微呼吸心跳等生命特征的远距离感知。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">隐私友好设计</strong>：由于整个过程不涉及任何形式的视频录制，极大程度上减少了对个人隐私泄露的风险，适用于对隐私要求较高的应用场景。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ruvnet/RuView" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ruvnet" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#18</span>
+                    <span class="project-title">gastownhall/gastown</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 16,388</span> | 
+                    <span>新增星标: 51 stars today</span>
+                     | <span>语言: Go</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Gas Town项目解决了在多用户或多代理环境下，资源管理和协作效率低下的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过构建一个<strong style="color:#000;">多代理工作空间管理器</strong>来协调不同用户或代理之间的资源分配与任务调度。它采用先进的分布式计算和智能算法，确保了系统在处理复杂任务时的高效性和灵活性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">智能调度算法</strong>：Gas Town利用先进的智能调度算法，能够根据各代理的需求动态调整资源分配，从而最大化整体工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高度可扩展性</strong>：设计上支持轻松添加新的代理或用户，同时保持系统性能稳定，体现了其在<strong style="color:#000;">水平扩展能力</strong>方面的强大优势。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/gastownhall/gastown" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/gastownhall" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#19</span>
+                    <span class="project-title">dotnet/skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,042</span> | 
+                    <span>新增星标: 246 stars today</span>
+                     | <span>语言: C#</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了AI编码助手在处理.NET和C#相关任务时缺乏针对性技能支持的问题，提高了AI助手对于特定编程语言及框架的理解与应用能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*dotnet/skills* 项目通过提供一系列预定义的<strong style="color:#000;">.NET和C#相关的技能集</strong>来增强AI编码代理的能力，这些技能集覆盖了从基础语法到高级特性的广泛范围。它旨在构建一个开源社区驱动的知识库，促进开发者与AI之间的更高效协作。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">领域专业知识集成</strong>：项目整合了大量关于.NET生态系统（包括但不限于ASP.NET Core, Entity Framework等）的专业知识，使得AI能够更好地理解并生成符合最佳实践的代码。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">持续更新与扩展性</strong>：采用模块化设计思路，允许用户根据需要添加新的技能或更新现有技能内容，确保随着技术的发展而保持相关性和实用性。这体现了项目对<strong style="color:#000;">开放性和灵活性</strong>的高度重视。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/dotnet/skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/dotnet" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#20</span>
+                    <span class="project-title">OthmanAdi/planning-with-files</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 24,715</span> | 
+                    <span>新增星标: 66 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了AI编码代理和长期运行任务在执行过程中因上下文丢失或系统崩溃导致计划中断的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'<strong style="color:#000;">OthmanAdi/planning-with-files</strong>' 通过基于文件的持久化存储方案，确保了即使在遇到上下文重置或系统故障后也能恢复并继续执行任务。它定义了一种标准化的方法（如<strong style="color:#000;">SKILL.md</strong>标准），使得超过60种不同的AI代理能够共享状态信息、协同工作，并且支持多代理之间的交互。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">持久性与可靠性</strong>：利用Markdown格式保存计划，不仅易于人类阅读理解，而且能有效抵抗数据丢失风险，确保计划能在各种情况下得以保留和恢复。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多代理兼容性</strong>：通过引入<strong style="color:#000;">SKILL.md</strong>作为统一接口规范，极大地增强了不同AI工具之间以及与本系统间的互操作性，促进了更加广泛的应用场景探索。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/OthmanAdi/planning-with-files" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/OthmanAdi" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#21</span>
+                    <span class="project-title">steipete/CodexBar</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 16,226</span> | 
+                    <span>新增星标: 153 stars today</span>
+                     | <span>语言: Swift</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了开发者在使用OpenAI Codex和Claude Code等AI编码辅助工具时难以直观了解其实际消耗情况的问题，无需登录即可查看使用统计。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>CodexBar通过API接口与OpenAI服务进行交互，收集并展示用户的<strong style="color:#000;">API调用次数</strong>及<strong style="color:#000;">费用估算</strong>信息；它定位为一个轻量级的第三方监控解决方案，帮助用户更好地管理他们的资源使用情况。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">无需登录验证</strong>：用户可以直接访问应用来查看自己的API使用概况，简化了获取信息的过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">实时数据更新</strong>：支持<strong style="color:#000;">动态刷新</strong>显示最新的API请求记录与成本预测，确保用户能够及时调整策略以优化成本。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/steipete/CodexBar" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/steipete" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#22</span>
+                    <span class="project-title">anthropics/claude-code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 136,299</span> | 
+                    <span>新增星标: 156 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Claude Code 解决了开发者在面对复杂代码库时效率低下以及日常开发任务繁琐耗时的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过将自然语言处理技术与终端操作相结合，为用户提供了一个能够理解代码、执行常规任务并管理Git工作流的智能代理工具。它定位为一个增强型的编码助手，旨在提高开发者的生产力和代码质量。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自然语言交互</strong>：用户可以通过简单的自然语言命令来控制Claude Code完成各种任务，极大地简化了人机交互过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">上下文感知能力</strong>：Claude Code具备<strong style="color:#000;">理解当前代码环境</strong>的能力，可以基于项目的结构和内容给出更加精准的帮助或建议，从而更好地支持开发者的工作。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/claude-code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">本周热门</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">usestrix/strix</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 37,133</span> | 
+                    <span>新增星标: 10,338 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong><strong style="color:#000;">usestrix/strix</strong> 解决了软件开发过程中难以高效发现和修复应用程序安全漏洞的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过集成先进的<strong style="color:#000;">人工智能</strong>技术，自动化地识别、分析并提出针对应用安全漏洞的解决方案；定位于成为开源社区中一款易于使用且功能强大的渗透测试工具。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">基于AI的漏洞检测</strong>：利用机器学习算法自动识别潜在的安全威胁，提高了检测效率与准确性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自动生成修复建议</strong>：不仅能发现漏洞，还能根据具体情况提供定制化的<strong style="color:#000;">修复指南</strong>，帮助开发者快速解决问题。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/usestrix/strix" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/usestrix" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">xbtlin/ai-berkshire</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 10,318</span> | 
+                    <span>新增星标: 5,038 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目通过结合人工智能技术与价值投资理念，解决了传统金融分析中信息处理效率低、难以全面整合多维度数据的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>'xbtlin/ai-berkshire' 旨在构建一个基于<strong style="color:#000;">Claude Code / Codex</strong>的价值投资研究平台，该平台不仅融合了巴菲特等四位投资大师的方法论，还利用了<strong style="color:#000;">多Agent并行研究</strong>机制来模拟不同的市场观点和策略之间的对抗性分析，从而为用户提供更加深入的投资洞察。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多Agent并行研究</strong>：通过设计多个具有不同投资逻辑的人工智能代理，模拟真实世界中的多样化投资决策过程，增强了对复杂市场环境的理解能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">四位大师方法论集成</strong>：将<strong style="color:#000;">巴菲特·芒格·段永平·李录</strong>这四位著名投资者的独特视角与策略融入到AI模型训练过程中，使得最终生成的投资建议能够吸收多位顶尖人士的经验智慧。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/xbtlin/ai-berkshire" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/xbtlin" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">diegosouzapw/OmniRoute</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 11,876</span> | 
+                    <span>新增星标: 4,411 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了开发者在使用多种AI服务时需要面对的接口不统一、成本高昂以及效率低下的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;OmniRoute定位为一个自由的AI网关，通过提供单一接入点整合了超过231家AI供应商的服务，其中包括50多家免费服务，旨在简化开发者对AI技术的应用流程。它支持连接Claude Code, Codex, Cursor, Cline & Copilot等工具到如Claude、GPT系列或Gemini这样的先进AI模型上，极大地增强了开发者的生产力和灵活性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">RTK+Caveman堆叠压缩</strong>：该技术能够有效减少15%至95%的数据传输量，对于依赖大量文本处理的应用场景来说，显著降低了成本同时提升了响应速度。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">智能自动回退机制</strong>：当首选API不可用时，系统会自动切换到备用选项，确保服务连续性和稳定性，减少了因单点故障导致的整体应用中断风险。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/diegosouzapw/OmniRoute" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/diegosouzapw" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">simplex-chat/simplex-chat</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 17,922</span> | 
+                    <span>新增星标: 3,572 stars this week</span>
+                     | <span>语言: Haskell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>SimpleX解决了传统即时通讯系统中用户隐私易被泄露的问题，通过完全匿名的设计保障了用户的通信隐私。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一种全新的、不依赖任何用户标识符的即时通讯网络；它通过去中心化的方式以及独特的<strong style="color:#000;">匿名身份管理</strong>机制来实现消息的安全传输与存储。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">无用户标识符设计</strong>：整个系统在设计上彻底摒弃了传统的用户名、手机号等任何形式的身份标识，取而代之的是基于密码学原理生成的一次性密钥对，确保每次通信都是匿名且不可追踪的。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">端到端加密</strong>：所有通信内容都采用<strong style="color:#000;">端到端加密技术</strong>进行保护，即使数据在网络上传输过程中被截获也无法被第三方解密查看，极大提高了信息传递的安全性和私密性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/simplex-chat/simplex-chat" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/simplex-chat" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">Robbyant/lingbot-map</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 9,896</span> | 
+                    <span>新增星标: 1,875 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了从流式数据中高效重建3D场景的难题，这在虚拟现实、增强现实以及自动驾驶等领域具有重要意义。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>'Robbyant/lingbot-map' 项目基于前馈神经网络架构设计了一个<strong style="color:#000;">3D基础模型</strong>，专门用于处理连续输入的数据流以生成或更新环境的三维表示。它定位为一种能够快速适应新场景并提供高质量重建结果的技术方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">实时性</strong>：通过优化算法和模型结构，实现了对流式输入数据近乎即时的响应与处理能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自适应学习</strong>：该模型具备<strong style="color:#000;">在线学习</strong>的能力，可以在不断接收新数据的过程中调整自身参数，从而更好地适应变化中的场景条件。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Robbyant/lingbot-map" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Robbyant" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">ogulcancelik/herdr</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 12,076</span> | 
+                    <span>新增星标: 3,937 stars this week</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在终端中同时管理和操作多个代理（agent）的复杂性和效率问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Herdr是一个<strong style="color:#000;">代理多路复用器</strong>，它允许用户通过单一界面管理多个后端服务或代理。其设计目的在于简化终端用户的操作流程，提高工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">统一控制台</strong>：提供一个集中的控制台来访问和管理所有连接的代理，极大地简化了多任务处理。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高度可扩展性</strong>：支持自定义插件开发，使得Herdr能够轻松适应不同的应用场景和技术栈需求，增加了系统的灵活性与实用性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ogulcancelik/herdr" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ogulcancelik" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">logto-io/logto</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 13,825</span> | 
+                    <span>新增星标: 1,575 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了SaaS及AI应用中用户身份验证与授权管理复杂且难以统一的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Logto基于<strong style="color:#000;">OIDC（OpenID Connect）</strong>和<strong style="color:#000;">OAuth 2.1</strong>标准构建，提供了一套完整的认证授权基础设施，支持多租户架构、单点登录（SSO）以及基于角色的访问控制（RBAC），旨在简化现代应用程序的安全性实现过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多租户支持</strong>：允许不同组织或个人在同一个系统内拥有独立的数据空间和服务配置，极大提升了服务的灵活性与扩展能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">基于标准协议</strong>：采用广泛认可的<strong style="color:#000;">OIDC</strong>和<strong style="color:#000;">OAuth 2.1</strong>作为基础，确保了与其他系统的良好兼容性和安全性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/logto-io/logto" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/logto-io" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">Zackriya-Solutions/meetily</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 17,027</span> | 
+                    <span>新增星标: 2,972 stars this week</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了会议记录过程中隐私保护与高效处理的行业痛点，通过本地化处理确保数据安全的同时提供高效的会议转录和总结功能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Meetily 是一个基于 <strong style="color:#000;">Rust</strong> 语言开发的AI会议助手，专注于在用户设备上进行所有处理工作，无需依赖云端服务。它利用了先进的语音识别（如 <strong style="color:#000;">Parakeet/Whisper</strong>）技术来实现快速准确的实时转写，并结合说话人分离及摘要生成技术，为用户提供完整的会议笔记解决方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">100%本地处理</strong>：整个应用程序运行于用户的个人计算机上，不上传任何信息到互联网，从而极大增强了用户的数据安全性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">4倍速转录能力</strong>：通过优化后的<strong style="color:#000;">Parakeet/Whisper</strong>模型，相比同类产品能够以更快的速度完成高质量的音频转文字转换任务。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Zackriya-Solutions/meetily" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Zackriya-Solutions" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">browser-use/video-use</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,033</span> | 
+                    <span>新增星标: 4,288 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'browser-use/video-use' 项目通过编程方式编辑视频，解决了传统视频编辑软件操作复杂、学习成本高的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位于利用<strong style="color:#000;">编程代理</strong>技术来实现视频的自动化编辑；用户可以通过编写代码指令来控制视频剪辑过程，从而达到高效、灵活的视频处理效果。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">编程代理</strong>：允许开发者通过编写脚本的方式对视频进行复杂的编辑操作，极大地提高了编辑效率和灵活性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">浏览器环境支持</strong>：基于Web技术开发，使得用户可以在任何支持现代浏览器的设备上运行该工具，无需安装额外软件，增强了跨平台兼容性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/browser-use/video-use" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/browser-use" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">alibaba/page-agent</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 23,892</span> | 
+                    <span>新增星标: 3,151 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'alibaba/page-agent' 项目解决了用户与网页交互过程中需要手动操作复杂界面的问题，通过自然语言处理技术使得网页控制更加直观和高效。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一个基于JavaScript的<strong style="color:#000;">在页GUI代理</strong>工具，它能够理解并执行用户的自然语言指令来自动化地操控网页元素。通过集成先进的自然语言理解和页面分析技术，page-agent能够准确解析用户意图，并将其转换成具体的网页操作。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">自然语言处理</strong>：利用先进的NLP技术解析用户命令，即使是非专业用户也能轻松上手。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">跨平台兼容性</strong>：支持多种浏览器环境，确保了广泛的适用性和良好的用户体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/alibaba/page-agent" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/alibaba" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">Starmel/OpenSuperWhisper</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 1,808</span> | 
+                    <span>新增星标: 532 stars this week</span>
+                     | <span>语言: Swift</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'Starmel/OpenSuperWhisper' 项目旨在通过提供一个基于本地运行的语音识别解决方案，解决macOS用户对于隐私保护和高效语音输入的需求问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目利用了<strong style="color:#000;">Whisper模型</strong>作为其语音转文字的核心引擎，并结合macOS平台特性开发而成，旨在为用户提供一个无需联网即可实现高质量语音转文字体验的应用程序。它不仅强调了用户体验上的便捷性与准确性，同时也注重对用户数据安全性的保障。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">离线语音识别</strong>：通过将先进的<strong style="color:#000;">Whisper AI模型</strong>集成到应用程序中，使得所有语音处理都在用户的设备上完成，从而保证了个人隐私不被泄露。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">跨平台兼容性</strong>：虽然主要针对macOS设计，但其架构支持一定程度上的跨平台移植工作，意味着未来可能扩展至其他操作系统，如Windows或Linux，以满足更广泛用户群体的需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Starmel/OpenSuperWhisper" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Starmel" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">msitarzewski/agency-agents</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 127,517</span> | 
+                    <span>新增星标: 10,637 stars this week</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过提供一系列具有专业技能和个性的AI代理，解决了企业或个人在创建和管理在线社区、内容生成以及客户服务等方面需要多样化且高效解决方案的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*msitarzewski/agency-agents* 定位为一个全面的<strong style="color:#000;">AI代理平台</strong>，旨在让用户能够轻松地根据需求选择合适的AI助手来完成特定任务；它不仅关注于技术实现上的创新，也注重每个代理角色背后的人格化设计与用户体验。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多角色AI代理</strong>：项目中包含多种不同职能定位的AI代理（如前端向导、Reddit社区忍者等），每种类型都针对特定应用场景进行了优化设计，以满足用户多元化的需求。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">个性化与交互性</strong>：除了强大的功能外，这些<strong style="color:#000;">AI代理还被赋予了独特的性格特征</strong>，使得它们在执行任务时更加贴近真实人类的行为模式，增强了用户与其之间的互动体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/msitarzewski/agency-agents" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/msitarzewski" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">apache/maven</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 5,286</span> | 
+                    <span>新增星标: 173 stars this week</span>
+                     | <span>语言: Java</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Apache Maven 核心项目解决了软件开发过程中依赖管理和构建过程复杂、难以标准化的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>它通过提供一个基于<strong style="color:#000;">项目对象模型 (POM)</strong> 的框架来管理项目的构建、报告和文档，从而简化了Java项目的构建配置。Maven采用了一种约定优于配置的理念，使得开发者能够以最小的配置快速上手并进行高效的项目管理与构建。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">依赖管理</strong>：自动处理库文件及其版本之间的依赖关系，极大地减少了因手动管理依赖而引发错误的可能性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">生命周期定义</strong>：为项目的构建过程定义了清晰的<strong style="color:#000;">阶段（Phase）</strong> 和<strong style="color:#000;">目标（Goal）</strong>，确保从清理到部署整个流程的一致性和可重复性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/apache/maven" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/apache" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">openai/codex-plugin-cc</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 25,476</span> | 
+                    <span>新增星标: 3,405 stars this week</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了开发者在代码审查和任务分配过程中效率低下、质量不高的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过集成<strong style="color:#000;">Claude Code</strong>的Codex能力，为用户提供了一种智能化的方式来进行代码审查及任务委派。它旨在简化开发流程，提高团队协作效率的同时保证代码质量。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">智能代码审查</strong>：利用先进的自然语言处理技术自动识别代码中的潜在错误或不良实践，提供修改建议。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自动化任务管理</strong>：能够根据项目的当前状态智能地分解大任务为小任务，并合理地分配给团队成员，提升整体工作效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openai/codex-plugin-cc" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">DeusData/codebase-memory-mcp</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 26,727</span> | 
+                    <span>新增星标: 7,945 stars this week</span>
+                     | <span>语言: C</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了代码理解和管理效率低下的问题，特别是在大型代码库中快速检索和理解代码变得困难时。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'<strong style="color:#000;">DeusData/codebase-memory-mcp</strong>' 是一个高性能的代码智能多控制点（MCP）服务器，它能够将代码库高效地索引到持久化的知识图谱中，极大提升了开发者在处理复杂代码库时的信息检索速度与准确性。通过先进的算法优化，该系统能够在极短的时间内完成对代码库的分析，并支持几乎实时的数据查询服务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">超高速索引与查询能力</strong>：能够以毫秒级的速度完成对代码库的索引工作，并且对于已索引的数据提供亚毫秒级别的响应时间查询，极大地提高了开发者的效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">广泛的编程语言支持及低资源消耗</strong>：支持多达158种编程语言，同时在处理过程中仅需使用极少数量的token，配合其单个静态二进制文件部署方式以及零依赖项的特点，使得该解决方案易于部署且运行成本低廉。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/DeusData/codebase-memory-mcp" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/DeusData" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#16</span>
+                    <span class="project-title">stablyai/orca</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 12,375</span> | 
+                    <span>新增星标: 3,783 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Orca 项目解决了在多代理并行工作环境中，高效管理和运行编码代理的难题，为开发者提供了一种更加灵活且易于访问的方式来利用AI辅助开发。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一款高级开发环境（<strong style="color:#000;">ADE</strong>），专为管理一组并行工作的代理而设计；它允许用户通过个人订阅方式运行任何类型的编码代理，并且支持桌面和移动设备跨平台使用。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多代理协同工作</strong>：Orca 支持同时运行多个代理，这些代理可以是不同类型的任务执行者，如代码生成、调试或测试等，从而极大地提高了开发效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">跨平台兼容性</strong>：无论是<strong style="color:#000;">桌面应用</strong>还是<strong style="color:#000;">移动端</strong>，Orca 都能够无缝运行，这使得无论何时何地，开发者都能够轻松访问其强大的功能集。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/stablyai/orca" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/stablyai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#17</span>
+                    <span class="project-title">calesthio/OpenMontage</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 33,667</span> | 
+                    <span>新增星标: 7,353 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了视频制作过程中高度依赖人工、成本高且效率低下的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;OpenMontage 是世界上首个开源的、基于代理的视频生产系统，它通过整合<strong style="color:#000;">12条流水线</strong>和<strong style="color:#000;">52个工具</strong>，以及超过500种代理技能，将AI编码助手转变为一个完整的视频制作工作室。其目标是通过自动化与智能化技术降低视频内容创作门槛，提高生产力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多流水线协同处理</strong>：通过设计多达12条专门针对不同视频制作环节（如剪辑、特效添加等）优化过的流水线，实现了高效并行处理视频素材的能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">广泛的代理技能库</strong>：拥有超过<strong style="color:#000;">500种</strong>代理技能，能够覆盖从基础编辑到高级特效合成等各种视频后期需求，极大地丰富了系统的功能性和灵活性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/calesthio/OpenMontage" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/calesthio" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#18</span>
+                    <span class="project-title">JCodesMore/ai-website-cloner-template</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 25,843</span> | 
+                    <span>新增星标: 3,246 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了快速复制网站结构和内容的难题，使得即使不具备深厚编程知识的人也能轻松克隆网页。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>通过利用<strong style="color:#000;">AI编码代理</strong>技术，'JCodesMore/ai-website-cloner-template'能够解析目标网站的HTML结构，并自动生成相应的代码来重建该站点。它定位于提供一种简单易用、高效快捷的方式来复制现有网站的设计与布局。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">自动化代码生成</strong>：基于先进的机器学习模型，本项目能够自动分析并模仿给定网页的外观及功能，极大简化了传统手动编写或调整代码的过程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">一键式操作流程</strong>：用户只需输入一条命令即可完成整个克隆过程，从抓取页面信息到最终部署新站点，整个工作流被设计得极为简便流畅。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/JCodesMore/ai-website-cloner-template" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/JCodesMore" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#19</span>
+                    <span class="project-title">ZhuLinsen/daily_stock_analysis</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 54,706</span> | 
+                    <span>新增星标: 3,806 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了金融投资领域中信息获取与分析效率低下的痛点，通过整合多源数据和实时新闻提供智能化的投资决策支持。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;项目定位为一个基于<strong style="color:#000;">大语言模型（LLM）</strong>的股票智能分析平台，旨在利用自然语言处理技术自动解析并整合来自不同市场的股票行情及最新财经资讯；同时，它还设计了用户友好的<strong style="color:#000;">决策看板</strong>以及自动推送服务，帮助投资者更高效地做出投资判断。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多源数据集成</strong>：系统能够从多个渠道收集最新的股票价格、交易量等市场数据，并结合实时更新的财经新闻，为用户提供全面而准确的信息基础。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自动化分析与通知</strong>：借助先进的机器学习算法，该平台不仅能自动生成针对特定股票或整个市场的深度报告，还能根据预设条件触发<strong style="color:#000;">自动推送</strong>功能，确保重要信息及时传达给用户。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ZhuLinsen/daily_stock_analysis" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ZhuLinsen" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#20</span>
+                    <span class="project-title">allenai/olmocr</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 18,794</span> | 
+                    <span>新增星标: 1,212 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在将PDF文档转换为适合大型语言模型（LLM）训练的数据集时，如何保持文档结构和内容完整性的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*olmocr* 通过<strong style="color:#000;">线性化处理</strong>技术将PDF文件转换成适合LLM使用的文本格式，同时尽量保留原文档的布局信息；它旨在提供一种高效且准确的方法来准备用于机器学习特别是自然语言处理任务的训练数据。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">版面分析</strong>：利用先进的图像处理与OCR(optical character recognition)技术，精准识别并提取PDF中的文字及其位置信息，确保转换后的文本能够反映原始文档的空间关系。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自定义配置</strong>：支持用户根据具体需求调整输出格式及内容过滤规则，比如可以选择是否保留表格、图片等非纯文本元素，或者指定特定区域的内容被优先考虑或忽略。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/allenai/olmocr" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/allenai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#21</span>
+                    <span class="project-title">topoteretes/cognee</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 27,122</span> | 
+                    <span>新增星标: 2,699 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Cognee项目解决了AI代理在不同会话间缺乏持久长期记忆的行业痛点，使得AI能够基于历史交互数据做出更加智能的决策。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一个开源的人工智能记忆平台，通过提供一个自托管的知识图谱引擎来支持AI代理跨会话保持其学习和记忆能力；它允许开发者轻松集成这一功能到自己的应用中，从而增强AI系统的个性化服务与用户体验。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">知识图谱</strong>：利用先进的<strong style="color:#000;">知识图谱</strong>技术构建了一个强大的数据存储和检索系统，能够高效地组织、管理和查询复杂的信息关系。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自托管部署</strong>：支持用户根据自身需求进行<strong style="color:#000;">自托管部署</strong>，不仅增强了数据的安全性和隐私保护，同时也提供了更高的灵活性与控制力。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/topoteretes/cognee" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/topoteretes" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">月度榜单</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">apple/container</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 46,635</span> | 
+                    <span>新增星标: 19,954 stars this month</span>
+                     | <span>语言: Swift</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了在Mac上运行Linux容器时缺乏高效且原生支持的行业痛点，使得开发者可以在Apple设备上更加便捷地开发和测试基于Linux的应用。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>'apple/container' 通过利用轻量级虚拟机技术，在MacOS环境中为用户提供了一个创建和运行Linux容器的解决方案；它采用Swift语言编写，并针对<strong style="color:#000;">Apple Silicon</strong>进行了优化，确保了在苹果自研芯片上的高性能表现。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">轻量级虚拟机</strong>：使用轻量级虚拟机作为底层技术支撑，相比传统虚拟化方案具有更快的启动速度与更低资源消耗。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">Apple Silicon优化</strong>：专为搭载M系列芯片的Mac设计，能够充分利用<strong style="color:#000;">ARM架构</strong>的优势，提供更佳的性能体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/apple/container" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/apple" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">DeusData/codebase-memory-mcp</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 26,727</span> | 
+                    <span>新增星标: 23,591 stars this month</span>
+                     | <span>语言: C</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了代码理解和管理效率低下的问题，特别是在大型代码库中快速检索和理解代码变得困难时。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;'<strong style="color:#000;">DeusData/codebase-memory-mcp</strong>' 是一个高性能的代码智能多控制点（MCP）服务器，它能够将代码库高效地索引到持久化的知识图谱中，极大提升了开发者在处理复杂代码库时的信息检索速度与准确性。通过先进的算法优化，该系统能够在极短的时间内完成对代码库的分析，并支持几乎实时的数据查询服务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">超高速索引与查询能力</strong>：能够以毫秒级的速度完成对代码库的索引工作，并且对于已索引的数据提供亚毫秒级别的响应时间查询，极大地提高了开发者的效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">广泛的编程语言支持及低资源消耗</strong>：支持多达158种编程语言，同时在处理过程中仅需使用极少数量的token，配合其单个静态二进制文件部署方式以及零依赖项的特点，使得该解决方案易于部署且运行成本低廉。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/DeusData/codebase-memory-mcp" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/DeusData" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">calesthio/OpenMontage</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 33,667</span> | 
+                    <span>新增星标: 29,179 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了视频制作过程中高度依赖人工、成本高且效率低下的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;OpenMontage 是世界上首个开源的、基于代理的视频生产系统，它通过整合<strong style="color:#000;">12条流水线</strong>和<strong style="color:#000;">52个工具</strong>，以及超过500种代理技能，将AI编码助手转变为一个完整的视频制作工作室。其目标是通过自动化与智能化技术降低视频内容创作门槛，提高生产力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多流水线协同处理</strong>：通过设计多达12条专门针对不同视频制作环节（如剪辑、特效添加等）优化过的流水线，实现了高效并行处理视频素材的能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">广泛的代理技能库</strong>：拥有超过<strong style="color:#000;">500种</strong>代理技能，能够覆盖从基础编辑到高级特效合成等各种视频后期需求，极大地丰富了系统的功能性和灵活性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/calesthio/OpenMontage" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/calesthio" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">Panniantong/Agent-Reach</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 51,297</span> | 
+                    <span>新增星标: 30,017 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了用户在多个平台（如Twitter、Reddit、YouTube等）获取信息时需要分别访问各平台并可能面临API费用的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;通过提供一个统一的命令行界面（CLI），<strong style="color:#000;">Agent-Reach</strong>允许用户轻松地跨多个社交和内容分享平台搜索和读取信息，而无需直接与这些平台的API交互或支付任何费用。它基于网络爬虫技术和自然语言处理技术构建，旨在为用户提供一种简便且经济的方式来浏览互联网上的多样化内容。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多平台支持</strong>：能够无缝接入并搜索包括但不限于Twitter、Reddit、YouTube等多个热门网站的信息。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">零API费用模式</strong>：利用公开可用的数据源及先进的<strong style="color:#000;">数据抓取算法</strong>，使得用户可以在不产生额外成本的情况下享受服务。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Panniantong/Agent-Reach" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Panniantong" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">mvanhorn/last30days-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 49,167</span> | 
+                    <span>新增星标: 21,367 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了用户在短时间内难以从多个信息源获取并综合特定主题最新动态的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过集成来自Reddit、X（Twitter）、YouTube、Hacker News (HN)、Polymarket以及整个互联网的数据，利用<strong style="color:#000;">人工智能技术</strong>对特定话题进行深入研究，并自动生成一个基于多源数据合成的总结报告。它定位为一种能够帮助个人或团队快速掌握某一领域最新进展的知识助手。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">跨平台数据分析</strong>：支持从多个主流社交媒体及新闻网站抓取相关信息，确保了分析结果的全面性和时效性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">智能摘要生成</strong>：采用先进的自然语言处理算法，能够自动提取关键点并形成易于理解的<strong style="color:#000;">综述文本</strong>，极大地提高了信息消费效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/mvanhorn/last30days-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/mvanhorn" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">iptv-org/iptv</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 130,575</span> | 
+                    <span>新增星标: 14,048 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了全球范围内用户难以方便地获取和管理公开可用的IPTV频道链接的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;iptv-org/iptv项目通过收集并维护一个<strong style="color:#000;">开放源代码</strong>的IPTV频道列表，为用户提供了一个简单易用的方式来访问来自世界各地的电视内容。它不仅支持多种播放格式，并且鼓励社区贡献以保持频道信息的最新性和准确性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">全球化覆盖</strong>：此项目汇集了来自几乎每个国家的数百个电视频道，使得无论用户身处何地都能轻松找到感兴趣的本地或国际频道。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">社区驱动更新</strong>：依赖于广大用户的积极参与来提交新发现的频道或是报告失效链接，确保数据库始终保持最新状态。这种<strong style="color:#000;">众包模式</strong>极大地提高了项目的实用价值和长期可持续性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/iptv-org/iptv" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/iptv-org" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">interviewstreet/hiring-agent</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,836</span> | 
+                    <span>新增星标: 3,975 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目通过自动化简历评估和评分，解决了招聘过程中手动筛选简历耗时且主观性强的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>'interviewstreet/hiring-agent' 旨在利用<strong style="color:#000;">人工智能技术</strong>来分析应聘者的简历，并根据预设的标准自动打分。它定位为一种高效、客观的辅助工具，帮助HR快速识别出符合岗位要求的候选人。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自然语言处理（NLP）</strong>：通过对简历文本的理解与解析，能够准确提取出求职者的关键技能、经验和成就等信息。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">自定义评分模型</strong>：允许用户根据自身需求调整或设定不同的评分标准，使得该AI代理可以灵活应用于多种类型的职位招聘场景中。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/interviewstreet/hiring-agent" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/interviewstreet" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">phuryn/pm-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 22,621</span> | 
+                    <span>新增星标: 10,731 stars this month</span>
+                    
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了项目管理过程中技能、工具和资源分散，难以系统化整合与利用的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;PM Skills Marketplace 定位为一个集成平台，旨在通过提供超过100种<strong style="color:#000;">代理技能</strong>、命令及插件，覆盖从发现需求到策略制定、执行、产品发布以及增长的全生命周期管理。它不仅支持个人或团队快速获取所需能力以提升工作效率，还促进了最佳实践在不同项目间的分享与应用。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">全面性</strong>：集合了从初期探索至后期扩展各个阶段所需的广泛资源，确保用户能够一站式解决项目推进中遇到的各种挑战。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">可定制化</strong>：允许用户根据自身特定需求选择并组合不同的<strong style="color:#000;">技能模块</strong>，从而构建出最适合自己的工作流程，极大提高了灵活性与适应性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/phuryn/pm-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/phuryn" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">asgeirtj/system_prompts_leaks</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 49,968</span> | 
+                    <span>新增星标: 8,311 stars this month</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过收集和公开各大AI公司（如Anthropic, OpenAI, Google, xAI等）的系统提示词，解决了AI模型开发过程中由于缺乏高质量或特定场景下<strong style="color:#000;">系统提示词</strong>而导致的效率低下问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目定位为一个开放资源库，旨在提供来自不同先进AI平台及版本的系统级提示词样本；它不仅促进了AI社区对于如何更好地设计与使用<strong style="color:#000;">系统提示词</strong>的理解，还加速了相关研究和应用的发展。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;技术实现上，主要是通过对目标AI系统的逆向工程分析来提取这些宝贵的提示词信息，并以结构化的方式整理发布。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多源性</strong>：涵盖多个领先AI企业的多种类型模型，包括但不限于语言生成、代码辅助、设计支持等领域，极大地丰富了可用资源池。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">实时更新</strong>：承诺定期根据最新发布的AI产品进行内容补充和完善，确保用户能够获取到最前沿、最具代表性的<strong style="color:#000;">系统提示词</strong>资料。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/asgeirtj/system_prompts_leaks" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/asgeirtj" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">ogulcancelik/herdr</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 12,076</span> | 
+                    <span>新增星标: 7,360 stars this month</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了在终端中同时管理和操作多个代理（agent）的复杂性和效率问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;Herdr是一个<strong style="color:#000;">代理多路复用器</strong>，它允许用户通过单一界面管理多个后端服务或代理。其设计目的在于简化终端用户的操作流程，提高工作效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">统一控制台</strong>：提供一个集中的控制台来访问和管理所有连接的代理，极大地简化了多任务处理。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高度可扩展性</strong>：支持自定义插件开发，使得Herdr能够轻松适应不同的应用场景和技术栈需求，增加了系统的灵活性与实用性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ogulcancelik/herdr" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ogulcancelik" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">stablyai/orca</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 12,375</span> | 
+                    <span>新增星标: 8,064 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Orca 项目解决了在多代理并行工作环境中，高效管理和运行编码代理的难题，为开发者提供了一种更加灵活且易于访问的方式来利用AI辅助开发。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一款高级开发环境（<strong style="color:#000;">ADE</strong>），专为管理一组并行工作的代理而设计；它允许用户通过个人订阅方式运行任何类型的编码代理，并且支持桌面和移动设备跨平台使用。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多代理协同工作</strong>：Orca 支持同时运行多个代理，这些代理可以是不同类型的任务执行者，如代码生成、调试或测试等，从而极大地提高了开发效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">跨平台兼容性</strong>：无论是<strong style="color:#000;">桌面应用</strong>还是<strong style="color:#000;">移动端</strong>，Orca 都能够无缝运行，这使得无论何时何地，开发者都能够轻松访问其强大的功能集。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/stablyai/orca" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/stablyai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">usestrix/strix</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 37,133</span> | 
+                    <span>新增星标: 10,932 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong><strong style="color:#000;">usestrix/strix</strong> 解决了软件开发过程中难以高效发现和修复应用程序安全漏洞的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过集成先进的<strong style="color:#000;">人工智能</strong>技术，自动化地识别、分析并提出针对应用安全漏洞的解决方案；定位于成为开源社区中一款易于使用且功能强大的渗透测试工具。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">基于AI的漏洞检测</strong>：利用机器学习算法自动识别潜在的安全威胁，提高了检测效率与准确性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自动生成修复建议</strong>：不仅能发现漏洞，还能根据具体情况提供定制化的<strong style="color:#000;">修复指南</strong>，帮助开发者快速解决问题。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/usestrix/strix" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/usestrix" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">kenn-io/agentsview</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 3,747</span> | 
+                    <span>新增星标: 2,486 stars this month</span>
+                     | <span>语言: Go</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了开发人员在使用多种编码代理（如Claude Code、Codex等）时难以高效管理和分析会话数据及<strong style="color:#000;">令牌使用情况</strong>的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;AgentsView定位为一个本地优先的应用程序，它提供了一个统一的界面来搜索、分析来自不同编码代理的会话记录，并给出有价值的见解。通过集成超过20种不同的编码辅助工具，它帮助用户更有效地理解自己的工作流程和优化资源利用效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">本地优先设计</strong>：确保所有敏感信息如代码片段和个人偏好设置都存储于用户的本地设备上，极大增强了隐私保护。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">广泛的兼容性与支持</strong>：不仅限于少数几种流行的编码助手，而是能够无缝对接包括Claude Code、Codex在内的超过20个不同的编码辅助平台，满足了开发者多样化的需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/kenn-io/agentsview" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/kenn-io" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">n0-computer/iroh</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 11,130</span> | 
+                    <span>新增星标: 2,466 stars this month</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了传统IP地址在网络穿透和连接稳定性方面存在的问题，特别是在面对复杂的网络环境（如NAT）时难以实现高效、稳定的数据传输这一行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#000;">n0-computer/iroh</strong> 通过引入<strong style="color:#000;">QUIC协议</strong>以及先进的<strong style="color:#000;">NAT穿越技术</strong>，为开发者提供了一个强大的库，使得应用程序能够更加容易地在不同网络环境下建立快速且可靠的通信链接。它不仅简化了底层网络编程的复杂度，还增强了应用间数据交换的安全性和效率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">QUIC协议支持</strong>：利用QUIC协议代替传统的TCP/IP协议栈，显著提高了数据传输的速度与安全性，同时减少了握手延迟。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;"></strong>NAT Traversal技术集成**：内置多种NAT类型下的自动探测及打洞机制，有效解决了因NAT设备导致的直接连接障碍问题，极大提升了P2P场景下的用户体验。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/n0-computer/iroh" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/n0-computer" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">roboflow/supervision</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 46,802</span> | 
+                    <span>新增星标: 6,888 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了计算机视觉领域中工具复用性差、开发效率低的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#000;">roboflow/supervision</strong> 定位于提供一套易于使用且高度可复用的计算机视觉工具库，旨在通过简化常见的图像处理任务来加速开发流程。它支持多种图像操作和数据增强功能，并且与流行的深度学习框架无缝集成。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">高度模块化设计</strong>：项目采用高度模块化的架构，使得开发者可以根据需求灵活组合不同的组件，从而轻松构建复杂的应用场景。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">强大的数据增强能力</strong>：提供了丰富的<strong style="color:#000;">图像变换</strong>选项，包括但不限于旋转、缩放、色彩调整等，极大地丰富了训练数据集，有助于提高模型的泛化能力和鲁棒性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/roboflow/supervision" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/roboflow" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#16</span>
+                    <span class="project-title">openai/plugins</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,074</span> | 
+                    <span>新增星标: 2,651 stars this month</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;OpenAI Plugins 项目解决了人工智能应用与外部服务集成的难题，使得开发者能够轻松地将各种外部工具和服务接入到AI系统中，从而极大地扩展了AI的能力范围和应用场景。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目通过提供一套标准化的接口和框架，允许开发者定义、注册并调用外部插件，实现<strong style="color:#000;">ChatGPT</strong>等AI模型与第三方服务之间的无缝对接。其定位在于构建一个开放且灵活的生态系统，促进AI技术与广泛领域的深度融合。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">插件化架构</strong>：支持快速开发和部署新功能，无需修改核心代码即可扩展AI系统的功能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">广泛的兼容性</strong>：设计之初就考虑到了对不同类型服务的支持，无论是API形式还是其他更复杂的交互模式，都能良好适配，确保了极高的灵活性与适用性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openai/plugins" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#17</span>
+                    <span class="project-title">t8y2/dbx</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,714</span> | 
+                    <span>新增星标: 4,861 stars this month</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了数据库管理工具通常体积庞大、不够轻便且跨平台支持不足的问题，为开发者提供了一个轻量级且功能全面的数据库管理解决方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;*t8y2/dbx* 定位为一个轻量级的跨平台数据库客户端工具，通过集成多种数据库驱动和支持多种操作系统来满足不同开发环境下的需求。它采用现代化的前端技术栈结合高效的后端服务，确保了良好的用户体验和高性能的数据处理能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多数据库支持</strong>：t8y2/dbx 支持包括MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse, SQL Server在内的多种主流数据库系统，极大地扩展了其适用范围。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">轻量化设计</strong>：尽管集成了对众多数据库的支持，但整个应用的大小被控制在15MB以内，这得益于<strong style="color:#000;">高效的代码优化</strong>与资源管理策略，使得用户可以在不牺牲性能的情况下享受快速下载和安装的优势。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/t8y2/dbx" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/t8y2" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#18</span>
+                    <span class="project-title">lfnovo/open-notebook</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 34,958</span> | 
+                    <span>新增星标: 9,499 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>'lfnovo/open-notebook' 旨在解决当前笔记软件在灵活性和自定义功能方面的不足，特别是对于那些需要高度个性化设置或特定领域功能支持的用户群体。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过提供一个开源的笔记本应用框架，允许开发者根据自身需求扩展其功能；它基于现代Web技术栈构建，确保了良好的跨平台兼容性和用户体验。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">插件化架构</strong>：支持第三方插件开发与集成，极大地增强了应用程序的功能多样性和适应性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高度可配置性</strong>：用户可以通过修改配置文件来调整界面布局、主题风格等，满足不同场景下的使用需求。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/lfnovo/open-notebook" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/lfnovo" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#19</span>
+                    <span class="project-title">mukul975/Anthropic-Cybersecurity-Skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 24,626</span> | 
+                    <span>新增星标: 10,363 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了网络安全领域中，AI代理在学习和应用结构化安全技能时缺乏统一标准和跨框架兼容性的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>'mukul975/Anthropic-Cybersecurity-Skills' 项目通过定义一套包含817项网络安全技能的标准集，并将其映射到六个主流的安全框架上，旨在为AI代理提供一个全面且易于集成的知识体系。此项目不仅支持多种开发环境与平台，还促进了不同安全领域间知识的共享与应用。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">标准化技能集</strong>：项目提供了一个覆盖29个安全领域的、详尽而结构化的网络安全技能列表，这些技能被精心设计以符合agentskills.io标准。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多框架兼容性</strong>：通过对MITRE ATT&CK, NIST CSF 2.0等六大权威安全框架的支持，确保了所定义的网络安全技能能够广泛应用于各种实际场景之中，增强了其在不同组织和技术栈中的适用性。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/mukul975" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#20</span>
+                    <span class="project-title">every-app/open-seo</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,100</span> | 
+                    <span>新增星标: 1,924 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了SEO工具高昂费用的问题，为用户提供了一个开源的、免费的替代方案。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>Open SEO通过集成多种数据抓取和分析技术，帮助用户优化网站搜索引擎排名；它定位于成为Semrush和Ahrefs这样的商业SEO服务的开放源代码替代品。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">多平台支持</strong>：能够跨不同操作系统运行，并且提供了丰富的API接口，便于开发者进行二次开发或集成。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;- <strong style="color:#000;">全面的功能覆盖</strong>：包括但不限于关键词研究、反向链接检查、竞争对手分析等，几乎涵盖了专业级SEO工具的所有基本功能。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/every-app/open-seo" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/every-app" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 4px; font-size: 16px;">← 返回历史日报首页</a>
+            </div>
+            
+            <!-- 回到顶部和底部按钮 -->
+            <div class="nav-button top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
+            <div class="nav-button bottom-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">↓</div>
+            
+            <!-- 移动端底部导航栏 -->
+            <div class="mobile-nav">
+                <a href="#" class="mobile-nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">回到顶部</a>
+                <a href="#footer" class="mobile-nav-btn">跳到底部</a>
+            </div>
+            
+            <div class="footer" id="footer">
+                <p>© 2026 GitHub Trending 日报 | 数据来源于 GitHub Trending</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
