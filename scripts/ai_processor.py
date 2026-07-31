@@ -41,6 +41,7 @@ def get_rich_summary(p):
     # 缓存未命中，调用LLM生成摘要
     print(f"调用LLM生成摘要: {p['name']}")
     dashscope.api_key = os.environ.get("DASHSCOPE_API_KEY")
+    model = os.environ.get("DASHSCOPE_MODEL", "qwen3.7-max")
     prompt = (
         f"你是一个资深架构师。请深入分析GitHub项目 '{p['name']}'。描述：{p['desc']}。\n"
         "请严格按以下格式输出（中文）：\n"
@@ -49,7 +50,7 @@ def get_rich_summary(p):
         "【关键特性】列举2个核心技术亮点，重要词汇请用双星号加粗。"
     )
     try:
-        resp = Generation.call(model="qwen-max", prompt=prompt, result_format='message')
+        resp = Generation.call(model=model, prompt=prompt, result_format='message')
         if resp.status_code == 200:
             summary = resp.output.choices[0].message.content
             # 缓存生成的摘要
