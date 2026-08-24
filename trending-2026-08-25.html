@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trending - 2026 / 08 / 25</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --background-color: #f6f8fa;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            overflow-x: hidden; /* 防止横向滚动 */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        /* 内容区域 */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+        
+        /* 移动端优化 */
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .project {
+                padding: 15px;
+            }
+            
+            .project-title {
+                font-size: 20px;
+            }
+            
+            /* 在移动端隐藏圆形导航按钮 */
+            .nav-button {
+                display: none;
+            }
+        }
+        
+        /* 移动端底部导航栏 */
+        @media screen and (max-width: 768px) {
+            body {
+                padding-bottom: 70px;
+            }
+
+            .mobile-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-background);
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            .mobile-nav-btn {
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+                color: var(--primary-color);
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+            
+            .mobile-nav-btn:hover {
+                background-color: #f0f0f0;
+            }
+        }
+        
+        .project {
+            background: var(--card-background);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #24292e;
+        }
+        
+        .project-stats {
+            font-size: 14px;
+            color: #586069;
+            margin-bottom: 15px;
+        }
+        
+        .project-content {
+            margin-bottom: 15px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            color: #24292e;
+        }
+        
+        .rank-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #666;
+            margin-right: 10px;
+        }
+        
+        /* 回到顶部和底部按钮 */
+        .nav-button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            right: 20px;
+            /* 确保按钮不会超出视口导致滚动 */
+            max-width: calc(100vw - 20px);
+        }
+        
+        .top-button {
+            top: 50%;
+            transform: translateY(-100%);
+        }
+        
+        .bottom-button {
+            top: 58%;
+            transform: translateY(-100%);
+        }
+        
+        .nav-button:hover {
+            background-color: #0251a0;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div style="text-align: center; margin-bottom: 20px; color: #666;">
+            <p>2026 / 08 / 25</p>
+        </div><div class="section-title">今日趋势</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">Alishahryar1/free-claude-code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 48,929</span> | 
+                    <span>新增星标: 889 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Alishahryar1/free-claude-code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Alishahryar1" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">openai/codex</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 117,011</span> | 
+                    <span>新增星标: 1,990 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Lightweight coding agent that runs in your terminal</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openai/codex" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">MadsLorentzen/ai-job-search</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 34,027</span> | 
+                    <span>新增星标: 378 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/MadsLorentzen/ai-job-search" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/MadsLorentzen" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">multica-ai/andrej-karpathy-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 206,479</span> | 
+                    <span>新增星标: 491 stars today</span>
+                    
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/multica-ai/andrej-karpathy-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/multica-ai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">makeplane/plane</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 57,909</span> | 
+                    <span>新增星标: 268 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/makeplane/plane" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/makeplane" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">NousResearch/hermes-agent</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 235,776</span> | 
+                    <span>新增星标: 899 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The agent that grows with you</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/NousResearch/hermes-agent" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/NousResearch" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">anthropics/claude-plugins-community</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 1,339</span> | 
+                    <span>新增星标: 490 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/claude-plugins-community" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">AprilNEA/OpenLogi</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,841</span> | 
+                    <span>新增星标: 1,102 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/AprilNEA/OpenLogi" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/AprilNEA" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">apache/maka</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 2,887</span> | 
+                    <span>新增星标: 408 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/apache/maka" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/apache" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">PostHog/posthog</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 38,985</span> | 
+                    <span>新增星标: 106 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/PostHog/posthog" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/PostHog" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">openclaw/openclaw</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 387,432</span> | 
+                    <span>新增星标: 160 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openclaw/openclaw" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openclaw" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">AgriciDaniel/claude-obsidian</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 11,869</span> | 
+                    <span>新增星标: 272 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/AgriciDaniel/claude-obsidian" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/AgriciDaniel" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">rohitg00/ai-engineering-from-scratch</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 48,266</span> | 
+                    <span>新增星标: 330 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Learn it. Build it. Ship it for others.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/rohitg00/ai-engineering-from-scratch" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/rohitg00" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">basecamp/omarchy</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 30,082</span> | 
+                    <span>新增星标: 1,055 stars today</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Beautiful, Modern & Opinionated Linux</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/basecamp/omarchy" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/basecamp" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">tashfeenahmed/freellmapi</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 19,761</span> | 
+                    <span>新增星标: 153 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/tashfeenahmed/freellmapi" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/tashfeenahmed" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#16</span>
+                    <span class="project-title">dani-garcia/vaultwarden</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 66,125</span> | 
+                    <span>新增星标: 176 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/dani-garcia/vaultwarden" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/dani-garcia" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#17</span>
+                    <span class="project-title">freestylefly/awesome-gpt-image-2</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,455</span> | 
+                    <span>新增星标: 2,442 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，470+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/freestylefly/awesome-gpt-image-2" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/freestylefly" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#18</span>
+                    <span class="project-title">VoltAgent/awesome-agent-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 31,853</span> | 
+                    <span>新增星标: 600 stars today</span>
+                    
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/VoltAgent/awesome-agent-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/VoltAgent" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#19</span>
+                    <span class="project-title">tinyhumansai/openhuman</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 37,248</span> | 
+                    <span>新增星标: 515 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/tinyhumansai/openhuman" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/tinyhumansai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">本周热门</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">modular/modular</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 29,067</span> | 
+                    <span>新增星标: 2,176 stars this week</span>
+                     | <span>语言: Mojo</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The Modular Platform (includes MAX & Mojo)</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/modular/modular" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/modular" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">harry0703/MoneyPrinterTurbo</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 115,948</span> | 
+                    <span>新增星标: 11,167 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/harry0703/MoneyPrinterTurbo" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/harry0703" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">AprilNEA/OpenLogi</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 15,841</span> | 
+                    <span>新增星标: 6,078 stars this week</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/AprilNEA/OpenLogi" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/AprilNEA" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">basecamp/omarchy</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 30,082</span> | 
+                    <span>新增星标: 3,660 stars this week</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Beautiful, Modern & Opinionated Linux</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/basecamp/omarchy" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/basecamp" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">volcengine/OpenViking</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 32,971</span> | 
+                    <span>新增星标: 3,799 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/volcengine/OpenViking" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/volcengine" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">anthropics/claude-plugins-community</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 1,339</span> | 
+                    <span>新增星标: 406 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/claude-plugins-community" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">cordiverse/cordis</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 7,405</span> | 
+                    <span>新增星标: 2,725 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Meta-Framework of Spatiotemporal Composability</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/cordiverse/cordis" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/cordiverse" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">public-apis/public-apis</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 469,872</span> | 
+                    <span>新增星标: 8,295 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A collective list of free APIs</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/public-apis/public-apis" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/public-apis" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">akitaonrails/ai-memory</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,402</span> | 
+                    <span>新增星标: 2,614 stars this week</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/akitaonrails/ai-memory" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/akitaonrails" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">jundot/omlx</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 20,546</span> | 
+                    <span>新增星标: 1,671 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/jundot/omlx" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/jundot" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">apache/maka</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 2,887</span> | 
+                    <span>新增星标: 859 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/apache/maka" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/apache" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">eneskirca/nodeterm</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 1,183</span> | 
+                    <span>新增星标: 496 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Node-based terminal manager for AI coding agents — tmux-backed terminals and parallel agent sessions as draggable nodes on an infinite pan/zoom canvas. macOS, Linux, and a browser Server Edition.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/eneskirca/nodeterm" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/eneskirca" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">Tencent/AI-Infra-Guard</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 5,760</span> | 
+                    <span>新增星标: 1,149 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Tencent/AI-Infra-Guard" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Tencent" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">cursor/plugins</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,973</span> | 
+                    <span>新增星标: 1,761 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Cursor plugin specification and official plugins</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/cursor/plugins" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/cursor" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">月度榜单</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">block/buzz</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 30,478</span> | 
+                    <span>新增星标: 24,429 stars this month</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A hive mind communication platform</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/block/buzz" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/block" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">TencentCloud/TencentDB-Agent-Memory</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 24,250</span> | 
+                    <span>新增星标: 14,878 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/TencentCloud" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">ayghri/i-have-adhd</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 23,823</span> | 
+                    <span>新增星标: 14,450 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>A skill to stop your coding agent from burying the answer. ADHD-friendly output.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ayghri/i-have-adhd" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ayghri" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">basecamp/omarchy</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 30,082</span> | 
+                    <span>新增星标: 4,850 stars this month</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Beautiful, Modern & Opinionated Linux</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/basecamp/omarchy" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/basecamp" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">zhaoxuya520/reverse-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 28,705</span> | 
+                    <span>新增星标: 19,063 stars this month</span>
+                     | <span>语言: PowerShell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/zhaoxuya520/reverse-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/zhaoxuya520" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">microsoft/AI-For-Beginners</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 66,755</span> | 
+                    <span>新增星标: 13,993 stars this month</span>
+                     | <span>语言: Jupyter Notebook</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>12 Weeks, 24 Lessons, AI for All!</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/microsoft/AI-For-Beginners" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/microsoft" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">virgiliojr94/book-to-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 25,209</span> | 
+                    <span>新增星标: 15,086 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/virgiliojr94/book-to-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/virgiliojr94" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">diegosouzapw/OmniRoute</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 54,451</span> | 
+                    <span>新增星标: 27,573 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Never stop coding. Free MIT AI gateway: one endpoint, 340 providers (90+ free), 1200+ models — Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 450+ contributors</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/diegosouzapw/OmniRoute" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/diegosouzapw" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">pingdotgg/t3code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 20,352</span> | 
+                    <span>新增星标: 5,876 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/pingdotgg/t3code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/pingdotgg" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">bojieli/ai-agent-book</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 41,753</span> | 
+                    <span>新增星标: 23,452 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/bojieli/ai-agent-book" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/bojieli" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">cactus-compute/needle</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 8,956</span> | 
+                    <span>新增星标: 5,464 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>14MB foundation model for tiny devices; phones, wearables, smart home, and robots.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/cactus-compute/needle" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/cactus-compute" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">citrolabs/ego-lite</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 13,245</span> | 
+                    <span>新增星标: 11,598 stars this month</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/citrolabs/ego-lite" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/citrolabs" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">volcengine/OpenViking</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 32,971</span> | 
+                    <span>新增星标: 5,332 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/volcengine/OpenViking" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/volcengine" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">mattpocock/skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 235,352</span> | 
+                    <span>新增星标: 50,629 stars this month</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Skills for Real Engineers. Straight from my .agents directory.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/mattpocock/skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/mattpocock" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">1jehuang/jcode</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 18,458</span> | 
+                    <span>新增星标: 7,570 stars this month</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The most RAM efficient harness</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/1jehuang/jcode" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/1jehuang" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#16</span>
+                    <span class="project-title">earendil-works/pi</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 96,608</span> | 
+                    <span>新增星标: 20,046 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/earendil-works/pi" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/earendil-works" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#17</span>
+                    <span class="project-title">megadose/holehe</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 14,153</span> | 
+                    <span>新增星标: 2,328 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/megadose/holehe" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/megadose" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#18</span>
+                    <span class="project-title">modular/modular</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 29,067</span> | 
+                    <span>新增星标: 2,426 stars this month</span>
+                     | <span>语言: Mojo</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>The Modular Platform (includes MAX & Mojo)</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/modular/modular" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/modular" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#19</span>
+                    <span class="project-title">akitaonrails/ai-memory</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,402</span> | 
+                    <span>新增星标: 3,045 stars this month</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/akitaonrails/ai-memory" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/akitaonrails" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 4px; font-size: 16px;">← 返回历史日报首页</a>
+            </div>
+            
+            <!-- 回到顶部和底部按钮 -->
+            <div class="nav-button top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
+            <div class="nav-button bottom-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">↓</div>
+            
+            <!-- 移动端底部导航栏 -->
+            <div class="mobile-nav">
+                <a href="#" class="mobile-nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">回到顶部</a>
+                <a href="#footer" class="mobile-nav-btn">跳到底部</a>
+            </div>
+            
+            <div class="footer" id="footer">
+                <p>© 2026 GitHub Trending 日报 | 数据来源于 GitHub Trending</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
