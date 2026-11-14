@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trending - 2026 / 11 / 14</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --background-color: #f6f8fa;
+            --card-background: #ffffff;
+            --text-color: #333333;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            overflow-x: hidden; /* 防止横向滚动 */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        /* 内容区域 */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+        
+        /* 移动端优化 */
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .project {
+                padding: 15px;
+            }
+            
+            .project-title {
+                font-size: 20px;
+            }
+            
+            /* 在移动端隐藏圆形导航按钮 */
+            .nav-button {
+                display: none;
+            }
+        }
+        
+        /* 移动端底部导航栏 */
+        @media screen and (max-width: 768px) {
+            body {
+                padding-bottom: 70px;
+            }
+
+            .mobile-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-background);
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            .mobile-nav-btn {
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+                color: var(--primary-color);
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+            
+            .mobile-nav-btn:hover {
+                background-color: #f0f0f0;
+            }
+        }
+        
+        .project {
+            background: var(--card-background);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #24292e;
+        }
+        
+        .project-stats {
+            font-size: 14px;
+            color: #586069;
+            margin-bottom: 15px;
+        }
+        
+        .project-content {
+            margin-bottom: 15px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            color: #24292e;
+        }
+        
+        .rank-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #666;
+            margin-right: 10px;
+        }
+        
+        /* 回到顶部和底部按钮 */
+        .nav-button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            right: 20px;
+            /* 确保按钮不会超出视口导致滚动 */
+            max-width: calc(100vw - 20px);
+        }
+        
+        .top-button {
+            top: 50%;
+            transform: translateY(-100%);
+        }
+        
+        .bottom-button {
+            top: 58%;
+            transform: translateY(-100%);
+        }
+        
+        .nav-button:hover {
+            background-color: #0251a0;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div style="text-align: center; margin-bottom: 20px; color: #666;">
+            <p>2026 / 11 / 14</p>
+        </div><div class="section-title">今日趋势</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">alibaba/open-code-review</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 50,727</span> | 
+                    <span>新增星标: 215 stars today</span>
+                     | <span>语言: Go</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统代码审查工具在大规模企业应用中难以兼顾静态规则的高误报率与纯大模型方案的幻觉不可控及缺乏精准行级定位的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>这是一款专为超大规模工程场景打造的混合架构代码审查工具，通过融合确定性流水线与LLM Agent技术来保障审查过程的安全、高效与可控。它内置了覆盖空指针、并发安全及注入漏洞等高危场景的多语言规则集，并全面兼容主流大模型API以输出精准的行级评审意见。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">混合架构设计</strong>：创新性地结合了<strong style="color:#000;">确定性流水线</strong>与<strong style="color:#000;">LLM Agent</strong>，既保证了基础规范检查的绝对确定性与低延迟，又赋予了复杂逻辑漏洞挖掘的深度语义推理能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高精度缺陷定位</strong>：支持高信噪比的<strong style="color:#000;">精准行级评论</strong>，并内置涵盖NPE、线程安全、XSS及SQL注入的<strong style="color:#000;">多语言规则集</strong>，有效消除大模型幻觉并大幅提升研发修复效率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/alibaba/open-code-review" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/alibaba" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">GoogleChrome/modern-web-guidance-src</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,968</span> | 
+                    <span>新增星标: 1,925 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了现代Web开发中，开发者面对快速演进的Web标准与Core Web Vitals等复杂性能指标时，缺乏权威、统一且可直接落地的架构级最佳实践指导的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为Google Chrome团队输出的现代Web开发权威指南源码库，旨在为前端工程化提供从底层渲染机制到上层架构设计的全链路标准参考。它通过结构化的文档工程与自动化代码示例校验机制，确保所有指导原则与最新的Web平台API及浏览器引擎行为保持严格同步。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">Core Web Vitals 架构级优化</strong>：提供针对LCP、INP、CLS等核心性能指标的<strong style="color:#000;">设计模式</strong>与反模式代码库，帮助开发者在系统架构层面直接落地<strong style="color:#000;">性能预算</strong>与优化策略。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自动化示例校验引擎</strong>：内置基于<strong style="color:#000;">Lighthouse CI</strong>与无头浏览器的持续集成测试流，确保指南中的所有代码片段在现代浏览器中具备极高的<strong style="color:#000;">渲染兼容性</strong>与性能达标率。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/GoogleChrome/modern-web-guidance-src" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/GoogleChrome" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">openai/codex-security</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 13,183</span> | 
+                    <span>新增星标: 751 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统软件开发生命周期中安全漏洞发现滞后、人工审计效率低下且自动化修复能力缺失的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一款AI驱动的智能代码安全审计工具，通过提供CLI命令行与TypeScript SDK双重接入方式赋能开发者。其技术方案依托大语言模型的深度代码理解能力，实现了从漏洞精准扫描、上下文验证到修复方案自动生成的全链路闭环。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">上下文感知的智能验证与修复</strong>：突破传统静态扫描的局限，利用AI深度解析代码逻辑与业务依赖，自动过滤误报并生成<strong style="color:#000;">高可用性的修复补丁</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">无缝集成的全链路安全闭环</strong>：提供轻量级<strong style="color:#000;">CLI工具</strong>与灵活的<strong style="color:#000;">TypeScript SDK</strong>，支持将安全检测与修复流程原生嵌入至CI/CD流水线及日常开发工作流中。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/openai/codex-security" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/openai" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">ZhuLinsen/daily_stock_analysis</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 71,726</span> | 
+                    <span>新增星标: 256 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了个人投资者与小型团队在多市场股票交易中缺乏低成本、全自动化且具备深度认知分析能力的智能决策辅助工具的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该系统定位为基于大语言模型的多市场股票智能分析平台，通过聚合多源行情数据与实时新闻流构建可视化的投资决策看板。其底层架构依托云端CI/CD流水线实现零成本的定时调度，并利用LLM对多模态金融数据进行深度推理与自动化结果推送。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">大模型驱动的多维金融推理</strong>：深度融合多源量价数据与实时新闻舆情，利用<strong style="color:#000;">LLM（大语言模型）</strong> 进行复杂的金融逻辑推理与市场情绪分析，自动生成高价值的投资决策报告。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">零成本云端自动化调度</strong>：巧妙复用<strong style="color:#000;">GitHub Actions</strong>等免费云原生CI/CD资源构建定时任务流，实现从数据抓取、模型分析到<strong style="color:#000;">多渠道消息推送</strong>的全链路无人值守运行。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ZhuLinsen/daily_stock_analysis" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ZhuLinsen" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">we-promise/sure</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 14,809</span> | 
+                    <span>新增星标: 925 stars today</span>
+                     | <span>语言: Ruby</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统个人财务管理工具中普遍存在的数据隐私泄露风险、高昂订阅成本以及缺乏个性化定制能力的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>它定位为一款社区驱动的开源普惠金融应用，采用本地优先与跨平台同步相结合的架构设计，确保用户对个人财务数据的绝对掌控权。在技术实现上，它通过模块化插件系统和端到端加密机制，在保障金融级数据安全的同时支持社区开发者灵活扩展各类账务分析功能。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">本地优先架构</strong>：数据默认存储在用户本地，结合<strong style="color:#000;">CRDT算法</strong>实现多端无缝同步，确保在弱网或无网环境下依然具备完整的记账与财务分析能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">端到端数据加密</strong>：采用<strong style="color:#000;">客户端加密技术</strong>处理敏感账单明细，确保数据在云端同步时全程密文传输与存储，实现真正的<strong style="color:#000;">零知识隐私保护</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/we-promise/sure" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/we-promise" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">backnotprop/plannotator</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 10,513</span> | 
+                    <span>新增星标: 108 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了在AI Agent自动化开发流程中，人类难以高效介入审查、协同规划并将反馈无缝闭环传递给AI模型的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>它是一个专为“人在回路”设计的AI Agent协作与规划工作台，通过结构化界面连接人类开发者与底层AI代理。该项目定位于AI辅助编程工作流中的中央控制枢纽，支持团队共同塑造任务、审查代码并集中管理Agent的执行计划。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">一键反馈闭环</strong>：支持将人类的审查意见、标注和决策<strong style="color:#000;">一键同步</strong>给AI Agent，实现高效的<strong style="color:#000;">人在回路</strong>（Human-in-the-loop）精准控制与模型迭代。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">多维协同工作区</strong>：提供集成的<strong style="color:#000;">代码审查</strong>与<strong style="color:#000;">团队共享</strong>环境，允许多名开发者共同规划、批注并塑造Agent的上下文与最终输出结果。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/backnotprop/plannotator" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/backnotprop" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">louislam/uptime-kuma</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 93,896</span> | 
+                    <span>新增星标: 71 stars today</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了中小型团队和个人开发者在寻找轻量级、低成本且界面友好的自托管监控工具时，面临的传统监控系统配置繁琐、资源消耗大及商业SaaS服务成本高昂的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为UptimeRobot的现代化开源替代品，旨在提供开箱即用且UI精美的自托管基础设施与应用监控能力。其底层基于Node.js与Vue 3构建，采用Socket.IO实现前后端实时状态推送，并默认使用SQLite以实现零配置的轻量级数据持久化。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多协议深度探测</strong>：原生支持HTTP(s)、TCP、Ping、DNS及Docker容器等<strong style="color:#000;">多元化监控协议</strong>，并深度集成<strong style="color:#000;">90+种通知渠道</strong>（如Telegram、Slack、Webhook）以实现自动化告警闭环。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">全链路实时通信</strong>：基于<strong style="color:#000;">Socket.IO</strong>构建前后端双向通信机制，实现监控数据的<strong style="color:#000;">毫秒级无刷新推送</strong>，并提供高度可定制的<strong style="color:#000;">公共状态页面（Status Page）</strong> 以透明化服务健康度。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/louislam/uptime-kuma" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/louislam" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">block/buzz</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 37,320</span> | 
+                    <span>新增星标: 97 stars today</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统中心化通信架构中存在的单点故障、数据隐私受限以及大规模群体协作时信息同步与共识效率低下的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为基于去中心化P2P网络构建的“蜂群思维”通信底座，通过分布式事件驱动架构实现多节点间的高效信息路由与状态同步。它结合端到端加密与分布式共识机制，为去中心化应用或AI智能体集群提供了一个高可用、抗审查且具备群体智能协作能力的通信平台。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">分布式Gossip路由</strong>：采用改进的<strong style="color:#000;">Gossip协议</strong>进行消息广播与状态同步，确保在动态网络拓扑下数据的<strong style="color:#000;">最终一致性</strong>，大幅提升<strong style="color:#000;">蜂群网络</strong>的容错率与水平扩展能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">隐私保护与身份验证</strong>：深度融合<strong style="color:#000;">端到端加密（E2EE）</strong>与<strong style="color:#000;">零知识证明（ZKP）</strong> 技术，在保障群体通信内容隐私的同时，实现节点身份的匿名验证，构建高安全性的<strong style="color:#000;">去中心化信任机制</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/block/buzz" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/block" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">tradermonty/claude-trading-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 4,229</span> | 
+                    <span>新增星标: 69 stars today</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了股票投资者和交易者在获取市场数据、进行技术分析与制定交易策略时工具高度分散且缺乏智能化自然语言交互辅助的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目基于Claude大模型构建了一套专属的金融投研技能集，通过封装外部金融API与本地代码执行环境来实现市场分析、图表绘制及策略开发等功能。其核心定位是为股票投资者打造一个无缝嵌入AI交互环境的全链路智能投研与交易决策辅助系统。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多源金融数据聚合引擎</strong>：通过标准化接口集成实时行情、经济日历与股票筛选器，支持AI动态调用并渲染<strong style="color:#000;">高精度技术图表</strong>，实现基本面与技术面的统一数据视图。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自然语言驱动的策略开发框架</strong>：利用大模型的代码生成能力，将用户的交易逻辑直接转化为<strong style="color:#000;">可执行的量化策略代码</strong>，打通从策略构思到逻辑验证的<strong style="color:#000;">全链路自动化投研闭环</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/tradermonty/claude-trading-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/tradermonty" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">tailscale/tailcat</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 9,503</span> | 
+                    <span>新增星标: 256 stars today</span>
+                     | <span>语言: Go</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了在完全离线或高隐私要求场景下，传统网络工具难以穿透NAT且标准Overlay网络过度依赖中心化控制平面而无法使用的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>tailcat 剥离了 Tailscale 的控制平面依赖，直接复用其底层的 WireGuard 数据平面来建立点对点加密连接。它定位为一款无需中心服务器协调、可在纯离线环境中运行的轻量级安全网络调试与数据传输工具。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">去中心化数据平面</strong>：绕过 Tailscale 协调服务器，直接基于 <strong style="color:#000;">WireGuard 协议</strong> 建立点对点加密隧道，实现纯离线环境下的安全通信。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">轻量级网络穿透</strong>：继承 Tailscale 优秀的 <strong style="color:#000;">NAT 穿透</strong> 能力，在无需中心化鉴权的前提下，提供类似 netcat 的便捷端口转发与数据流传输。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/tailscale/tailcat" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/tailscale" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">Likely7/Veyra-NRVideo</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 1,656</span> | 
+                    <span>新增星标: 256 stars today</span>
+                     | <span>语言: C++</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统视频播放与采集卡预览中低分辨率、低帧率导致的视觉体验不佳及缺乏实时AI画质增强的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>这是一款定位为Windows平台的高级多媒体播放与采集增强工具，通过集成AI超分与帧生成算法实现实时画质与流畅度的大幅提升。它利用深度学习模型对视频流和采集卡输入进行实时推理处理，从而在终端侧提供超越原生硬件限制的下一代视觉体验。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">AI超分辨率</strong>与图像增强：结合先进的深度学习模型对视频和采集画面进行实时像素级重构，显著提升低分辨率源的清晰度与细节表现。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. 实时<strong style="color:#000;">帧生成</strong>技术：通过AI算法预测并智能插入中间帧，将低帧率内容平滑提升至120FPS，彻底消除画面卡顿与拖影。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Likely7/Veyra-NRVideo" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Likely7" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">ChromeDevTools/chrome-devtools-mcp</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 55,530</span> | 
+                    <span>新增星标: 67 stars today</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI编程智能体在开发Web应用时缺乏真实浏览器环境感知与动态调试能力，导致难以闭环验证UI效果和排查运行时错误的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目基于Model Context Protocol将Chrome DevTools Protocol封装为标准化的工具接口，使AI Agent能够以低侵入方式直接控制浏览器并获取深层页面上下文。它定位为连接大语言模型与真实浏览器运行环境的标准化桥梁，赋予智能体视觉验证和运行时调试维度的深度感知能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">MCP协议适配</strong>：将复杂的底层浏览器控制指令抽象为符合<strong style="color:#000;">Model Context Protocol</strong>标准的原子化工具集，使各类大模型Agent能无缝调用<strong style="color:#000;">DOM查询</strong>与网络拦截等核心API。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">多模态上下文感知</strong>：支持实时捕获页面渲染截图、控制台日志及<strong style="color:#000;">运行时异常</strong>，为Agent提供包含视觉反馈和代码执行状态的<strong style="color:#000;">全链路调试闭环</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ChromeDevTools" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">本周热门</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">sherlock-project/sherlock</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 111,219</span> | 
+                    <span>新增星标: 13,364 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>解决了开源情报（OSINT）调查和网络安全分析中，人工跨平台追踪同一用户名耗时费力且极易遗漏的效率痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>Sherlock 是一款基于 Python 构建的自动化命令行工具，通过高并发异步请求与多维度响应特征匹配技术，在数百个社交网络中快速检索指定用户名的数字足迹。它精准定位为安全研究人员与调查记者的开源情报基础设施，提供高效、可扩展的跨平台身份追踪能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">异步高并发架构</strong>：底层采用 asyncio 与 aiohttp 构建<strong style="color:#000;">非阻塞异步I/O模型</strong>，能够同时对数百个目标站点发起并发探测，将全网扫描耗时从小时级压缩至<strong style="color:#000;">秒级响应</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">声明式规则引擎</strong>：通过高度解耦的 JSON 配置文件定义<strong style="color:#000;">多维度特征匹配规则</strong>（涵盖状态码、正则表达式、响应头及错误文本等），使得新增或维护社交平台的探测逻辑具备<strong style="color:#000;">极高的可扩展性</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/sherlock-project/sherlock" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/sherlock-project" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">anthropics/skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 194,179</span> | 
+                    <span>新增星标: 6,169 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了AI智能体（Agent）开发过程中技能组件碎片化、复用性低以及缺乏跨平台统一标准的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目是 Anthropic 官方推出的智能体技能标准化仓库，旨在为开发者提供开箱即用的工具链、API集成方案与最佳实践模板。它通过模块化的架构设计和标准化的接口规范，使大语言模型能够更安全、高效地编排和调用外部能力以执行复杂任务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">模块化技能编排</strong>：采用高内聚低耦合的设计模式，将复杂的Agent能力拆分为独立、可复用的<strong style="color:#000;">标准化技能组件</strong>，支持开发者像搭积木一样快速构建和扩展定制化智能体。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">安全与上下文隔离</strong>：内置严格的<strong style="color:#000;">权限控制机制</strong>与<strong style="color:#000;">上下文状态管理</strong>，确保Agent在调用外部工具或执行多步推理时，能够有效防止提示词注入并保障数据交互的绝对安全。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">milind-soni/OpenMausBot</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 22,237</span> | 
+                    <span>新增星标: 7,763 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了闭源AI对话模型缺乏透明度，以及传统AI代理缺乏安全隔离环境来自主执行复杂系统级任务的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为Grok Bot的开源平替方案，旨在通过社区驱动的方式提供高度可定制的AI交互体验。其技术架构创新性地内置了沙盒虚拟机环境，使AI代理能够安全地执行代码、调用系统工具并完成复杂的自动化任务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">沙盒虚拟机环境</strong>：为AI代理提供高度隔离的<strong style="color:#000;">虚拟执行环境</strong>，使其能够安全地运行代码、操作文件及调用外部API，大幅扩展了机器人的自主操作边界与任务执行能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">开源可定制架构</strong>：作为Grok的<strong style="color:#000;">开源替代方案</strong>，支持开发者深度微调模型的<strong style="color:#000;">人格特征</strong>与交互逻辑，并能灵活集成各类第三方工具链以构建复杂的Agent工作流。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/milind-soni/OpenMausBot" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/milind-soni" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">vercel-labs/agent-browser</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 50,770</span> | 
+                    <span>新增星标: 4,360 stars this week</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI Agent在与真实网页交互时，因传统浏览器自动化API过于底层且DOM结构复杂而导致大模型难以直接理解和精准操作的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为专为AI Agent设计的浏览器自动化命令行工具，通过封装底层浏览器操作提供高层级的语义化交互接口。其技术实现通过智能解析和简化网页DOM树，将复杂的页面状态转化为大语言模型易于理解的上下文，从而驱动精准的自动化任务执行。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">DOM树语义化降维</strong>：通过智能过滤冗余标签并提取网页核心元素，将复杂的原始DOM转化为<strong style="color:#000;">大模型友好的精简上下文</strong>，大幅降低Token消耗并提升操作准确率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">CLI原生Agent集成</strong>：提供标准化的<strong style="color:#000;">命令行接口（CLI）</strong> 与结构化数据输出，使各类AI Agent框架能够以极低的接入成本实现<strong style="color:#000;">无头浏览器自动化</strong>的无缝控制。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/vercel-labs/agent-browser" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/vercel-labs" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">google/elephant-goldfish-model</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 18,671</span> | 
+                    <span>新增星标: 5,560 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI智能体在复杂软件设计与代码审查中因上下文窗口限制而丢失全局架构认知，导致局部代码实现与整体系统设计脱节的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为一款增强AI Agent上下文感知能力的开源插件，旨在通过仿生记忆模型重塑自动化软件设计与审查流程。其技术方案巧妙融合了代表全局架构演进的“大象”长期记忆与聚焦当前代码片段的“金鱼”短期记忆，使智能体能够在宏观架构约束与微观代码细节间实现精准协同。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">双轨仿生记忆机制</strong>：创新性地构建了“大象-金鱼”<strong style="color:#000;">动态上下文管理模型</strong>，将系统架构蓝图与历史设计决策沉淀为长期记忆，同时为当前审查的代码块分配高优短期记忆，彻底突破大语言模型的<strong style="color:#000;">长文本遗忘瓶颈</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">全局架构一致性守护</strong>：在代码审查环节，Agent会自动将局部变更与“大象”记忆中的<strong style="color:#000;">系统架构蓝图</strong>或<strong style="color:#000;">设计规范</strong>进行交叉验证，实时生成<strong style="color:#000;">架构偏离度报告</strong>，从根源上杜绝技术债务的隐性累积。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/google/elephant-goldfish-model" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/google" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">ZhuLinsen/daily_stock_analysis</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 71,726</span> | 
+                    <span>新增星标: 3,778 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了个人投资者与小型团队在多市场股票交易中缺乏低成本、全自动化且具备深度认知分析能力的智能决策辅助工具的痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该系统定位为基于大语言模型的多市场股票智能分析平台，通过聚合多源行情数据与实时新闻流构建可视化的投资决策看板。其底层架构依托云端CI/CD流水线实现零成本的定时调度，并利用LLM对多模态金融数据进行深度推理与自动化结果推送。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">大模型驱动的多维金融推理</strong>：深度融合多源量价数据与实时新闻舆情，利用<strong style="color:#000;">LLM（大语言模型）</strong> 进行复杂的金融逻辑推理与市场情绪分析，自动生成高价值的投资决策报告。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">零成本云端自动化调度</strong>：巧妙复用<strong style="color:#000;">GitHub Actions</strong>等免费云原生CI/CD资源构建定时任务流，实现从数据抓取、模型分析到<strong style="color:#000;">多渠道消息推送</strong>的全链路无人值守运行。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/ZhuLinsen/daily_stock_analysis" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/ZhuLinsen" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">NVIDIA/auto-ontology</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 12,591</span> | 
+                    <span>新增星标: 4,108 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了大语言模型（LLM）和智能体（Agent）在处理复杂业务数据时缺乏深层语义结构、容易产生幻觉且推理过程难以追溯和解释的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>Auto Ontology 是一个基于 Python 的框架，旨在通过在底层数据之上构建语义化、基于图的推理层来增强大模型的数据理解能力。它专为 LLM 和 Agent 工作流设计，提供确定性的查询生成、更精准的上下文检索以及高度可解释的 AI 推理机制。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">语义图推理层</strong>：利用<strong style="color:#000;">本体构建</strong>技术将底层数据转化为语义图谱，为模型提供具备深度关联和逻辑结构的<strong style="color:#000;">上下文检索</strong>基础。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">确定性查询生成</strong>：支持<strong style="color:#000;">确定性查询生成</strong>以替代传统大模型的概率性输出，从而在复杂 Agent 工作流中实现逻辑严密、过程透明的<strong style="color:#000;">可解释性 AI</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/NVIDIA/auto-ontology" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/NVIDIA" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">google-deepmind/mujoco</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 17,883</span> | 
+                    <span>新增星标: 1,764 stars this week</span>
+                     | <span>语言: C++</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>解决了机器人控制、强化学习和生物力学等领域中，复杂多关节接触动力学仿真计算效率低、数值不稳定且精度不足的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>MuJoCo 是一款基于C语言底层开发的高性能通用物理引擎，专为需要极高精度和速度的正向与逆向动力学计算而设计。它通过采用基于凸优化的接触求解算法和高度优化的稀疏矩阵运算，实现了对多关节系统复杂接触行为的实时、稳定且精确的物理仿真。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">基于凸优化的接触求解</strong>：采用先进的<strong style="color:#000;">凸优化算法</strong>处理软接触与硬接触模型，能够高效解析复杂的摩擦和多体穿透问题，确保仿真的<strong style="color:#000;">数值稳定性</strong>与物理真实性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">极致性能与可微物理支持</strong>：底层依赖<strong style="color:#000;">高度优化的稀疏矩阵运算</strong>实现微秒级的<strong style="color:#000;">实时仿真速度</strong>，并原生集成<strong style="color:#000;">可微物理引擎（MJX）</strong>，为强化学习和轨迹优化提供高效的<strong style="color:#000;">梯度计算</strong>能力。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/google-deepmind/mujoco" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/google-deepmind" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">mattpocock/skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 323,890</span> | 
+                    <span>新增星标: 7,599 stars this week</span>
+                     | <span>语言: Shell</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI编程助手在默认模式下生成的代码缺乏严谨工程规范、难以直接融入复杂生产环境的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目沉淀了一套开箱即用的AI代理指令集与提示词配置，通过结构化的规则约束引导AI助手按照资深工程师的思维范式进行编码。它定位为连接高级工程经验与AI编程工具的桥梁，将隐性的最佳实践转化为可复用的机器可读上下文。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">工程级提示词约束</strong>：通过精细化的系统指令限制AI模型的幻觉与发散，确保生成的代码严格遵循<strong style="color:#000;">类型安全</strong>与<strong style="color:#000;">架构规范</strong>，彻底消除低质量的“AI代码味”。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">场景化技能矩阵</strong>：将复杂的研发流程拆解为高内聚的<strong style="color:#000;">Agent Skills</strong>模块，实现针对代码审查、重构优化等特定工程场景的<strong style="color:#000;">精准上下文注入</strong>与行为编排。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/mattpocock/skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/mattpocock" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">addyosmani/agent-skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 117,187</span> | 
+                    <span>新增星标: 3,502 stars this week</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI编码代理生成的代码往往缺乏生产环境所需的健壮性、可维护性和企业级规范，难以直接落地于实际工程的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过提供一套标准化的提示词模板、上下文规则和最佳实践指南，为AI代理注入资深工程师的编码思维与约束条件。其定位是作为AI编码助手的“外挂大脑”，将生产级的工程标准转化为AI可理解并严格执行的开发规范。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">生产级规则约束</strong>：提供深度定制的上下文规则文件（如 `.cursorrules`），强制AI代理在代码生成时严格遵循<strong style="color:#000;">企业级错误处理</strong>、<strong style="color:#000;">边界条件测试</strong>与<strong style="color:#000;">安全合规</strong>标准，从源头杜绝缺乏健壮性的“玩具代码”。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">高阶工程思维注入</strong>：超越基础的代码补全，通过结构化的提示词模板为AI注入<strong style="color:#000;">系统架构设计</strong>、<strong style="color:#000;">性能优化</strong>与<strong style="color:#000;">代码可维护性</strong>等资深开发者思维，赋予AI代理<strong style="color:#000;">全链路工程化</strong>的思考与决策能力。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/addyosmani/agent-skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/addyosmani" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">cloudflare/security-audit-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 71,987</span> | 
+                    <span>新增星标: 8,829 stars this week</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统代码安全审查中人工效率低下、自动化工具误报率高以及审计结果难以自动化流转与验证的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为编码智能体（Coding-Agent）的专属扩展技能，通过编排多阶段自动化工作流来执行深度的代码安全审计。它引入了独立验证机制与结构化数据输出，确保审计发现不仅准确可靠，还能无缝集成到现代DevSecOps流水线中。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多阶段独立验证机制</strong>：采用分步骤的审计策略，对初步识别的安全漏洞进行<strong style="color:#000;">交叉验证</strong>与<strong style="color:#000;">逻辑确认</strong>，从而大幅降低传统扫描工具的误报率并提升审计深度。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">机器可读标准化输出</strong>：将复杂的审计发现转化为<strong style="color:#000;">结构化、机器可读</strong>的数据格式，使安全漏洞能够被下游的CI/CD系统、工单追踪系统或自动化修复工具直接解析与处理。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/cloudflare/security-audit-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/cloudflare" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">zed-industries/zed</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 94,972</span> | 
+                    <span>新增星标: 2,117 stars this week</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了现代基于Web技术栈（如Electron）的代码编辑器在处理大型项目时普遍存在的性能卡顿、内存占用过高以及缺乏原生实时协作能力的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>Zed 是一款由 Atom 和 Tree-sitter 创始团队打造的高性能多人协作代码编辑器，旨在为开发者提供“思维速度”般的极致编码体验。它在底层完全采用 Rust 语言构建，并深度结合现代 GPU 加速渲染技术，从而彻底摆脱了传统 Web 架构的性能与内存瓶颈。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">GPU加速渲染</strong>与<strong style="color:#000;">Rust底层架构</strong>：摒弃了传统的 DOM 渲染方案，采用自研的 <strong style="color:#000;">GPUI</strong> 框架将界面绘制直接交由 <strong style="color:#000;">GPU</strong> 处理，结合 <strong style="color:#000;">Rust语言</strong> 的零成本抽象与高并发特性，实现了亚毫秒级的输入响应与极低的系统资源消耗。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">原生实时协作</strong>与<strong style="color:#000;">Tree-sitter语法解析</strong>：内置基于 <strong style="color:#000;">CRDT算法</strong> 的冲突解决机制以支持无缝的<strong style="color:#000;">多人协同编辑</strong>，并深度集成 <strong style="color:#000;">Tree-sitter</strong> 引擎来实现高精度的增量语法高亮与实时代码结构分析。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/zed-industries/zed" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/zed-industries" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">anthropics/claude-quickstarts</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 20,879</span> | 
+                    <span>新增星标: 1,731 stars this week</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>解决了开发者在接入大模型API时因缺乏标准化工程脚手架和最佳实践而导致应用落地周期长、试错成本高的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目是Anthropic官方推出的一系列开箱即用的代码模板集合，涵盖了从基础API调用、流式处理到复杂Agent构建等多种典型应用场景。它通过提供模块化且支持一键部署的标准化工程脚手架，帮助开发者跳过繁琐的底层配置，直接聚焦于业务逻辑与Claude大模型能力的深度集成。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">场景化架构模板</strong>：提供了涵盖<strong style="color:#000;">检索增强生成（RAG）</strong>、<strong style="color:#000;">多智能体协作</strong>及<strong style="color:#000;">多模态交互</strong>等丰富场景的标准化代码结构，开发者可根据业务需求直接复用或进行二次开发。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">生产级部署就绪</strong>：内置了完善的<strong style="color:#000;">错误重试机制</strong>、<strong style="color:#000;">流式响应处理</strong>以及<strong style="color:#000;">容器化部署配置</strong>，确保示例代码不仅可用于快速原型验证，更能平滑过渡到真实的生产环境。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/claude-quickstarts" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">vercel-labs/agent-desktop</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 23,352</span> | 
+                    <span>新增星标: 5,408 stars this week</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI Agent缺乏直接操作本地桌面图形界面（GUI）能力，导致自动化流程在面对无API的传统软件时被迫中断的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>它作为一个轻量级的命令行接口（CLI）工具，充当了云端大模型与本地操作系统之间的桥梁，赋予AI代理像人类一样感知屏幕和操作电脑的能力。通过提供标准化的系统级控制指令，它使Agent能够无缝执行跨应用的复杂桌面自动化任务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">原生桌面控制能力</strong>：支持通过CLI指令实现高精度的<strong style="color:#000;">屏幕截图</strong>与<strong style="color:#000;">键鼠事件模拟</strong>，使AI能够直接干预和操作本地GUI应用程序。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">Agent标准化集成</strong>：提供契合大模型<strong style="color:#000;">工具调用（Tool Calling）</strong> 范式的接口设计，无缝对接主流AI框架，实现端到端的<strong style="color:#000;">自主任务规划与执行</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/vercel-labs/agent-desktop" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/vercel-labs" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">lobehub/lobehub</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 85,418</span> | 
+                    <span>新增星标: 1,126 stars this week</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了企业团队在日常协作中缺乏能够自主执行复杂任务并持续进化的AI助手，导致人机协同效率低下与业务知识难以自动沉淀的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目定位为面向企业团队的超级智能体协同平台，通过将大模型能力无缝嵌入团队现有的聊天工作流中，打造即插即用的“数字员工”。技术上采用多智能体协同架构与检索增强生成机制，结合持续学习反馈闭环，使Agent能够自主接管任务并在实际业务交互中实现能力的周期性迭代。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">无缝工作流集成与自主任务执行</strong>：Agent深度嵌入团队通讯工具，依托强大的<strong style="color:#000;">意图识别</strong>与<strong style="color:#000;">工具调用（Function Calling）</strong> 能力，可自主拆解、规划并执行复杂业务流，实现从被动问答到主动接单的跨越。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">企业级数据飞轮与持续进化机制</strong>：基于<strong style="color:#000;">检索增强生成（RAG）</strong> 融合企业私有知识库，Agent能够利用团队交互历史与业务反馈构建<strong style="color:#000;">数据飞轮</strong>，通过自动化微调与记忆更新实现能力的每周自我迭代与优化。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/lobehub/lobehub" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/lobehub" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div><div class="section-title">月度榜单</div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#1</span>
+                    <span class="project-title">Nutlope/hallmark</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 54,563</span> | 
+                    <span>新增星标: 24,631 stars this month</span>
+                     | <span>语言: CSS</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI编程助手生成的前端UI代码普遍存在风格同质化、审美疲劳及缺乏专业设计感（即“AI Slop”）的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为专为Cursor、Claude Code等AI编码工具定制的系统级设计提示词与前端规范指南。它通过向大语言模型注入严格的排版、色彩克制和空间布局原则，引导其摒弃默认的模板化风格，从而生成具备高级感的专业UI代码。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">反劣质设计约束机制</strong>：通过建立严格的负面清单与正面规范，限制模型滥用渐变、过度阴影等典型“AI味”元素，强制输出符合<strong style="color:#000;">极简主义</strong>与<strong style="color:#000;">克制美学</strong>的高质量界面代码。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">无缝编辑器工作流集成</strong>：作为高度可复用的<strong style="color:#000;">系统级提示词</strong>或规则配置文件（如 `.cursorrules`），能够直接注入AI编码环境，实现<strong style="color:#000;">底层代码生成逻辑</strong>与<strong style="color:#000;">专业UI设计规范</strong>的深度对齐。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Nutlope/hallmark" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Nutlope" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#2</span>
+                    <span class="project-title">morluto/rea</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 457,873</span> | 
+                    <span>新增星标: 271,084 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统逆向工程高度依赖安全专家经验、分析周期漫长且难以高效贯通高层应用逻辑与底层机器指令的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为基于大语言模型驱动的自动化逆向工程框架，通过构建多智能体协同架构来接管并自动化执行复杂的代码分析任务。它创新性地融合了应用层动态行为监控与底层原生二进制静态反汇编，实现了端到端的智能化逆向解析。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多智能体协同推理</strong>：构建专门针对逆向场景的Agent工作流，使不同智能体分别负责行为捕获、反汇编分析与逻辑推理，实现复杂逆向任务的<strong style="color:#000;">自动化拆解与闭环执行</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">全栈跨层级分析</strong>：彻底打通从高层<strong style="color:#000;">应用动态行为</strong>（如API调用、状态流转）到底层<strong style="color:#000;">原生二进制代码</strong>（如汇编指令、内存操作）的完整数据链路，提供无死角的逆向解析覆盖。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/morluto/rea" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/morluto" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#3</span>
+                    <span class="project-title">cloudflare/security-audit-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 71,987</span> | 
+                    <span>新增星标: 42,839 stars this month</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统代码安全审查中人工效率低下、自动化工具误报率高以及审计结果难以自动化流转与验证的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为编码智能体（Coding-Agent）的专属扩展技能，通过编排多阶段自动化工作流来执行深度的代码安全审计。它引入了独立验证机制与结构化数据输出，确保审计发现不仅准确可靠，还能无缝集成到现代DevSecOps流水线中。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多阶段独立验证机制</strong>：采用分步骤的审计策略，对初步识别的安全漏洞进行<strong style="color:#000;">交叉验证</strong>与<strong style="color:#000;">逻辑确认</strong>，从而大幅降低传统扫描工具的误报率并提升审计深度。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">机器可读标准化输出</strong>：将复杂的审计发现转化为<strong style="color:#000;">结构化、机器可读</strong>的数据格式，使安全漏洞能够被下游的CI/CD系统、工单追踪系统或自动化修复工具直接解析与处理。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/cloudflare/security-audit-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/cloudflare" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#4</span>
+                    <span class="project-title">thedotmack/claude-mem</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 116,873</span> | 
+                    <span>新增星标: 17,120 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI Agent在跨会话交互中上下文记忆丢失、无法保持长期任务连贯性的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为跨会话的持久化上下文管理中间件，通过AI压缩技术提取并存储历史交互的核心语义信息。它在每次新会话启动时，自动将高相关性的浓缩上下文注入到Agent中，从而实现无缝的记忆延续。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">智能上下文压缩</strong>：利用大模型对冗长的历史会话进行语义提炼与降维，在精准保留核心业务逻辑的同时大幅降低<strong style="color:#000;">Token消耗</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">跨平台代理兼容</strong>：构建标准化的上下文注入协议，无缝适配Claude Code、Copilot、Gemini等<strong style="color:#000;">主流AI Agent生态</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/thedotmack/claude-mem" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/thedotmack" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#5</span>
+                    <span class="project-title">pingdotgg/t3code</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 59,692</span> | 
+                    <span>新增星标: 32,057 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>解决了开发者难以跨终端（如手机或异地电脑）无缝监控与远程控制本地AI编程助手长时运行任务的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为AI编程助手的跨设备远程控制中枢，通过构建安全的通信通道将本地命令行工具的执行状态与交互指令映射至Web或移动端。它利用现代化的全栈架构实现低延迟的上下文同步与指令下发，使开发者能够随时随地无缝接管AI代码生成流程。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">跨端实时状态同步</strong>：基于<strong style="color:#000;">WebSocket长连接</strong>构建本地CLI与远程客户端的<strong style="color:#000;">低延迟双向通信</strong>通道，确保AI推理进度与终端标准输出在任意设备上<strong style="color:#000;">毫秒级实时渲染</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">安全的远程指令下发</strong>：依托<strong style="color:#000;">零信任安全模型</strong>与令牌校验机制，支持从移动设备等非受信网络环境向本地AI代理安全注入<strong style="color:#000;">中断、重试或动态追加Prompt</strong>等控制流。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/pingdotgg/t3code" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/pingdotgg" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#6</span>
+                    <span class="project-title">pbakaus/impeccable</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 109,676</span> | 
+                    <span>新增星标: 29,328 stars this month</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>解决了AI编程代理生成的代码和界面缺乏设计美感与一致性，导致最终产品充斥低质量“AI生成垃圾（AI slop）”的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为专为AI编码代理设计的“设计词汇表”与系统提示词集合，旨在通过注入高标准的UI/UX规范来提升AI生成代码的视觉质量。它通过提供结构化的设计引导与严格的审查指令，使AI在编码和重构过程中自动遵循专业设计原则，从而在代码发布前拦截粗糙的实现。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">结构化设计词汇</strong>：提供了一套标准化的<strong style="color:#000;">设计原则</strong>与视觉规范，使AI代理能够精准理解并应用“精致”与“大胆”的UI风格，确保生成代码具备极高的<strong style="color:#000;">设计一致性</strong>与美感。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自动化审查与审计</strong>：内置了严格的<strong style="color:#000;">代码审查指令</strong>与质量评估标准，驱动AI代理在生成代码后自动执行<strong style="color:#000;">设计走查</strong>，有效拦截并修正缺乏细节的<strong style="color:#000;">AI生成垃圾（AI slop）</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/pbakaus/impeccable" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/pbakaus" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#7</span>
+                    <span class="project-title">heygen-com/hyperframes</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 83,987</span> | 
+                    <span>新增星标: 21,924 stars this month</span>
+                     | <span>语言: TypeScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI Agent在生成富媒体视频内容时，缺乏简单、声明式且易于通过代码直接驱动的底层渲染基础设施的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>Hyperframes通过将前端HTML/CSS代码直接解析并渲染为视频帧，把成熟的Web技术栈转化为高效的视频渲染引擎。它定位为专为AI Agent打造的声明式视频生成基础设施，使大模型能够通过编写网页代码来精准控制视频画面的生成。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">HTML转视频渲染</strong>：直接利用<strong style="color:#000;">HTML/CSS</strong>作为视频画面的描述语言，将复杂的视频编辑逻辑降维成大模型最熟悉的<strong style="color:#000;">Web标准DOM渲染</strong>。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">Agent原生适配</strong>：采用高度<strong style="color:#000;">声明式</strong>的API设计，完美契合大语言模型的<strong style="color:#000;">代码生成能力</strong>，使AI Agent能够以极高的自由度动态生成<strong style="color:#000;">视频帧序列</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/heygen-com/hyperframes" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/heygen-com" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#8</span>
+                    <span class="project-title">HKUDS/DeepTutor</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 58,979</span> | 
+                    <span>新增星标: 17,913 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>解决了传统AI教育辅导系统缺乏长期记忆与动态学情追踪，导致无法提供跨周期、连续性且真正“因材施教”的个性化教学痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为面向终身学习的智能AI导师，通过构建动态更新的学生认知模型与长期记忆机制，实现对学习者知识状态和交互偏好的持续追踪。其技术方案深度融合大语言模型与个性化检索增强策略，能够根据学生的历史学习轨迹自适应生成定制化的教学对话与辅导内容。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">动态学生认知建模</strong>：系统能够持续追踪并更新学习者的知识掌握度与历史交互数据，构建高保真的<strong style="color:#000;">长期个性化学生画像</strong>，从而打破传统AI辅导的上下文遗忘限制。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自适应教学策略生成</strong>：结合<strong style="color:#000;">检索增强生成（RAG）</strong> 与教育学启发理论，大模型能够基于实时学情与长期记忆，动态调整辅导难度并生成<strong style="color:#000;">启发式个性化反馈</strong>，实现跨越长周期的因材施教。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/HKUDS/DeepTutor" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/HKUDS" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#9</span>
+                    <span class="project-title">anthropics/skills</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 194,179</span> | 
+                    <span>新增星标: 13,734 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目解决了AI智能体（Agent）开发过程中技能组件碎片化、复用性低以及缺乏跨平台统一标准的问题。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;该项目是 Anthropic 官方推出的智能体技能标准化仓库，旨在为开发者提供开箱即用的工具链、API集成方案与最佳实践模板。它通过模块化的架构设计和标准化的接口规范，使大语言模型能够更安全、高效地编排和调用外部能力以执行复杂任务。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">模块化技能编排</strong>：采用高内聚低耦合的设计模式，将复杂的Agent能力拆分为独立、可复用的<strong style="color:#000;">标准化技能组件</strong>，支持开发者像搭积木一样快速构建和扩展定制化智能体。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">安全与上下文隔离</strong>：内置严格的<strong style="color:#000;">权限控制机制</strong>与<strong style="color:#000;">上下文状态管理</strong>，确保Agent在调用外部工具或执行多步推理时，能够有效防止提示词注入并保障数据交互的绝对安全。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/skills" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#10</span>
+                    <span class="project-title">AgriciDaniel/claude-seo</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 29,093</span> | 
+                    <span>新增星标: 10,190 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了传统SEO工作流高度碎片化、人工依赖度高且难以与现代AI编程助手深度融合以实现全链路自动化优化的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>它定位为Claude Code的通用SEO技能扩展，通过构建包含26个子技能和19个子智能体的庞大矩阵，全面覆盖从技术SEO到生成式引擎优化（GEO/AEO）的各个维度。其技术方案结合了Lighthouse代理浏览、WebMCP和llms.txt等前沿协议，并支持多种实时数据扩展，从而赋予AI代码助手深度的SEO分析与自动化执行能力。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">多智能体协同架构</strong>：内置<strong style="color:#000;">26个子技能</strong>与<strong style="color:#000;">19个子智能体</strong>，实现从技术审计、E-E-A-T评估到本地及电商SEO的<strong style="color:#000;">全链路自动化</strong>与精细化任务分发。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">生成式引擎与代理就绪</strong>：深度集成<strong style="color:#000;">GEO/AEO</strong>优化策略，并原生支持<strong style="color:#000;">Lighthouse代理浏览</strong>、<strong style="color:#000;">WebMCP</strong>及<strong style="color:#000;">llms.txt</strong>协议，确保网站结构对<strong style="color:#000;">AI爬虫与智能体</strong>的高度友好与可读。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/AgriciDaniel/claude-seo" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/AgriciDaniel" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#11</span>
+                    <span class="project-title">debpalash/VoiceStudio</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 110,045</span> | 
+                    <span>新增星标: 48,848 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了商业语音合成与克隆服务存在的数据隐私泄露风险、高昂API调用成本以及强依赖网络环境的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为ElevenLabs的开源且完全本地化的替代品，通过整合前沿的开源语音生成与识别模型，构建了涵盖声音克隆、视频配音及多语言转录的全链路语音创作工作流。其技术架构采用纯本地化部署方案，在免除云端API依赖与持续订阅成本的同时，确保了用户核心语音数据的绝对隐私与安全。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">完全本地化计算架构</strong>：摒弃了对云端服务的依赖，所有<strong style="color:#000;">声音克隆</strong>、<strong style="color:#000;">视频配音</strong>及<strong style="color:#000;">语音转录</strong>任务均在本地环境闭环运行，从根本上保障了<strong style="color:#000;">数据隐私安全</strong>并消除了网络延迟瓶颈。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">超大规模多语言处理引擎</strong>：底层集成支持高达<strong style="color:#000;">646种语言</strong>的先进模型矩阵，不仅实现了高精度的<strong style="color:#000;">跨语种声音设计</strong>与<strong style="color:#000;">听写识别</strong>，还极大降低了全球化多语言<strong style="color:#000;">有声书创作</strong>的技术门槛。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/debpalash/VoiceStudio" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/debpalash" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#12</span>
+                    <span class="project-title">Leonxlnx/taste-skill</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 115,102</span> | 
+                    <span>新增星标: 19,948 stars this month</span>
+                     | <span>语言: JavaScript</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI编码助手生成的前端页面往往缺乏设计感、千篇一律且充满“AI味”的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目通过为编码代理注入结构化的艺术指导原则与高质量视觉参考，从根本上提升AI生成UI的审美上限。同时它引入了浏览器端的视觉校验闭环，确保最终渲染效果符合专业设计标准而非仅停留在代码可运行层面。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">艺术指导与参考注入</strong>：通过向Agent提供<strong style="color:#000;">结构化设计原则</strong>与<strong style="color:#000;">高质量参考图像</strong>，引导其摆脱模板化生成，创造出具备高级审美和细节打磨的用户界面。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">自动化视觉校验闭环</strong>：引入<strong style="color:#000;">浏览器渲染检查机制</strong>，在代码生成后自动进行视觉比对与微调，确保UI的高保真还原并彻底消除千篇一律的“通用AI页面”特征。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/Leonxlnx/taste-skill" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/Leonxlnx" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#13</span>
+                    <span class="project-title">anthropics/knowledge-work-plugins</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 35,681</span> | 
+                    <span>新增星标: 6,311 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了知识工作者在使用大语言模型时，难以将AI能力与企业私有数据源及现有办公工作流无缝集成，导致生产力转化存在“最后一公里”断层的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目提供了一套标准化的开源插件集合，通过统一的扩展接口将Claude大模型与各类知识管理及文档协作工具进行深度打通。它定位为Claude Cowork生态的核心扩展库，旨在为知识工作者构建高度可定制且安全的AI增强型工作流。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">统一上下文注入协议</strong>：通过定义标准化的插件接口规范，实现大模型与外部企业知识库的<strong style="color:#000;">无缝数据交互</strong>与<strong style="color:#000;">动态上下文加载</strong>，大幅提升AI输出的业务相关性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">细粒度安全管控机制</strong>：内置企业级的<strong style="color:#000;">数据访问隔离</strong>与<strong style="color:#000;">操作审计链路</strong>，确保知识工作者在调用插件处理敏感信息时严格保障<strong style="color:#000;">隐私安全</strong>与<strong style="color:#000;">合规性</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/knowledge-work-plugins" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#14</span>
+                    <span class="project-title">anthropics/claude-plugins-official</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 47,212</span> | 
+                    <span>新增星标: 9,580 stars this month</span>
+                     | <span>语言: Python</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了大模型辅助编程生态中第三方扩展工具质量参差不齐、缺乏官方安全背书与标准化治理的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目是Anthropic官方集中维护的高质量Claude代码插件注册中心，旨在构建安全、可控的AI编程扩展生态。其通过定义标准化的插件接入协议与严格的入库审核流程，为开发者提供高可信度的代码能力增强组件。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">官方认证与信任链</strong>：所有收录插件均经过Anthropic的<strong style="color:#000;">严格安全审计</strong>与代码质量评估，确保在复杂工程环境下的<strong style="color:#000;">执行可靠性</strong>与数据合规性。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">标准化扩展协议</strong>：提供统一的<strong style="color:#000;">插件接口规范</strong>与上下文注入机制，大幅降低开发者构建和集成自定义AI代码工具的<strong style="color:#000;">架构耦合度</strong>。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/anthropics/claude-plugins-official" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/anthropics" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <span class="rank-number">#15</span>
+                    <span class="project-title">vercel-labs/agent-browser</span>
+                </div>
+                
+                <div class="project-stats">
+                    <span>总星标: 50,770</span> | 
+                    <span>新增星标: 6,810 stars this month</span>
+                     | <span>语言: Rust</span>
+                </div>
+                
+                <div>
+                    <p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【项目背景】</strong>该项目解决了AI Agent在与真实网页交互时，因传统浏览器自动化API过于底层且DOM结构复杂而导致大模型难以直接理解和精准操作的行业痛点。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【核心介绍】</strong>该项目定位为专为AI Agent设计的浏览器自动化命令行工具，通过封装底层浏览器操作提供高层级的语义化交互接口。其技术实现通过智能解析和简化网页DOM树，将复杂的页面状态转化为大语言模型易于理解的上下文，从而驱动精准的自动化任务执行。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#1a1a1a;">【关键特性】</strong></p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;1. <strong style="color:#000;">DOM树语义化降维</strong>：通过智能过滤冗余标签并提取网页核心元素，将复杂的原始DOM转化为<strong style="color:#000;">大模型友好的精简上下文</strong>，大幅降低Token消耗并提升操作准确率。</p><p class="project-content">&nbsp;&nbsp;&nbsp;&nbsp;2. <strong style="color:#000;">CLI原生Agent集成</strong>：提供标准化的<strong style="color:#000;">命令行接口（CLI）</strong> 与结构化数据输出，使各类AI Agent框架能够以极低的接入成本实现<strong style="color:#000;">无头浏览器自动化</strong>的无缝控制。</p>
+                </div>
+                
+                <div>
+                    <a href="https://github.com/vercel-labs/agent-browser" class="project-link" target="_blank">查看项目详情 →</a>
+                     | <a href="https://github.com/vercel-labs" class="project-link" target="_blank">用户主页</a>
+                </div>
+            </div>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 4px; font-size: 16px;">← 返回历史日报首页</a>
+            </div>
+            
+            <!-- 回到顶部和底部按钮 -->
+            <div class="nav-button top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
+            <div class="nav-button bottom-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">↓</div>
+            
+            <!-- 移动端底部导航栏 -->
+            <div class="mobile-nav">
+                <a href="#" class="mobile-nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">回到顶部</a>
+                <a href="#footer" class="mobile-nav-btn">跳到底部</a>
+            </div>
+            
+            <div class="footer" id="footer">
+                <p>© 2026 GitHub Trending 日报 | 数据来源于 GitHub Trending</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
